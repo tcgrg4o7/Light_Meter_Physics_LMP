@@ -1,0 +1,248 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{Action $\times$ Time:\\
+An Inertia Scale from Planck Area and Gravitational Time}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Planck area and a mass-dependent gravitational timescale contain the same factor $G/c^3$. With $\ell_P^2\equiv\hbar G/c^3$ and $\tau_g\equiv GM/c^3$, their product with mass gives the exact algebraic identity $M\ell_P^2=\hbar\tau_g$. Both sides have the units of moment of inertia. Defining the inertia scale $I_*\equiv M\ell_P^2$ and the inverse-time scale $\omega_g\equiv1/\tau_g$ yields $I_*\omega_g=\hbar$. For an uncharged, nonrotating Schwarzschild black hole, the standard semiclassical Hawking temperature further gives $\tfrac12 I_*\omega_g^2=4\pi k_{\mathrm B}T_H$. This expression is a formal energy scale, not the black hole's rotational energy. A second exact identity, $\tau_g\tilde{\tau}_C=t_P^2$, makes the gravitational and reduced Compton times geometric complements about the Planck time. Solar-mass and Earth-mass examples illustrate the scales. The algebra is exact for the stated definitions; the black-hole temperature interpretation has the more specific Schwarzschild and semiclassical assumptions stated here. Neither identity implies a physical Planck-length rotor, a new angular velocity, or a mechanism linking inertia to Hawking radiation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Planck area, gravitational timescale, moment of inertia, Hawking temperature, Compton time
+
+\section{Introduction}
+
+The Planck area is proportional to $G/c^3$, as is the gravitational timescale associated with a mass $M$. Multiplying the first by the mass and regrouping the constants therefore gives an identity between mass times area and action times time. Both expressions have units of moment of inertia, which motivates an inertia-scale interpretation.
+
+This manuscript separates the algebra from that interpretation. The identity $M\ell_P^2=\hbar\tau_g$ follows directly from definitions and does not require $M$ to be a black hole. The connection to Hawking temperature does require a Schwarzschild black hole and the standard semiclassical temperature normalized at infinity \cite{Hawking}. The numerical examples use hypothetical black holes whose masses equal the Sun's and Earth's masses; they do not describe the actual Sun or Earth.
+
+The notation $I_*$ denotes a defined scale, not the measured moment of inertia of a particular extended body. Likewise, $\omega_g$ is an inverse-time scale, not an angular velocity or the spin of a black hole. These distinctions are essential to interpreting the equations without turning a units identity into an unsupported physical mechanism.
+
+\section{Planck area and gravitational time}
+
+Define the Planck area and gravitational timescale by
+\begin{equation}
+  \ell_P^2\equiv\frac{\hbar G}{c^3},
+  \qquad
+  \tau_g\equiv\frac{GM}{c^3},
+  \label{eq:basic-definitions}
+\end{equation}
+where $G$ is Newton's gravitational constant, $c$ is the vacuum speed of light, and $\hbar$ is the reduced Planck constant. The dimensions are
+\begin{equation}
+  [\ell_P^2]=\mathrm{m^2},
+  \qquad
+  [\tau_g]=\mathrm{s}.
+  \label{eq:basic-units}
+\end{equation}
+For a Schwarzschild black hole, the Schwarzschild radius $r_s=2GM/c^2$ satisfies $r_s=2c\tau_g$. This is an algebraic relation between scales; it does not describe a signal traversing the black hole.
+
+\section{The action-times-time identity}
+
+Multiplying the Planck area by $M$ and regrouping gives
+\begin{equation}
+  M\ell_P^2
+  =M\frac{\hbar G}{c^3}
+  =\hbar\frac{GM}{c^3}
+  =\hbar\tau_g.
+  \label{eq:action-time-identity}
+\end{equation}
+Both sides have dimensions
+\begin{equation}
+  [M\ell_P^2]
+  =\mathrm{kg\,m^2},
+  \qquad
+  [\hbar\tau_g]
+  =(\mathrm{kg\,m^2\,s^{-1}})(\mathrm{s})
+  =\mathrm{kg\,m^2}.
+  \label{eq:inertia-units}
+\end{equation}
+These are the units of moment of inertia. Equation~\eqref{eq:action-time-identity} is an exact algebraic identity given the definitions in Eq.~\eqref{eq:basic-definitions}; it is not a new dynamical law.
+
+The explicit factor of $G$ cancels if mass is expressed as $M=(GM)/G$:
+\begin{equation}
+  M\ell_P^2
+  =\frac{GM}{G}\frac{\hbar G}{c^3}
+  =\frac{\hbar\,GM}{c^3}.
+  \label{eq:g-cancellation}
+\end{equation}
+This cancellation can be useful for numerical values when a gravitational parameter $GM$ is known more accurately than a mass inferred using $G$. It does not make $G$ exact or eliminate its uncertainty from quantities that depend separately on $M$ or $\ell_P^2$.
+
+\section{An inertia scale and an action scale}
+
+For a point mass a distance $r$ from an axis, the moment of inertia is $I=Mr^2$. The structure of Eq.~\eqref{eq:action-time-identity} can therefore be read as the inertia associated dimensionally with mass $M$ and a length scale $\ell_P$. We define
+\begin{equation}
+  I_*\equiv M\ell_P^2=\hbar\tau_g,
+  \qquad
+  \omega_g\equiv\frac{1}{\tau_g}.
+  \label{eq:defined-scales}
+\end{equation}
+The symbol $I_*$ names a scale with units of moment of inertia; it does not specify the mass distribution and axis required to determine the moment of inertia of an actual body. The quantity $\omega_g$ has units of inverse seconds. Its notation is not a claim that an object physically rotates at this rate.
+
+Their product is
+\begin{equation}
+  I_*\omega_g
+  =\hbar\tau_g\frac{1}{\tau_g}
+  =\hbar.
+  \label{eq:action-scale}
+\end{equation}
+The dimensions are those of angular momentum, but Eq.~\eqref{eq:action-scale} does not assign physical spin $\hbar$ to a black hole. It is the product of two defined scales.
+
+\section{A formal energy scale and Hawking temperature}
+
+Combining the definitions of $I_*$ and $\omega_g$ gives an energy-dimensioned quantity:
+\begin{equation}
+  E_*\equiv\frac{1}{2}I_*\omega_g^2
+  =\frac{1}{2}\hbar\tau_g\frac{1}{\tau_g^2}
+  =\frac{\hbar}{2\tau_g}.
+  \label{eq:formal-energy}
+\end{equation}
+The factor $\tfrac12 I\omega^2$ resembles the classical rotational-energy expression, but $E_*$ is introduced here as a formal scale. The Schwarzschild examples below have zero spin; Eq.~\eqref{eq:formal-energy} is not their rotational energy.
+
+For a four-dimensional, asymptotically flat, uncharged, nonrotating Schwarzschild black hole, the semiclassical Hawking temperature measured relative to time at infinity is \cite{Hawking}
+\begin{equation}
+  k_{\mathrm B}T_H
+  =\frac{\hbar c^3}{8\pi GM}
+  =\frac{\hbar}{8\pi\tau_g}.
+  \label{eq:hawking-temperature}
+\end{equation}
+Consequently,
+\begin{equation}
+  \boxed{\frac{1}{2}I_*\omega_g^2
+  =\frac{\hbar}{2\tau_g}
+  =4\pi k_{\mathrm B}T_H.}
+  \label{eq:thermal-identity}
+\end{equation}
+Within the Schwarzschild assumptions above, this is an exact rearrangement of the defined scales and the standard Hawking-temperature formula. In particular, $E_*=4\pi k_{\mathrm B}T_H$ and its coefficient $4\pi$ are Schwarzschild-specific; they do not extend unchanged to Kerr or charged black holes. This does not identify $E_*$ with the ordinary thermal energy of a body, nor does it establish that a physical rotational degree of freedom is present.
+
+\section{Gravitational and reduced Compton times}
+
+Define the reduced Compton time of mass $M$ as
+\begin{equation}
+  \tilde{\tau}_C\equiv\frac{\hbar}{Mc^2}.
+  \label{eq:reduced-compton-time}
+\end{equation}
+The reduced Compton time and the full Compton cycle are distinguished by the angular and cyclic frequency scales:
+\begin{equation}
+  \begin{aligned}
+    \omega_C&\equiv\frac{Mc^2}{\hbar}=2\pi\nu_C,\qquad
+    \nu_C&\equiv\frac{Mc^2}{h},\\
+    \tilde{\tau}_C&=\frac{1}{\omega_C},\qquad
+    \frac{1}{\nu_C}&=\frac{2\pi}{\omega_C}=2\pi\tilde{\tau}_C.
+  \end{aligned}
+  \label{eq:compton-cycle}
+\end{equation}
+
+Multiplication by $\tau_g$ gives
+\begin{equation}
+  \tau_g\tilde{\tau}_C
+  =\frac{GM}{c^3}\frac{\hbar}{Mc^2}
+  =\frac{\hbar G}{c^5}
+  =t_P^2,
+  \qquad
+  t_P\equiv\frac{\ell_P}{c}
+  =\sqrt{\frac{\hbar G}{c^5}}.
+  \label{eq:time-product}
+\end{equation}
+Thus $t_P=\sqrt{\tau_g\tilde{\tau}_C}$ is the geometric mean of these two mass-dependent timescales. This relation does not mean that either timescale is a directly ticking clock. At the Planck mass $M_P\equiv\sqrt{\hbar c/G}$, the two times are equal; on either side of that mass, one is larger and the other smaller.
+
+\section{Numerical illustrations}
+
+Table~\ref{tab:examples} uses the solar and terrestrial gravitational parameters $GM$ listed by NASA/JPL \cite{JPL}. The tabulated masses are hypothetical black-hole masses corresponding to those parameters. The temperature follows Eq.~\eqref{eq:hawking-temperature}; it is a theoretical semiclassical value, not a measurement of Hawking radiation from these objects. Values are rounded to avoid implying unwarranted precision. CODATA 2022 gives the measured value and uncertainty of $G$ and the derived Planck time; $c$, $h$, and $k_{\mathrm B}$ have exact SI-defined values \cite{CODATA}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Defined scales for hypothetical Schwarzschild black holes with solar and terrestrial masses.}
+  \label{tab:examples}
+  \begin{tabular}{lcc}
+    \toprule
+    Quantity & Solar-mass example & Earth-mass example \\
+    \midrule
+    $\tau_g$ & $4.9255\ \mu\mathrm{s}$ & $14.794\ \mathrm{ps}$ \\
+    $\omega_g=1/\tau_g$ & $2.0303\times10^5\ \mathrm{s^{-1}}$ & $6.7597\times10^{10}\ \mathrm{s^{-1}}$ \\
+    $I_*=\hbar\tau_g$ & $5.1943\times10^{-40}\ \mathrm{kg\,m^2}$ & $1.5601\times10^{-45}\ \mathrm{kg\,m^2}$ \\
+    $T_H$ & $61.703\ \mathrm{nK}$ & $20.544\ \mathrm{mK}$ \\
+    $E_*=\tfrac12 I_*\omega_g^2$ & $1.0705\times10^{-29}\ \mathrm{J}$ & $3.5643\times10^{-24}\ \mathrm{J}$ \\
+    $\tilde{\tau}_C$ & $5.90\times10^{-82}\ \mathrm{s}$ & $1.96\times10^{-76}\ \mathrm{s}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+For each column, $I_*\omega_g=\hbar$ and $E_*=4\pi k_{\mathrm B}T_H$ by construction. The reduced Compton-time entries combine with the corresponding $\tau_g$ to give $t_P\simeq5.3912\times10^{-44}\ \mathrm{s}$, independent of the chosen mass. The Planck-time value has a relative uncertainty dominated by the measured uncertainty in $G$ \cite{CODATA}. These examples check the algebra and display the scale of the quantities; they do not describe actual rotations or directly observed thermal emission.
+
+\section{Relation to horizon area and entropy}
+
+The entropy formula used here is the Bekenstein--Hawking area law \cite{Bekenstein}.
+
+For the Schwarzschild cases, $r_s=2GM/c^2$ and $A=4\pi r_s^2$, so the horizon area grows as $M^2$, while $\tau_g$ grows as $M$. The identity in Eq.~\eqref{eq:action-time-identity} uses the Planck area but does not count horizon constituents. In the area-entropy relation, the ratio $A/\ell_P^2$ is an area expressed in Planck-area units and $S_{\mathrm{BH}}/k_{\mathrm B}=A/(4\ell_P^2)$; neither expression alone establishes literal horizon tiles or physical information-storage elements. The horizon-count interpretation is treated separately in the preceding manuscript.
+
+\section{Interpretation and limits}
+
+The central identity is a regrouping of definitions. Its value is in making the shared dimensions and scales visible, not in adding a new law of motion. Calling $I_*$ an inertia scale is justified by its units and its form $M\ell_P^2$; it does not fix a real object's geometry, axis, or quantum state. Calling $\omega_g$ an inverse-time scale is similarly precise, while calling it a physical rotation rate would go beyond the derivation.
+
+The thermal equation has a narrower domain than the algebraic identity: it uses the standard semiclassical temperature for an uncharged, nonrotating Schwarzschild black hole in four-dimensional asymptotically flat spacetime. Rotating or charged black holes have different thermodynamic relations. No claim is made here that the formal energy scale is rotational energy, that Hawking radiation has been measured from the example black holes, or that the identity supplies a mechanism connecting inertia and temperature.
+
+\section{Conclusion}
+
+The Planck area and gravitational timescale give the exact identity $M\ell_P^2=\hbar\tau_g$. Defining $I_*=M\ell_P^2$ and $\omega_g=1/\tau_g$ makes their product equal to $\hbar$. For a Schwarzschild black hole, the standard Hawking formula further rewrites the formal energy scale $\tfrac12 I_*\omega_g^2$ as $4\pi k_{\mathrm B}T_H$. The reduced Compton time supplies a second identity, $\tau_g\tilde{\tau}_C=t_P^2$.
+
+These equations are exact within their definitions and stated thermodynamic input. Their careful interpretation matters: $I_*$ is not automatically an object's moment of inertia, $\omega_g$ is not black-hole spin, and the thermal equality is not a new energy reservoir or causal explanation. They provide a compact connection among established dimensional and semiclassical scales.
+
+\begin{thebibliography}{4}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Hawking}
+S. W. Hawking,
+``Particle creation by black holes,''
+\emph{Communications in Mathematical Physics} \textbf{43}, 199--220 (1975),
+\href{https://doi.org/10.1007/BF02345020}{doi:\nolinkurl{10.1007/BF02345020}}.
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html},
+accessed October 27, 2026.
+
+\bibitem{CODATA}
+P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga,
+``CODATA recommended values of the fundamental physical constants: 2022,''
+\emph{Reviews of Modern Physics} \textbf{97}, 025002 (2025),
+\href{https://doi.org/10.1103/RevModPhys.97.025002}{doi:\nolinkurl{10.1103/RevModPhys.97.025002}}.
+
+\bibitem{Bekenstein}
+J. D. Bekenstein,
+``Black holes and entropy,''
+\emph{Physical Review D} \textbf{7}, 2333--2346 (1973),
+\href{https://doi.org/10.1103/PhysRevD.7.2333}{doi:\nolinkurl{10.1103/PhysRevD.7.2333}}.
+
+\end{thebibliography}
+
+\end{document}
