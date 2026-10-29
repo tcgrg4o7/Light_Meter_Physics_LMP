@@ -1,0 +1,359 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Static Clock in Schwarzschild Spacetime:\\
+Lapse, Reciprocal Rate, and Weak-Field Expansion}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper derives the rate of a clock held at fixed spatial coordinates in the Schwarzschild exterior and examines several useful ways to express it. With $t$ normalized to proper time at infinity, the exact rate is $\mathrm{d}\tau/\mathrm{d}t=\alpha(r)=\sqrt{1-r_s/r}$. Its reciprocal, denoted $\delta\tau_{\mathrm{grav}}\equiv\mathrm{d}t/\mathrm{d}\tau$ here, is a dimensionless rate ratio, not an inverse proper-time reading; its excess above unity agrees with the lapse reduction only to first order. We expand both rates, identify their convergence behavior, and define the logarithmic lapse as an additive measure of rate ratios. We also show the precise relation between the lapse and the local speed of a particle dropped from rest at infinity, work an idealized Earth example, and connect the static-clock comparison to gravitational redshift. The reciprocal-rate quantity is treated as a coordinate-rate ratio, not as a physical density or a local invariant. No static clock exists on the horizon; the finite limiting value of the lapse there does not describe a clock that can hover at that location.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Schwarzschild spacetime, gravitational time dilation, lapse, static observer, gravitational redshift, weak-field expansion
+
+\section{Introduction}
+
+The ``static clock'' is an ideal clock held at a fixed position outside an isolated spherical source. This paper develops the clock rate from the Schwarzschild metric and compares the rate, its reciprocal, and a logarithmic measure of the offset using a common notation with explicit physical domains.
+
+The principal result is the exact lapse relation
+\begin{equation*}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =\sqrt{1-\frac{2GM}{rc^2}}.
+\end{equation*}
+Here $\tau$ is proper time recorded by the held clock, while $t$ is a reference time normalized at infinity. They are not two readings taken by the same clock. A static clock is supported against free fall, and its rate relative to $t$ depends on the chosen static time reference. Each clock nevertheless runs normally with respect to its own proper time.
+
+The discussion is restricted to the vacuum Schwarzschild exterior of a nonrotating, uncharged spherical source. The radius $r$ is the areal radius, so a sphere at fixed $r$ has area $4\pi r^2$. For a material source with surface radius $R$, the exterior formula applies for $r\ge R$; for a Schwarzschild black hole, the static exterior is $r>r_s$.
+
+\section{From the metric to the static-clock rate}
+
+In Schwarzschild coordinates with signature $(-,+,+,+)$, the exterior line element is \cite{Schwarzschild,Tong}
+\begin{equation}
+  \mathrm{d}s^2
+  =-\left(1-\frac{r_s}{r}\right)c^2\mathrm{d}t^2
+   +\left(1-\frac{r_s}{r}\right)^{-1}\mathrm{d}r^2
+   +r^2\mathrm{d}\Omega^2,
+  \qquad
+  r_s\equiv\frac{2GM}{c^2},
+  \label{eq:schwarzschild-metric}
+\end{equation}
+where $M$ is the source mass, $G$ is Newton's constant, and $\mathrm{d}\Omega^2=\mathrm{d}\theta^2+\sin^2\theta\,\mathrm{d}\phi^2$. The coordinate $t$ is chosen so that it agrees with proper time for a stationary observer in the asymptotically flat limit $r\to\infty$.
+
+Holding a clock static means fixing all its spatial coordinates:
+\begin{equation}
+  \mathrm{d}r=\mathrm{d}\theta=\mathrm{d}\phi=0.
+  \label{eq:static-worldline}
+\end{equation}
+For a future-directed timelike clock, $\mathrm{d}s^2=-c^2\mathrm{d}\tau^2$. Substituting Eq.~\eqref{eq:static-worldline} into Eq.~\eqref{eq:schwarzschild-metric} gives
+\begin{equation}
+  -c^2\mathrm{d}\tau^2
+  =-\left(1-\frac{r_s}{r}\right)c^2\mathrm{d}t^2,
+  \qquad
+  \boxed{\frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =\alpha(r)\equiv\sqrt{1-\frac{r_s}{r}}.}
+  \label{eq:lapse}
+\end{equation}
+The positive square root is selected because both time increments are future-directed. A fixed radius alone would not imply a static worldline if angular motion were allowed; Eq.~\eqref{eq:static-worldline} excludes orbital motion as well.
+
+The held clock is accelerated. Its required proper acceleration magnitude is
+\begin{equation}
+  a_{\mathrm{hold}}(r)
+  =c^2\alpha\,\frac{\mathrm{d}}{\mathrm{d}r}\ln\alpha
+  =\frac{GM}{r^2\alpha(r)}.
+  \label{eq:holding-acceleration}
+\end{equation}
+It approaches the Newtonian value $GM/r^2$ in a weak field and diverges as $r\to r_s^+$. The horizon is therefore not the location of a clock that can be held static.
+
+\section{Weak-field expansion and potential}
+
+Introduce the dimensionless compactness variables
+\begin{equation}
+  x\equiv\frac{r_s}{r}=\frac{2GM}{rc^2},
+  \qquad
+  u\equiv\frac{GM}{rc^2}=\frac{x}{2}.
+  \label{eq:compactness}
+\end{equation}
+For a black-hole exterior, $0\le x<1$. Applying the generalized binomial expansion \cite{DLMF} to $(1-x)^{1/2}$ gives
+\begin{equation}
+  \alpha
+  =1-\frac{x}{2}-\frac{x^2}{8}-\frac{x^3}{16}
+    -\frac{5x^4}{128}-\frac{7x^5}{256}-\cdots.
+  \label{eq:lapse-x-series}
+\end{equation}
+Equivalently, in powers of $u$,
+\begin{equation}
+  \alpha
+  =1-u-\frac{1}{2}u^2-\frac{1}{2}u^3
+    -\frac{5}{8}u^4-\frac{7}{8}u^5-\cdots.
+  \label{eq:lapse-u-series}
+\end{equation}
+The first correction is the Newtonian potential term. With the standard convention
+\begin{equation}
+  \Phi(r)=-\frac{GM}{r},
+  \qquad \Phi(\infty)=0,
+  \label{eq:newtonian-potential}
+\end{equation}
+the weak-field limit $u\ll1$ is
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =\alpha\simeq1-u
+  =1+\frac{\Phi}{c^2}.
+  \label{eq:potential-clock-rate}
+\end{equation}
+Thus a clock deeper in the potential well has a smaller rate relative to the same time at infinity. Equation~\eqref{eq:potential-clock-rate} is a first-order approximation; the exact Schwarzschild expression is Eq.~\eqref{eq:lapse}.
+
+For integer $n\ge1$, the magnitude of the coefficient of $x^n$ in the nonconstant terms of Eq.~\eqref{eq:lapse-x-series} is
+\begin{equation}
+  a_n=\frac{\binom{2n}{n}}{4^n(2n-1)}.
+  \label{eq:lapse-coefficients}
+\end{equation}
+Every correction to the lapse is negative for $x>0$. This does not mean that a local clock is mechanically slowed or malfunctioning; it states that its proper-time interval per unit reference time is smaller than that of the reference clock.
+
+\section{Clock rate, reciprocal rate, and logarithmic depth}
+
+The reciprocal of the lapse is
+\begin{equation}
+  \delta\tau_{\mathrm{grav}}(r)\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}
+  =\frac{1}{\alpha(r)}
+  =\left(1-x\right)^{-1/2}.
+  \label{eq:reciprocal-rate}
+\end{equation}
+Here, the symbol $\delta\tau_{\mathrm{grav}}$ denotes the dimensionless ratio of reference-time increment to local proper-time increment; despite its symbol, it is neither an elapsed proper-time interval nor the reciprocal of a proper-time reading. It is not a material density, an index of refraction, or a local invariant.
+
+Its expansion is
+\begin{equation}
+  \delta\tau_{\mathrm{grav}}
+  =1+\frac{x}{2}+\frac{3x^2}{8}+\frac{5x^3}{16}
+    +\frac{35x^4}{128}+\cdots
+  =1+u+\frac{3}{2}u^2+\frac{5}{2}u^3
+    +\frac{35}{8}u^4+\cdots.
+  \label{eq:reciprocal-series}
+\end{equation}
+The exact identity is
+\begin{equation}
+  \boxed{\alpha \delta\tau_{\mathrm{grav}}=1.}
+  \label{eq:reciprocal-identity}
+\end{equation}
+Consequently, the clock-rate reduction $1-\alpha$ and the reciprocal-rate excess $\delta\tau_{\mathrm{grav}}-1$ agree at first order but not exactly:
+\begin{align}
+  1-\alpha
+  &=u+\frac{1}{2}u^2+\frac{1}{2}u^3+\frac{5}{8}u^4+\cdots,
+  \label{eq:rate-reduction}\\
+  \delta\tau_{\mathrm{grav}}-1
+  &=u+\frac{3}{2}u^2+\frac{5}{2}u^3+\frac{35}{8}u^4+\cdots.
+  \label{eq:reciprocal-excess}\\
+  \psi
+  &=u+u^2+O(u^3).
+  \label{eq:log-depth-second-order}
+\end{align}
+Here $\psi=-\ln\alpha$ is the logarithmic depth defined below. The three quantities agree at first order but differ at second order; using one as a finite-field substitute for another discards different terms.
+
+A third useful quantity is the logarithmic clock potential, or depth,
+\begin{equation}
+  \psi(r)\equiv\ln \delta\tau_{\mathrm{grav}}(r)=-\ln\alpha(r)
+  =-\frac{1}{2}\ln(1-x).
+  \label{eq:log-depth}
+\end{equation}
+For $|x|<1$, its series is
+\begin{equation}
+  \psi
+  =\frac{x}{2}+\frac{x^2}{4}+\frac{x^3}{6}+\frac{x^4}{8}+\cdots
+  =u+u^2+\frac{4}{3}u^3+2u^4+\cdots.
+  \label{eq:log-depth-series}
+\end{equation}
+Unlike $1-\alpha$ or $\delta\tau_{\mathrm{grav}}-1$, the logarithm adds exactly across successive static comparisons:
+\begin{equation}
+  \psi_2-\psi_1
+  =\ln\!\left(\frac{\delta\tau_{\mathrm{grav},2}}{\delta\tau_{\mathrm{grav},1}}\right)
+  =\ln\!\left(\frac{\alpha_1}{\alpha_2}\right).
+  \label{eq:additive-log}
+\end{equation}
+In Schwarzschild spacetime, the proper radial derivative of the logarithmic lapse also gives the acceleration required to remain static:
+\begin{equation}
+  a_{\mathrm{hold}}
+  =c^2 D_{\hat r}\ln\alpha
+  =-c^2D_{\hat r}\psi,
+  \label{eq:log-gradient-acceleration}
+\end{equation}
+where $\mathrm{d}L=\mathrm{d}r/\alpha$ is proper radial distance and $D_{\hat r}$ denotes differentiation per unit $L$ along the outward radial direction. This is a relation for a supported static observer, not a claim that a clock-rate ratio is a new force field.
+
+\section{The escape-speed correspondence}
+
+The lapse has a useful exact relation to radial free fall. A particle dropped from rest at infinity has conserved energy per unit rest energy equal to one. At radius $r$, its local Lorentz factor as measured by a static observer, $\gamma_{\mathrm{loc}}$, satisfies \cite{TaylorWheeler}
+\begin{equation}
+  \alpha(r)\gamma_{\mathrm{loc}}=1.
+  \label{eq:freefall-energy}
+\end{equation}
+It follows that
+\begin{equation}
+  \gamma_{\mathrm{loc}}=\delta\tau_{\mathrm{grav}},
+  \qquad
+  \frac{v_{\mathrm{loc}}^2}{c^2}
+  =1-\frac{1}{\gamma_{\mathrm{loc}}^2}
+  =1-\alpha^2
+  =\frac{r_s}{r}
+  =\frac{2GM}{rc^2}.
+  \label{eq:freefall-speed}
+\end{equation}
+Therefore the local speed of this particular infalling particle is
+\begin{equation}
+  v_{\mathrm{loc}}=\sqrt{\frac{2GM}{r}}.
+  \label{eq:escape-speed}
+\end{equation}
+This has the same numerical form as the Newtonian escape speed and is exact for radial fall from rest at infinity when the speed is measured by a static observer in Schwarzschild spacetime. Equations~\eqref{eq:freefall-energy}--\eqref{eq:escape-speed} compare two different worldlines: the held clock and the freely falling particle. They do not say that the held clock itself moves at $v_{\mathrm{loc}}$.
+
+At $r=2r_s$, for example,
+\begin{equation}
+  \alpha=\frac{1}{\sqrt{2}},
+  \qquad \delta\tau_{\mathrm{grav}}=\sqrt{2},
+  \qquad v_{\mathrm{loc}}=\frac{c}{\sqrt{2}}.
+  \label{eq:two-rs-example}
+\end{equation}
+The static observer at that radius measures the falling particle's local speed; a static observer cannot exist at $r=r_s$ itself.
+
+\section{Examples: Earth and strong compactness}
+
+For an idealized Earth model, take $GM=3.986004418\times10^{14}\ \mathrm{m^3\,s^{-2}}$, $R=6.371\times10^6\ \mathrm{m}$, and $c=299\,792\,458\ \mathrm{m\,s^{-1}}$ \cite{IERS}. For a clock held at $r=R$ with the reference at infinity,
+\begin{equation}
+  \begin{aligned}
+    u&=\frac{GM}{Rc^2}\simeq6.9613\times10^{-10},\\
+    \alpha(R)&\simeq0.99999999930387,\\
+    \delta\tau_{\mathrm{grav}}(R)&\simeq1.00000000069613.
+  \end{aligned}
+  \label{eq:earth-values}
+\end{equation}
+For a comparison defined by common coordinate-time endpoints separated by $\Delta t=86\,400\ \mathrm{s}$, with $t$ normalized at infinity, the idealized surface clock accumulates
+\begin{equation}
+  \Delta\tau_{\mathrm{surface}}=\alpha(R)\Delta t,
+  \qquad
+  \Delta t-\Delta\tau_{\mathrm{surface}}\simeq60.1\ \mathrm{\mu s}.
+  \label{eq:earth-day}
+\end{equation}
+This is an elapsed-time difference between the surface clock and the reference under the stated endpoint convention; it is not a one-day error in the surface clock. The calculation treats Earth as spherical and nonrotating, excludes other bodies, and uses a Schwarzschild exterior. It is not a model of a real geoid-to-satellite comparison.
+
+The exact dimensionless rates at a few Schwarzschild radii are shown in Table~\ref{tab:landmarks}. The last row denotes a limit from outside, not a static clock on the horizon.
+\begin{table}[ht]
+  \centering
+  \caption{Static-clock lapse and reciprocal rate, with the local speed of a particle falling from rest at infinity.}
+  \label{tab:landmarks}
+  \begin{tabular}{ccccc}
+    \toprule
+    $r/r_s$ & $x=r_s/r$ & $\alpha=\mathrm{d}\tau/\mathrm{d}t$ & $\delta\tau_{\mathrm{grav}}=1/\alpha$ & $v_{\mathrm{loc}}/c$ \\
+    \midrule
+    $3$ & $1/3$ & $0.8165$ & $1.2247$ & $0.5774$ \\
+    $2$ & $1/2$ & $0.7071$ & $1.4142$ & $0.7071$ \\
+    $1.5$ & $2/3$ & $0.5774$ & $1.7321$ & $0.8165$ \\
+    $1$ & $1$ & $0$ (limit) & $\infty$ (limit) & $1$ (limit) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Clock comparison and gravitational redshift}
+
+For stationary clocks at radii $r_1$ and $r_2$, their proper-time rates relative to the same time at infinity obey the exact ratio
+\begin{equation}
+  \frac{(\mathrm{d}\tau/\mathrm{d}t)_2}
+       {(\mathrm{d}\tau/\mathrm{d}t)_1}
+  =\frac{\alpha(r_2)}{\alpha(r_1)}.
+  \label{eq:clock-comparison}
+\end{equation}
+This clock-rate comparison should not be confused with the frequency shift of a photon exchanged between the clocks. In a static spacetime, the photon frequency measured locally at radius $r$ is inversely proportional to $\alpha(r)$. A photon emitted at $r_1$ and received at $r_2$ therefore satisfies
+\begin{equation}
+  \frac{\nu_{\mathrm{received},2}}
+       {\nu_{\mathrm{emitted},1}}
+  =\frac{\alpha(r_1)}{\alpha(r_2)}.
+  \label{eq:photon-redshift}
+\end{equation}
+The ratios are reciprocal. In the weak field, the clock-rate ratio is approximately $1+(\Phi_2-\Phi_1)/c^2$, whereas the photon frequency ratio is approximately $1+(\Phi_1-\Phi_2)/c^2$. Thus a clock higher in the field runs faster relative to the common reference, while a photon climbing to that clock is received at a lower frequency.
+
+Near Earth's surface, the magnitude of the photon redshift across height $h$ is $gh/c^2$. For the approximately $22.5\ \mathrm{m}$ height of the Harvard Jefferson tower, this is about $2.46\times10^{-15}$, the scale tested by Pound and Rebka using the M\"ossbauer effect \cite{PoundRebka}. The experiment concerns a relative photon-frequency shift; it is not a direct reading of an absolute local clock rate.
+
+\section{Convergence and the horizon limit}
+
+The binomial series for $\alpha=(1-x)^{1/2}$ has radius of convergence one and converges for the entire physical static domain $0\le x<1$. Its coefficients satisfy
+\begin{equation}
+  a_n=\frac{\binom{2n}{n}}{4^n(2n-1)}
+  \sim\frac{1}{2\sqrt{\pi}\,n^{3/2}}
+  \qquad (n\to\infty).
+  \label{eq:root-asymptotic}
+\end{equation}
+The lapse series therefore also converges absolutely at the mathematical endpoint $x=1$, where its sum is zero. The reciprocal series has coefficients
+\begin{equation}
+  b_n=\frac{\binom{2n}{n}}{4^n}
+  \sim\frac{1}{\sqrt{\pi n}},
+  \label{eq:inverse-asymptotic}
+\end{equation}
+so the series for $\delta\tau_{\mathrm{grav}}$ diverges at $x=1$. The logarithmic series diverges there as well. At the horizon, however, these endpoint statements concern functions and series only: the static worldline ceases to exist, and Eq.~\eqref{eq:holding-acceleration} shows that the required support acceleration becomes unbounded.
+
+Within the exterior domain, the closed forms in Eqs.~\eqref{eq:lapse} and \eqref{eq:reciprocal-rate} remain exact. A truncated weak-field series is most effective for $x\ll1$; close to the horizon the exact expression is preferable, and the inverse and logarithmic quantities become large. The horizon is a boundary of the static coordinate family, not a place where a real hovering clock can be placed.
+
+\section{Conclusion}
+
+The rate of a clock held static in the Schwarzschild exterior is the lapse $\alpha=\sqrt{1-r_s/r}$ relative to time normalized at infinity. The reciprocal rate $\delta\tau_{\mathrm{grav}}=1/\alpha$ is the exact inverse of the lapse; its excess above unity agrees with the lapse reduction only at first order. The logarithmic clock potential $\psi=\ln \delta\tau_{\mathrm{grav}}$ packages endpoint comparisons additively and its spatial gradient is related to the acceleration required to hold position.
+
+The escape-speed correspondence is exact for a separate radial geodesic dropped from rest at infinity, when its speed is measured locally by a static observer. The idealized Earth calculation and the gravitational-redshift comparison show how the lapse connects to measurable rate and frequency ratios while preserving the distinction between local proper time, a chosen reference time, and photon frequency. The Taylor series describe these standard general-relativistic relationships; they do not introduce a new material density or alter the local behavior of clocks.
+
+\clearpage
+\begin{thebibliography}{99}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{Tong}
+D. Tong,
+\emph{General Relativity}, lecture notes, Sections 1.2.5 and 1.3, Department of Applied Mathematics and Theoretical Physics, University of Cambridge,
+\url{https://www.damtp.cam.ac.uk/user/tong/gr.html}.
+
+\bibitem{TaylorWheeler}
+E. F. Taylor and J. A. Wheeler,
+\emph{Exploring Black Holes: Introduction to General Relativity}
+(Addison Wesley Longman, San Francisco, 2000).
+
+\bibitem{DLMF}
+F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain, eds.,
+\emph{NIST Digital Library of Mathematical Functions}, Section 4.6, Eq. 4.6.7, National Institute of Standards and Technology,
+\url{https://dlmf.nist.gov/4.6}.
+
+\bibitem{PoundRebka}
+R. V. Pound and G. A. Rebka, Jr.,
+``Apparent weight of photons,''
+\emph{Physical Review Letters} \textbf{4}, 337--341 (1960),
+\href{https://doi.org/10.1103/PhysRevLett.4.337}{doi:\nolinkurl{10.1103/PhysRevLett.4.337}}.
+
+\bibitem{IERS}
+G. Petit and B. Luzum, eds.,
+\emph{IERS Conventions (2010)}, IERS Technical Note 36, Frankfurt am Main (2010).
+
+\end{thebibliography}
+
+\end{document}
