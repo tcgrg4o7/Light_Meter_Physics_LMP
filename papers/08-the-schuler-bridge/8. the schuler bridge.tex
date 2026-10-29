@@ -1,0 +1,235 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Schuler Bridge:\\
+Navigation Timescale, Light-Time, and the First-Order Clock Rate}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In an ideal spherical-Earth model, the Schuler angular frequency is set by the ratio of surface gravity to Earth radius. Expressing that radius as its vacuum light-time produces two algebraic identities: one gives the acceleration scale $g/c$, and a second gives the dimensionless compactness $gR/c^2$. When $g$ is the Newtonian surface acceleration $GM/R^2$, this compactness is the leading weak-field excess of the inverse static-clock rate $\delta\tau\equiv\mathrm{d}t/\mathrm{d}\tau$ relative to time at infinity. A consistent Earth example yields a Schuler period of about 84.35 minutes and a first-order surface-clock lag of about 60.1 microseconds per reference day. The connection is dimensional and algebraic; it does not mean that navigation dynamics cause gravitational time dilation, or that any physical signal crosses the Earth. The Schuler model is Newtonian, while the clock-rate comparison is retained only to first order in $GM/(Rc^2)$. The paper also distinguishes the cycle frequency from angular frequency and the ideal-sphere acceleration from the conventional standard-gravity value.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Schuler tuning, inertial navigation, gravitational time dilation, clock rate, weak field
+
+\section{Introduction}
+
+Schuler tuning gives a characteristic oscillation period for a simplified inertial-navigation error mode near a spherical Earth. The same scale can be represented using the Earth radius as a vacuum light-time. Combining the navigation frequency with that time converts the length scale into a dimensionless quantity that also appears in the weak-field comparison between a static surface clock and a clock at infinity.
+
+The purpose of this manuscript is to show that bridge with explicit units and a controlled approximation. The navigation result is the standard Schuler relation, not a new dynamical law \cite{Schuler1923,WhittakerCrassidis}. The clock comparison begins with the static Schwarzschild lapse \cite{Schwarzschild}, but only its first-order weak-field limit is used in the bridge. The algebra does not establish a causal connection between inertial navigation and gravity; it shows that familiar scales can be rearranged into the same dimensionless ratio.
+
+The model is an ideal, spherical, nonrotating Earth with mass $M$ and radius $R$. The reference time $t$ is normalized to proper time at infinity, and $\tau$ is the proper time of a static clock at the surface. Earth's rotation, flattening, local gravity variation, other bodies, and the geoid are excluded. These assumptions make the result a transparent model comparison rather than a prediction for a real clock-transfer system.
+
+\section{Schuler frequency and the ideal Earth}
+
+Let $g_{\mathrm{N}}$ denote the Newtonian surface-gravity magnitude of the ideal sphere:
+\begin{equation}
+  g_{\mathrm{N}}\equiv\frac{GM}{R^2}.
+  \label{eq:newtonian-g}
+\end{equation}
+The Schuler mode of a simplified, unforced, linearized inertial-navigation model has angular frequency
+\begin{equation}
+  \omega_{\mathrm{S}}^2=\frac{g_{\mathrm{N}}}{R},
+  \qquad
+  \ddot{q}+\omega_{\mathrm{S}}^2q=0,
+  \label{eq:schuler-mode}
+\end{equation}
+where $q$ denotes the small error coordinate of that mode. This is not a claim that every navigation error follows a single sinusoid; sensor errors, damping, rotation, and other model terms can alter the complete error dynamics. The same frequency is often represented by an equivalent pendulum of length $R$, whose ideal period is $2\pi\sqrt{R/g_{\mathrm{N}}}$. No physical Earth-length pendulum is implied.
+
+Navigation papers commonly state the Schuler frequency in cycles per second. Define
+\begin{equation}
+  f_{\mathrm{S}}\equiv\frac{\omega_{\mathrm{S}}}{2\pi}
+  =\frac{1}{2\pi}\sqrt{\frac{g_{\mathrm{N}}}{R}},
+  \qquad
+  T_{\mathrm{S}}\equiv\frac{1}{f_{\mathrm{S}}}
+  =2\pi\sqrt{\frac{R}{g_{\mathrm{N}}}}.
+  \label{eq:schuler-frequency}
+\end{equation}
+The factor of $2\pi$ distinguishes a cyclic frequency from an angular frequency measured in radians per second. Retaining that distinction is essential when the frequency is squared below.
+
+\section{Earth radius expressed as a light-time}
+
+Define the radius light-time
+\begin{equation}
+  t_R\equiv\frac{R}{c},
+  \label{eq:radius-light-time}
+\end{equation}
+where $c$ is the vacuum speed of light. This is a unit conversion from length to time. It does not describe a photon traveling through the Earth or a measurement made along an interior path. The value of $c$ is exact in the International System of Units \cite{BIPM}.
+
+\section{The algebraic bridge}
+
+Substituting Eqs.~\eqref{eq:schuler-frequency} and \eqref{eq:radius-light-time} gives
+\begin{align}
+  f_{\mathrm{S}}^2t_R
+  &=\frac{1}{4\pi^2}\frac{g_{\mathrm{N}}}{R}\frac{R}{c}
+   =\frac{g_{\mathrm{N}}}{4\pi^2c},
+  \label{eq:frequency-light-time}\\
+  4\pi^2 f_{\mathrm{S}}^2t_R
+  &=\frac{g_{\mathrm{N}}}{c}.
+  \label{eq:acceleration-frequency-scale}
+\end{align}
+The first product has units of inverse time. Multiplication by $4\pi^2$ recovers the acceleration-over-light-speed scale $g_{\mathrm{N}}/c$. In angular-frequency notation the same identity is shorter:
+\begin{equation}
+  \omega_{\mathrm{S}}^2t_R
+  =\frac{g_{\mathrm{N}}}{c}.
+  \label{eq:angular-frequency-scale}
+\end{equation}
+Thus $g_{\mathrm{N}}/c$ is a derived inverse-time scale; it is not an oscillation frequency of the navigation system.
+
+Multiplying once more by the radius light-time produces a dimensionless result:
+\begin{equation}
+  4\pi^2 f_{\mathrm{S}}^2t_R^2
+  =\frac{g_{\mathrm{N}}R}{c^2}
+  =\frac{GM}{Rc^2}
+  \equiv x_R.
+  \label{eq:dimensionless-bridge}
+\end{equation}
+Here $x_R$ is the compactness of the idealized spherical source. Equations~\eqref{eq:frequency-light-time}--\eqref{eq:dimensionless-bridge} are exact algebraic identities for the definitions in this Newtonian model. They do not by themselves describe a relativistic correction to the Schuler dynamics.
+
+\section{Connection to a first-order static clock rate}
+
+For a static clock at radius $R$ outside a spherical source, the exact Schwarzschild lapse is
+\begin{equation}
+  \alpha(R)=\frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =\sqrt{1-\frac{2GM}{Rc^2}}.
+  \label{eq:schwarzschild-lapse}
+\end{equation}
+The inverse rate and its excess over unity are
+\begin{equation}
+  \delta\tau(R)\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}
+  =\frac{1}{\alpha(R)},
+  \qquad
+  \epsilon_{\mathrm{grav}}(R)\equiv\delta\tau(R)-1.
+  \label{eq:inverse-rate}
+\end{equation}
+The symbol $\delta\tau$ denotes a dimensionless rate ratio, not an elapsed proper-time interval. For $x_R\ll1$, the first-order approximation is
+\begin{equation}
+  \epsilon_{\mathrm{grav}}(R)
+  =\frac{1}{\sqrt{1-2x_R}}-1
+  \simeq x_R
+  =\frac{g_{\mathrm{N}}R}{c^2}
+  =4\pi^2 f_{\mathrm{S}}^2t_R^2.
+  \label{eq:first-order-clock-bridge}
+\end{equation}
+Only the final comparison with $\epsilon_{\mathrm{grav}}$ is approximate. The preceding relation between the Schuler definitions and $x_R$ is the algebraic identity in Eq.~\eqref{eq:dimensionless-bridge}. Higher-order clock-rate terms are outside the scope of this first-order treatment.
+
+The shared ratio depends on the specified static reference. The surface clock does not locally register an absolute deficit; $\epsilon_{\mathrm{grav}}$ compares its rate with $t$ normalized at infinity. The bridge therefore relates a navigation timescale and a chosen clock-rate comparison without turning either into a new physical field.
+
+\section{Numerical illustration}
+
+For the series' ideal spherical-Earth reference set, take $GM=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$, set the spherical model radius $R=6.371\times10^6\ \mathrm{m}$, and use the exact SI value of $c$ \cite{JPL,Moritz,BIPM}. The model acceleration is derived from $GM/R^2$, rather than inserted as a separate standard-gravity value. Where a manuscript uses a different Earth radius or gravity convention, that choice should be stated explicitly. The resulting scales, rounded, are shown in Table~\ref{tab:scales}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Schuler, light-time, and first-order clock-rate scales for the chosen ideal Earth.}
+  \label{tab:scales}
+  \begin{tabular}{lc}
+    \toprule
+    Quantity & Value \\
+    \midrule
+    $g_{\mathrm{N}}=GM/R^2$ & $9.8203\ \mathrm{m\,s^{-2}}$ \\
+    Schuler frequency $f_{\mathrm{S}}$ & $197.6\ \mathrm{\mu Hz}$ \\
+    Schuler period $T_{\mathrm{S}}$ & $84.35\ \mathrm{min}$ \\
+    Radius light-time $t_R=R/c$ & $21.251\ \mathrm{ms}$ \\
+    $f_{\mathrm{S}}^2t_R$ & $0.8297\ \mathrm{nHz}$ \\
+    $g_{\mathrm{N}}/c$ & $32.76\ \mathrm{nHz}$ \\
+    $x_R=GM/(Rc^2)$ & $0.6961\ \mathrm{ppb}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The first-order clock comparison can also be expressed as an accumulated time difference. Over $86\,400\ \mathrm{s}$ of reference time at infinity, the static surface clock accumulates approximately
+\begin{equation}
+  \Delta t-\Delta\tau
+  \simeq x_R\,(86\,400\ \mathrm{s})
+  \simeq60.1\ \mathrm{\mu s}.
+  \label{eq:daily-lag}
+\end{equation}
+Over one Schuler period the corresponding first-order difference is about $3.52\ \mathrm{\mu s}$. These are comparisons of elapsed intervals for the idealized reference and surface clock, not errors in the operation of either clock.
+
+The standard acceleration of gravity, $g_{\mathrm{n}}=9.80665\ \mathrm{m\,s^{-2}}$, is a conventional reference value \cite{CGPM1901}. Substituting it for $g_{\mathrm{N}}$ while keeping the same $R$ gives approximately $0.695\ \mathrm{ppb}$ for $g_{\mathrm{n}}R/c^2$, rather than the $0.696\ \mathrm{ppb}$ obtained from $GM/(Rc^2)$ above. The values differ because they represent different choices of input; $g_{\mathrm{n}}$ is not the Newtonian field of this nonrotating spherical mass model. The two should not be mixed within one calculation.
+
+\section{Interpretation and limits}
+
+The Schuler frequency is a navigation-system error-mode scale. The radius light-time is a way to express a length in time units. Their products yield $g_{\mathrm{N}}/c$ and $g_{\mathrm{N}}R/c^2$ by algebra. The latter happens to equal the leading weak-field inverse-rate excess for the static surface clock when the same spherical mass model supplies $g_{\mathrm{N}}$. This correspondence is not evidence that the Schuler oscillation drives, measures, or causes gravitational time dilation.
+
+The numerical example assumes a Newtonian Schuler model and a first-order clock-rate comparison in an ideal, nonrotating spherical exterior. It is not a model of a real terrestrial clock network. Earth's rotation and nonspherical gravity field, altitude, reference-frame conventions, and external sources must be included for practical geodetic or navigation applications. Nor does the frequency-scale product $f_{\mathrm{S}}^2t_R$ imply an independently observable oscillation at the nanohertz value.
+
+\section{Conclusion}
+
+For the ideal spherical Earth, $f_{\mathrm{S}}=(2\pi)^{-1}\sqrt{g_{\mathrm{N}}/R}$ and $t_R=R/c$ give the identities $4\pi^2f_{\mathrm{S}}^2t_R=g_{\mathrm{N}}/c$ and $4\pi^2f_{\mathrm{S}}^2t_R^2=g_{\mathrm{N}}R/c^2$. With $g_{\mathrm{N}}=GM/R^2$, the second quantity is the compactness $GM/(Rc^2)$ and equals the first-order excess of the static inverse clock-rate ratio relative to infinity. Keeping the $2\pi$ convention and the approximation order explicit makes the bridge useful without overstating its physical meaning: it is an algebraic connection among established scales, not a new law or a causal mechanism.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Schuler1923}
+M. Schuler,
+``Die St\"orung von Pendel- und Kreiselapparaten durch die Beschleunigung des Fahrzeuges,''
+\emph{Physikalische Zeitschrift} \textbf{24}(16), 344--350 (1923).
+
+\bibitem{WhittakerCrassidis}
+M. P. Whittaker and J. L. Crassidis,
+``Linearized Analysis of Inertial Navigation Employing Common Frame Error Representations,''
+2018 AIAA Guidance, Navigation, and Control Conference,
+AIAA Paper 2018-1600,
+\href{https://doi.org/10.2514/6.2018-1600}{doi:\nolinkurl{10.2514/6.2018-1600}}.
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html}, and
+\emph{Planetary Physical Parameters},
+\url{https://ssd.jpl.nasa.gov/planets/phys_par.html},
+accessed October 27, 2026.
+
+\bibitem{Moritz}
+H. Moritz,
+``Geodetic Reference System 1980,''
+\emph{Journal of Geodesy} \textbf{74}, 128--133 (2000),
+\href{https://doi.org/10.1007/s001900050278}{doi:\nolinkurl{10.1007/s001900050278}}.
+
+\bibitem{BIPM}
+Bureau International des Poids et Mesures,
+\emph{The International System of Units (SI)}, 9th ed. (2019), updated 2026,
+\href{https://doi.org/10.59161/AUEZ1291}{doi:\nolinkurl{10.59161/AUEZ1291}}.
+
+\bibitem{CGPM1901}
+Conf\'erence G\'en\'erale des Poids et Mesures,
+Declaration 2 of the 3rd CGPM (1901), ``Conventional value of $g_{\mathrm{n}}$,''
+\href{https://doi.org/10.59161/CGPM1901DECL2E}{doi:\nolinkurl{10.59161/CGPM1901DECL2E}}.
+
+\end{thebibliography}
+
+\end{document}
