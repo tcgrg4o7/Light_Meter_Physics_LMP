@@ -1,0 +1,300 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+
+\title{Relativistic Energy as a Function of Momentum:\\
+Low- and High-Momentum Expansions}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The exact relativistic energy--momentum relation contains both rest energy and momentum in a single square root. This paper develops two complementary binomial expansions of that relation: a low-momentum series whose leading correction is the Newtonian kinetic energy, and a high-momentum series whose leading term is $pc$. It derives the coefficients, compares the momentum and speed expansions, and identifies precisely where each infinite series converges. For a massive particle, the low-momentum expansion converges for $0\leq p\leq mc$, while the inverse-momentum expansion converges for $p\geq mc$; at the shared endpoint both sums reproduce the exact energy. The corresponding boundary speed, $c/\sqrt{2}$, is a limit of these momentum-centered series, not a new physical speed limit. Throughout, the rest mass $m$ is fixed and energy and momentum refer to one inertial frame.
+\end{abstract}
+
+\noindent\textbf{Keywords:} special relativity, energy--momentum relation, binomial series, kinetic energy, convergence
+
+\section{Introduction}
+
+For a free particle of invariant rest mass $m$, relativistic energy and momentum are connected by
+\begin{equation}
+  E^2=p^2c^2+m^2c^4,
+  \label{eq:energy-momentum}
+\end{equation}
+where $p$ is the magnitude of the particle's momentum and $c$ is the speed of light in vacuum. The energy and momentum in Eq.~\eqref{eq:energy-momentum} are measured in the same inertial frame. Equation~\eqref{eq:energy-momentum} is the starting point for this analysis; the aim is to study its expansions, not to rederive special relativity from its postulates. This paper makes the assumptions, endpoint behavior, and distinction between convergence and finite-truncation accuracy explicit. The standard four-momentum treatment and low-speed limit are reviewed, for example, in the MIT 8.033 lecture notes \cite{Hughes2024}.
+
+A Taylor expansion is useful only after its dimensionless variable has been chosen. Factoring out the rest energy makes the ratio $p/(mc)$ the natural parameter at low momentum. Factoring out $pc$ instead makes $mc/p$ the natural parameter at high momentum. The two choices yield different-looking series for the same exact function. The generalized binomial expansion supplies their coefficients \cite{DLMF}.
+
+The paper makes three distinctions explicit. First, total energy includes the rest energy $mc^2$, while kinetic energy does not. Second, the momentum expansion and speed expansion organize corrections differently, so their coefficients need not match term by term. Third, convergence of an infinite series is not the same as accuracy of a short truncation.
+
+\section{Exact energy and notation}
+
+Taking the positive root of Eq.~\eqref{eq:energy-momentum} gives the exact total energy
+\begin{equation}
+  E(p)=\sqrt{p^2c^2+m^2c^4}.
+  \label{eq:exact-energy}
+\end{equation}
+For $m>0$, define the rest energy and kinetic energy by
+\begin{equation}
+  E_0\equiv mc^2,
+  \qquad
+  K\equiv E-E_0.
+  \label{eq:kinetic-definitions}
+\end{equation}
+The mass $m$ is the invariant (rest) mass, not a momentum-dependent mass. The symbols $E$, $p$, and $K$ refer to the selected inertial frame, whereas $m$ and $E_0$ are invariant under changes of inertial frame.
+
+Introduce the nonnegative dimensionless momentum ratio
+\begin{equation}
+  q\equiv\frac{p}{mc}.
+  \label{eq:q-definition}
+\end{equation}
+Then Eq.~\eqref{eq:exact-energy} becomes
+\begin{equation}
+  \frac{E}{E_0}=\sqrt{1+q^2}.
+  \label{eq:dimensionless-energy}
+\end{equation}
+This form exposes the small parameter for the low-momentum expansion.
+
+\section{Low-momentum expansion}
+
+For $q<1$, apply the generalized binomial series to $(1+x)^{1/2}$ with $x=q^2$. The first coefficients follow from
+\begin{equation}
+  (1+x)^a=1+ax+\frac{a(a-1)}{2!}x^2
+  +\frac{a(a-1)(a-2)}{3!}x^3+\cdots,
+  \qquad |x|<1,
+  \label{eq:binomial-series}
+\end{equation}
+with $a=1/2$. Thus
+\begin{equation}
+  \sqrt{1+x}
+  =1+\frac{x}{2}-\frac{x^2}{8}+\frac{x^3}{16}
+   -\frac{5x^4}{128}+\frac{7x^5}{256}-\cdots.
+  \label{eq:sqrt-series}
+\end{equation}
+Substituting $x=q^2$ and restoring units yields
+\begin{align}
+  E
+  &=mc^2\left(1+\frac{q^2}{2}-\frac{q^4}{8}
+      +\frac{q^6}{16}-\frac{5q^8}{128}+\cdots\right) \notag\\
+  &=mc^2+\frac{p^2}{2m}-\frac{p^4}{8m^3c^2}
+      +\frac{p^6}{16m^5c^4}
+      -\frac{5p^8}{128m^7c^6}+\cdots.
+  \label{eq:low-momentum-energy}
+\end{align}
+Every term has dimensions of energy. The constant term is rest energy; the first momentum-dependent term is precisely the Newtonian kinetic-energy expression at fixed momentum.
+
+Subtracting the rest energy gives the low-momentum kinetic-energy series:
+\begin{equation}
+  K=\frac{p^2}{2m}-\frac{p^4}{8m^3c^2}
+      +\frac{p^6}{16m^5c^4}-\cdots.
+  \label{eq:low-momentum-kinetic}
+\end{equation}
+The first correction to $p^2/(2m)$ is negative. This sign is consistent with an exact comparison. Rationalizing Eq.~\eqref{eq:kinetic-definitions} gives
+\begin{equation}
+  K=\sqrt{p^2c^2+m^2c^4}-mc^2
+   =\frac{p^2c^2}{E+mc^2}.
+  \label{eq:rationalized-kinetic}
+\end{equation}
+For $p>0$, Eq.~\eqref{eq:dimensionless-energy} implies
+$E+mc^2>2mc^2$, and consequently
+\begin{equation}
+  0<K<\frac{p^2}{2m}\qquad (p>0).
+  \label{eq:newtonian-upper-bound}
+\end{equation}
+Thus, at a fixed nonzero momentum, the Newtonian expression overestimates the exact relativistic kinetic energy. Equality holds at $p=0$.
+
+The coefficients can be written compactly. For integer $n\geq 1$, the coefficient of $q^{2n}$ in $\sqrt{1+q^2}$ is
+\begin{equation}
+  {\binom{1/2}{n}}
+  =(-1)^{n-1}\frac{(2n-3)!!}{2^n n!},
+  \label{eq:low-coefficients}
+\end{equation}
+where $(-1)!!\equiv1$. The sign alternates after the first momentum term. In physical units, the corresponding term in $E$ is proportional to $p^{2n}/(m^{2n-1}c^{2n-2})$.
+
+\section{Why the speed expansion has different signs}
+
+The momentum expansion is not the only useful expansion of the same energy. For speed $v$ in the chosen inertial frame, let
+\begin{equation}
+  \beta\equiv\frac{v}{c},
+  \qquad
+  \gamma\equiv\frac{1}{\sqrt{1-\beta^2}},
+  \qquad
+  p=\gamma mv.
+  \label{eq:speed-definitions}
+\end{equation}
+The exact total energy and kinetic energy are then
+\begin{equation}
+  E=\gamma mc^2,
+  \qquad
+  K=(\gamma-1)mc^2.
+  \label{eq:total-and-kinetic-energy}
+\end{equation}
+Expanding in $\beta^2$ gives
+\begin{align}
+  E&=mc^2\left(1+\frac{1}{2}\beta^2
+       +\frac{3}{8}\beta^4+\frac{5}{16}\beta^6
+       +\frac{35}{128}\beta^8+\cdots\right),
+  \label{eq:speed-energy-series}\\
+  K&=\frac{1}{2}mv^2+\frac{3}{8}\frac{mv^4}{c^2}
+       +\frac{5}{16}\frac{mv^6}{c^4}
+       +\frac{35}{128}\frac{mv^8}{c^6}+\cdots.
+  \label{eq:speed-kinetic-series}
+\end{align}
+The speed-series coefficients beyond rest energy are positive, whereas the momentum series in Eq.~\eqref{eq:low-momentum-energy} alternates. There is no contradiction: the series use different independent variables, related nonlinearly by $p=\gamma mv$.
+
+The first difference appears already at order $v^4$. Expanding relativistic momentum gives
+\begin{equation}
+  p=mv\left(1+\frac{1}{2}\frac{v^2}{c^2}+O\!\left(\frac{v^4}{c^4}\right)\right).
+  \label{eq:momentum-speed-expansion}
+\end{equation}
+Consequently,
+\begin{equation}
+  \frac{p^2}{2m}
+  =\frac{1}{2}mv^2+\frac{1}{2}\frac{mv^4}{c^2}
+   +O\!\left(\frac{mv^6}{c^4}\right),
+  \qquad
+  -\frac{p^4}{8m^3c^2}
+  =-\frac{1}{8}\frac{mv^4}{c^2}
+   +O\!\left(\frac{mv^6}{c^4}\right).
+  \label{eq:momentum-series-fourth-order-terms}
+\end{equation}
+Collecting the terms of order $v^4$ gives
+\begin{equation}
+  \left(\frac{1}{2}-\frac{1}{8}\right)\frac{mv^4}{c^2}
+  =\frac{3}{8}\frac{mv^4}{c^2},
+  \label{eq:fourth-order-momentum-correction}
+\end{equation}
+in agreement with Eq.~\eqref{eq:speed-kinetic-series}. Substituting only the leading approximation $p\approx mv$ into the momentum series would miss part of this fourth-order coefficient.
+
+\section{Convergence domains and the boundary}
+
+\subsection{Low-momentum series}
+
+The binomial series in Eq.~\eqref{eq:binomial-series} has radius of convergence one in $x$. Since $x=q^2\geq0$, the low-momentum series converges for $0\leq q<1$. It also converges at $q=1$: the magnitudes of the nonconstant coefficients in Eq.~\eqref{eq:low-coefficients} decrease asymptotically as $n^{-3/2}$, so the endpoint series is absolutely convergent. Its sum at the endpoint is the exact value $\sqrt{2}$. Therefore the full low-momentum expansion is valid for
+\begin{equation}
+  0\leq p\leq mc.
+  \label{eq:low-domain}
+\end{equation}
+For $p>mc$, the terms of this power series do not tend to zero, and the series diverges. The exact relation in Eq.~\eqref{eq:exact-energy}, of course, remains valid.
+
+\subsection{High-momentum expansion}
+
+When $p>0$, factor $pc$ rather than $mc^2$ from Eq.~\eqref{eq:exact-energy}:
+\begin{equation}
+  E=pc\sqrt{1+\left(\frac{mc}{p}\right)^2}.
+  \label{eq:high-factorization}
+\end{equation}
+Set $s=mc/p$. Applying the same binomial expansion gives
+\begin{align}
+  E
+  &=pc\left(1+\frac{s^2}{2}-\frac{s^4}{8}
+       +\frac{s^6}{16}-\frac{5s^8}{128}+\cdots\right) \notag\\
+  &=pc+\frac{m^2c^3}{2p}-\frac{m^4c^5}{8p^3}
+       +\frac{m^6c^7}{16p^5}-\frac{5m^8c^9}{128p^7}+\cdots.
+  \label{eq:high-momentum-series}
+\end{align}
+This expansion converges for $0<s\leq1$, or equivalently
+\begin{equation}
+  p\geq mc.
+  \label{eq:high-domain}
+\end{equation}
+At $p=mc$, both series converge absolutely and sum to the exact value $E=\sqrt{2}\,mc^2$. The coefficient test confirms the inclusive endpoint: both binomial series converge absolutely at unit argument to that shared value. For $p\gg mc$, a short high-momentum truncation is most useful; near the shared boundary it may require many terms for precision. The high-momentum series is undefined at $p=0$, where the exact energy and low-momentum expansion remain regular. The two series are complementary expansions of one exact relation using reciprocal dimensionless ratios.
+
+\subsection{Translating the boundary into speed}
+
+For a massive particle, use $p=\gamma mv$ and $\beta=v/c$ to write
+\begin{equation}
+  \frac{p}{mc}=\frac{\beta}{\sqrt{1-\beta^2}}.
+  \label{eq:p-beta}
+\end{equation}
+The low-momentum convergence condition $p\leq mc$ becomes
+\begin{align}
+  \frac{\beta^2}{1-\beta^2}&\leq1,
+  &\beta^2&\leq\frac{1}{2},
+  &v&\leq\frac{c}{\sqrt{2}}.
+  \label{eq:velocity-boundary}
+\end{align}
+At the shared boundary,
+\begin{equation}
+  p=mc,
+  \qquad
+  v=\frac{c}{\sqrt{2}}\approx0.7071c,
+  \qquad
+  \gamma=\sqrt{2},
+  \qquad
+  E=\sqrt{2}\,mc^2.
+  \label{eq:boundary-values}
+\end{equation}
+This value of $v$ is a boundary of convergence for the momentum-centered expansion expressed as a function of speed. It is not a physical speed limit: the exact relativistic formulas remain valid for every massive-particle speed $v<c$. Indeed, the speed expansion in Eq.~\eqref{eq:speed-energy-series} converges throughout the physical range $0\leq v<c$, even when the low-momentum series has left its convergence domain.
+
+\section{Accuracy of finite expansions}
+
+Convergence describes the infinite series; it does not guarantee that a short partial sum is accurate. For the low-momentum expansion, the natural requirement for a few terms to work well is $p\ll mc$. For the high-momentum expansion, it is $p\gg mc$. At the shared endpoint both infinite series converge to the exact energy, but a finite truncation is only an approximation.
+
+\begin{table}[ht]
+  \centering
+  \caption{Choice of expansion parameter for the exact energy. The endpoint is included in both domains.}
+  \label{tab:expansions}
+  \begin{tabular}{lll}
+    \toprule
+    Expansion & Convergence domain & Few terms most useful when \\
+    \midrule
+    Low momentum in $p/(mc)$ & $0\leq p\leq mc$ & $p\ll mc$ \\
+    High momentum in $mc/p$ & $p\geq mc$ & $p\gg mc$ \\
+    Speed in $v/c$ & $0\leq v<c$ & $v\ll c$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+For quantitative work outside these small-parameter regimes, use the exact energy--momentum relation rather than a short truncation.
+
+\section{Scope and limiting case}
+
+The discussion concerns a single free particle with fixed positive invariant mass and translational energy in one inertial frame. It does not include interactions, potential energy, radiation, or multi-particle binding energy. The expansions do not introduce discrete energy levels; their powers simply organize the terms of a smooth function.
+
+The formulas containing divisions by $m$ assume $m>0$. At $m=0$, Eq.~\eqref{eq:energy-momentum} gives the exact massless relation $E=pc$. Equivalently, at fixed $p>0$, the high-momentum expansion tends smoothly to $E=pc$ as $m\to0$, with its mass-dependent corrections vanishing. The low-momentum ratio $p/(mc)$ is undefined in this limit.
+
+\section{Conclusion}
+
+The exact relation $E=\sqrt{p^2c^2+m^2c^4}$ admits complementary expansions. Factoring out $mc^2$ yields a low-momentum series beginning with the rest energy and the Newtonian kinetic-energy term, followed by alternating relativistic corrections. Factoring out $pc$ yields a high-momentum series beginning with $pc$ and corrections in inverse powers of momentum.
+
+For $m>0$, the low-momentum series converges through $p=mc$, and the high-momentum series converges from $p=mc$ onward; both absolutely converge at the shared endpoint. The boundary corresponds to $v=c/\sqrt{2}$, a feature of these momentum expansions rather than a new limit on motion. Choosing the dimensionless ratio appropriate to the regime keeps the approximation transparent while leaving the exact energy--momentum relation unchanged.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{DLMF}
+F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain, eds.,
+\emph{NIST Digital Library of Mathematical Functions}, Section 4.6, Eq.~4.6.7, National Institute of Standards and Technology,
+\url{https://dlmf.nist.gov/4.6}.
+
+\bibitem{Hughes2024}
+S. A. Hughes,
+\emph{Introduction to Relativity and Spacetime Physics}, Fall 2024, MIT 8.033, Lecture 7: ``4-Momentum and 4-Velocity,'' Massachusetts Institute of Technology OpenCourseWare,
+\href{https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/pages/lecture-notes/}{lecture notes}.
+
+\end{thebibliography}
+
+\end{document}
