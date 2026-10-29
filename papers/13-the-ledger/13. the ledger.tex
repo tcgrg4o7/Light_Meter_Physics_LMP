@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Ledger:\\
+Gravity, Motion, and First-Order Clock Rates}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+A clock's rate in a weak gravitational field depends, to leading order, on both Newtonian potential and motion relative to a specified coordinate frame. With $\delta\tau\equiv\mathrm{d}t/\mathrm{d}\tau$, the inverse-rate excess is $\delta\tau-1\simeq-\Phi/c^2+v^2/(2c^2)$. This paper treats that expression as a ledger: source potentials are summed once, and the clock's kinematic term is added using the same reference time and frame. For an ideal circular Earth orbit around the Sun, the solar potential and orbital-speed terms combine to $3GM_{\odot}/(2ac^2)$; adding the potential at a nonrotating spherical Earth surface gives approximately $15.502$ parts per billion. This corresponds within the model to about $0.489$ s less proper time per Julian year than the chosen reference coordinate time, not to a direct comparison with a clock physically placed at infinity. The paper compares this estimate with the IAU time-scale rate constants, distinguishes global coordinate-rate bookkeeping from local clock and accelerometer measurements, and treats annual and Galactic/CMB entries as model- or frame-dependent extensions. The ledger is a first-order accounting identity, not a new physical field or an absolute measure of clock depth.
+\end{abstract}
+
+\noindent\textbf{Keywords:} gravitational time dilation, clock rates, coordinate time, orbital motion, relativistic time scales
+
+\section{Introduction}
+
+A clock does not report an absolute rate offset. It records proper time along its worldline. To compare that rate with another clock or a coordinate time, one must specify the reference worldline or time scale, the motion of the clock, and the gravitational model. In a weak field and at low speed, the leading contributions can be arranged as a compact rate ledger.
+
+This paper uses the dimensionless inverse rate
+\begin{equation}
+  \delta\tau\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau},
+  \qquad
+  \epsilon\equiv\delta\tau-1,
+  \label{eq:inverse-rate}
+\end{equation}
+where $\tau$ is proper time along the clock worldline and $t$ is a specified reference coordinate time. The label ``temporal-density ledger'' is project shorthand for this bookkeeping; neither $\delta\tau$ nor $\epsilon$ is a material density or an independent physical field.
+
+The main numerical example is an idealized, isolated Sun--Earth system. The reference potential is set to zero at infinity, the Earth follows a circular orbit at one astronomical unit, and the clock is supported at the surface of a spherical, nonrotating Earth. This model excludes Earth's rotation, eccentricity, other planets, the Moon, and the full geoid. These assumptions make the arithmetic transparent but do not turn the reference coordinate time into a physical clock at infinity.
+
+\section{The first-order rate ledger}
+
+In standard weak-field coordinates, retaining terms linear in $\Phi/c^2$ and $v^2/c^2$, the proper-time rate of a slowly moving clock is \cite{Einstein1905,Einstein1911}
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  \simeq1+\frac{\Phi}{c^2}-\frac{v^2}{2c^2},
+  \label{eq:proper-rate}
+\end{equation}
+where $\Phi$ is the Newtonian gravitational potential and $v$ is the clock's coordinate speed in the same reference system used for $t$ and $\Phi$. Inverting to the same order gives
+\begin{equation}
+  \boxed{\epsilon=\delta\tau-1
+  \simeq-\frac{\Phi}{c^2}+\frac{v^2}{2c^2}.}
+  \label{eq:ledger}
+\end{equation}
+Terms quadratic in the weak-field potential, products of potential and speed terms, and fourth-order speed terms are omitted. The gravitational and kinematic terms therefore add in this inverse-rate convention at first order.
+
+For an ideal Newtonian model with point-mass sources $M_A$ at distances $r_A$ from the clock, choose $\Phi=0$ at infinity and write
+\begin{equation}
+  \Phi=-\sum_A\frac{GM_A}{r_A}.
+  \label{eq:potential-sum}
+\end{equation}
+Then the ledger is
+\begin{equation}
+  \epsilon\simeq\sum_A\frac{GM_A}{r_Ac^2}
+  +\frac{v^2}{2c^2}.
+  \label{eq:source-ledger}
+\end{equation}
+Each source potential appears once. The kinetic term belongs to the clock's total motion in the selected frame; it is not assigned independently to every gravitating body. If the clock is fixed on a rotating planet, its rotation velocity must also be included when the chosen frame requires it. It is omitted in the nonrotating-Earth example below.
+
+The potential zero fixes the reference for the displayed single-clock excess. A constant change in $\Phi$ changes the rate normalization associated with $t$, while finite clock comparisons require a consistent comparison of both worldlines and their synchronization. The separate entries in Eq.~\eqref{eq:source-ledger} are useful model contributions, not individually frame-independent observables.
+
+\section{Why circular orbits give the three-halves factor}
+
+For a test clock in a Newtonian circular orbit around a point mass $M$, force balance gives
+\begin{equation}
+  \frac{v^2}{r}=\frac{GM}{r^2},
+  \qquad
+  v^2=\frac{GM}{r}.
+  \label{eq:circular-speed}
+\end{equation}
+Define $x\equiv GM/(rc^2)$. In the source's potential and the orbital kinetic term, respectively,
+\begin{equation}
+  \epsilon_{\mathrm{grav}}\simeq x,
+  \qquad
+  \epsilon_{\mathrm{kin}}\simeq\frac{v^2}{2c^2}=\frac{x}{2},
+  \qquad
+  \epsilon_{\mathrm{orbit}}\simeq\frac{3}{2}x.
+  \label{eq:three-halves}
+\end{equation}
+The factor $3/2$ applies to this circular Kepler orbit because its speed is fixed by the same point-mass potential. It does not multiply every source in a multi-body ledger. In the Sun--Earth example, it combines the Sun's potential with Earth's orbital motion; the Earth's own surface potential contributes separately with factor one because the clock is supported at Earth's surface, not orbiting Earth.
+
+For an eccentric Kepler orbit with semimajor axis $a$ and instantaneous radius $r$, the vis-viva equation gives $v^2=GM(2/r-1/a)$. The instantaneous contribution from that source and the orbital speed is therefore
+\begin{equation}
+  \epsilon_{\mathrm{orbit}}(r)
+  \simeq\frac{GM}{rc^2}+\frac{v^2}{2c^2}
+  =\frac{2GM}{rc^2}-\frac{GM}{2ac^2},
+  \label{eq:eccentric-instantaneous}
+\end{equation}
+which is not a fixed $3GM/(2rc^2)$. Its time average over a Kepler period is $3GM/(2ac^2)$, using $\langle1/r\rangle=1/a$ and $\langle v^2\rangle=GM/a$. Thus a fixed $3/2$ multiplier is appropriate instantaneously for a circular orbit, or as a specified time average for an ideal Kepler ellipse, not as a universal rule for arbitrary motion.
+
+\section{An ideal Sun--Earth calculation}
+
+Take the Sun's and Earth's gravitational parameters from the JPL DE440 ephemeris \cite{Park2021}, use $a=1\ \mathrm{au}$ with $1\ \mathrm{au}=149\,597\,870\,700\ \mathrm{m}$ exactly by IAU convention \cite{IAU2012}, and choose $R_{\oplus}=6371\ \mathrm{km}$ for the idealized spherical Earth. Let $\mu_{\odot}\equiv GM_{\odot}$ and $\mu_{\oplus}\equiv GM_{\oplus}$. The circular-orbit approximation gives $v_{\oplus}^2=\mu_{\odot}/a$. For the solar terms, the potential and orbital speed are evaluated at Earth's geocenter; the finite displacement from the geocenter to the surface clock is neglected. The Earth's own surface-potential term is retained. The contributions are
+\begin{equation}
+  \epsilon_{\mathrm{model}}
+  \simeq\frac{\mu_{\odot}}{ac^2}
+   +\frac{v_{\oplus}^2}{2c^2}
+   +\frac{\mu_{\oplus}}{R_{\oplus}c^2}
+  =\frac{3}{2}\frac{\mu_{\odot}}{ac^2}
+   +\frac{\mu_{\oplus}}{R_{\oplus}c^2}.
+  \label{eq:sun-earth-ledger}
+\end{equation}
+Table~\ref{tab:ledger} shows the rounded terms.
+
+\begin{table}[ht]
+  \centering
+  \caption{First-order inverse-rate contributions for the idealized Sun--Earth model.}
+  \label{tab:ledger}
+  \begin{tabular}{lcc}
+    \toprule
+    Contribution & Expression & Excess (ppb) \\
+    \midrule
+    Sun's potential at $1\ \mathrm{au}$
+      & $\mu_{\odot}/(ac^2)$ & 9.8706 \\
+    Earth's circular orbital motion
+      & $v_{\oplus}^2/(2c^2)$ & 4.9353 \\
+    Earth surface potential
+      & $\mu_{\oplus}/(R_{\oplus}c^2)$ & 0.6961 \\
+    \midrule
+    Total
+      & $\epsilon_{\mathrm{model}}$ & 15.5021 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+One part per billion is $10^{-9}$ in the dimensionless rate ratio. In this model, $\epsilon_{\mathrm{model}}=15.5021\times10^{-9}$ means about $15.5\ \mathrm{ns}$ less proper time accumulated per second of the chosen reference coordinate time. Over a Julian year, $31\,557\,600\ \mathrm{s}$, the corresponding first-order interval difference is approximately
+\begin{equation}
+  \Delta t-\Delta\tau
+  \simeq\epsilon_{\mathrm{model}}\Delta t
+  \simeq0.489\ \mathrm{s}.
+  \label{eq:annual-lag}
+\end{equation}
+This is a rate comparison within the idealized coordinate model. It does not mean that a physical clock at infinity is required or that the whole sum is locally measurable as an absolute offset.
+
+The Earth-surface entry depends on the adopted radius and geophysical convention. With the explicit $R_{\oplus}=6371\ \mathrm{km}$ and DE440 $GM_{\oplus}$ used here, it is $0.6961\ \mathrm{ppb}$. The carousel's rounded ratio $14.79\ \mathrm{ps}/21.28\ \mathrm{ms}$ gives approximately $0.695\ \mathrm{ppb}$ because it uses a different rounded radius light-time. Neither should be conflated with the IAU geoid rate constant $L_G$, discussed next.
+
+\section{Relation to conventional relativistic time scales}
+
+The IAU and IERS define several coordinate and terrestrial time scales with small constant rate scalings \cite{Luzum2011,IERS2010}. Their defining constants are useful checks on the scale of the ledger, but they are not a literal decomposition of one clock's local rate into independently measurable pieces.
+
+\begin{table}[ht]
+  \centering
+  \caption{Selected IAU/IERS rate constants, expressed in parts per billion.}
+  \label{tab:timescale-constants}
+  \begin{tabular}{lll}
+    \toprule
+    Constant & Definition & Value (ppb) \\
+    \midrule
+    $L_G$ & $1-\mathrm{dTT}/\mathrm{dTCG}$ & 0.696929 \\
+    $L_C$ & $1-\langle\mathrm{dTCG}/\mathrm{dTCB}\rangle$ & 14.808269 \\
+    $L_B$ & $1-\mathrm{dTDB}/\mathrm{dTCB}$ & 15.505198 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Here TCG and TCB are the geocentric and barycentric coordinate times, TT is Terrestrial Time, and TDB is Barycentric Dynamical Time. The defining linear scalings are $\mathrm{dTT}/\mathrm{dTCG}=1-L_G$, with $L_G=6.969290134\times10^{-10}$, and $\mathrm{dTDB}/\mathrm{dTCB}=1-L_B$, with $L_B=1.550519768\times10^{-8}$ \cite{Luzum2011,IERS2010}. The value of $L_G$ was historically tied to the conventional geopotential at the geoid, but it is now a fixed defining constant rather than a value continually adjusted as geoid estimates change. By contrast, $L_C$ in the table is a model-dependent long-term average relationship between TCG and TCB. The chosen $L_B$ keeps TDB close in rate to TT at the geocenter over long intervals, using an estimate of the combined scaling; to first order its value is close to $L_C+L_G$. These constants are useful scale checks, not a literal decomposition of one clock's local rate into independently measurable pieces.
+
+The ideal ledger's $15.5021\ \mathrm{ppb}$ is close to, but not identical with, the conventional combined rate scale. The Earth term differs because the ledger uses a bare spherical model rather than the rotating geoid; the solar term also omits other Solar System contributions and follows a simplified circular orbit. The agreement is a consistency check at the level of scale, not proof that every ledger entry is a separately observable absolute clock offset.
+
+\section{Free fall, local clocks, and solar tides}
+
+The Sun's potential term appears in the barycentric rate ledger because the reference time and potential are defined in that model. It should not be interpreted as an extra local force or as a rate offset that a single Earth-bound instrument can weigh. Earth and its laboratory share nearly the same free fall around the Sun. In a local freely falling frame, the uniform part of an external gravitational field can be removed; spatial variations across the laboratory, represented by tidal terms, remain.
+
+This distinction matters for comparisons between clocks at different terrestrial locations. A naive subtraction of the Sun's Newtonian potential at noon and midnight is not by itself a complete clock comparison. The coordinate simultaneity convention and associated kinematic terms must be treated consistently. Ashby and Weiss analyze why the apparent large solar noon--midnight effect does not survive a correct relativistic comparison for GPS and Earth-bound clocks \cite{AshbyWeiss2013}. A characteristic solar tidal potential scale across Earth is
+\begin{equation}
+  \frac{|\Phi_{\mathrm{tidal}}|}{c^2}
+  \sim\frac{GM_{\odot}R_{\oplus}^2}{a^3c^2}
+  \sim2\times10^{-17},
+  \label{eq:tidal-scale}
+\end{equation}
+up to geometry-dependent factors. This is an order-of-magnitude tidal scale, not a universal noon-to-midnight clock shift; a specific comparison must state the sites, clock worldlines, rotation, and time-transfer convention.
+
+An accelerometer attached to the supported Earth clock measures the proper acceleration of its supported worldline, dominated in this idealization by the local support against Earth's gravity. It does not separately report the nearly uniform solar acceleration shared by Earth and the instrument. The Sun remains relevant to barycentric clock-rate bookkeeping, orbital dynamics, and tidal comparisons, but these are different observables.
+
+\section{Eccentricity and entries beyond the ideal system}
+
+Earth's actual orbit is not circular, and the other Solar System bodies perturb it. The instantaneous ledger then uses the current potential and velocity rather than a fixed $3/2$ multiplier. The familiar annual-scale $\mathrm{TDB}-\mathrm{TT}$ periodic variation, of order $1.7\ \mathrm{ms}$, is a difference between defined coordinate time scales calculated from Solar System dynamics \cite{IERS2010,Fairhead1990}. It is not a standalone statement that a terrestrial clock physically gains or loses that amount ``against pulsars.'' A pulsar timing comparison requires its own propagation, ephemeris, and time-scale model.
+
+The Moon and planets can be added to a Solar System rate model by including their gravitational potentials and using a consistent ephemeris and coordinate time. Their small contributions should not be rounded into a generic residual without specifying epoch and model. For the present closed example they are omitted.
+
+Two much larger numbers in the carousel are best kept as separate contextual scales rather than appended to the Sun--Earth total. First, the Solar System barycenter's speed relative to the cosmic microwave background frame is about $369.82\ \mathrm{km\,s^{-1}}$ \cite{Planck2020}. If one chooses that frame for a special-relativistic kinematic comparison, $v^2/(2c^2)$ is about $761\ \mathrm{ppb}$. This is a frame-dependent kinematic term, not gravitational depth. To apply it to an Earth clock requires the full velocity vector, including Earth's orbital and any surface motion; scalar speeds cannot simply be added.
+
+Second, a Milky Way potential estimate of order $10^3$--$2\times10^3\ \mathrm{ppb}$ depends on the chosen Galactic mass model and on where the potential reference or halo boundary is placed. Galactic escape-speed analyses explicitly require a limiting-radius convention and model assumptions \cite{Deason2019}. The range is therefore not a universal clock-rate constant and is not included in the closed Solar System ledger. In particular, a CMB-frame speed already contains the Sun's Galactic motion, so adding a separate Galactic-orbit kinetic term risks double counting. A cosmological-scale ledger needs a specified spacetime, slicing, and reference family; it cannot assume a globally available clock at infinity.
+
+\section{Conclusion}
+
+In a weak field and at low speed, a single consistent coordinate-time convention gives the first-order inverse-rate ledger $\delta\tau-1\simeq-\Phi/c^2+v^2/(2c^2)$. For point-mass sources, their Newtonian potentials add once, while the clock's total speed contributes one kinematic term. The circular-orbit factor $3/2$ follows only when Kepler's circular-orbit condition ties that speed to the same point-mass potential.
+
+In the ideal Sun--Earth example, the solar potential, Earth's orbital motion, and the spherical Earth surface potential sum to about $15.502\ \mathrm{ppb}$, or roughly $0.489\ \mathrm{s}$ per Julian year relative to the chosen coordinate time. Comparison with IAU/IERS rate constants is useful but convention-dependent. Local clocks and accelerometers respond to finite comparisons and proper acceleration, not to a separately measurable absolute ``depth'' assigned to each distant source. The ledger organizes standard weak-field terms without introducing new physics.
+
+\begin{thebibliography}{10}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Einstein1905}
+A. Einstein,
+``Zur Elektrodynamik bewegter K\"orper,''
+\emph{Annalen der Physik} \textbf{17}, 891--921 (1905),
+\href{https://doi.org/10.1002/andp.19053221004}{doi:\nolinkurl{10.1002/andp.19053221004}}.
+
+\bibitem{Einstein1911}
+A. Einstein,
+``\"Uber den Einflu\ss{} der Schwerkraft auf die Ausbreitung des Lichtes,''
+\emph{Annalen der Physik} \textbf{35}, 898--908 (1911),
+\href{https://doi.org/10.1002/andp.19113401005}{doi:\nolinkurl{10.1002/andp.19113401005}}.
+
+\bibitem{Park2021}
+R. S. Park, W. M. Folkner, J. G. Williams, and D. H. Boggs,
+``The JPL Planetary and Lunar Ephemerides DE440 and DE441,''
+\emph{The Astronomical Journal} \textbf{161}, 105 (2021),
+\href{https://doi.org/10.3847/1538-3881/abd414}{doi:\nolinkurl{10.3847/1538-3881/abd414}}.
+
+\bibitem{IAU2012}
+International Astronomical Union,
+Resolution B2, ``The re-definition of the astronomical unit of length'' (2012).
+
+\bibitem{Luzum2011}
+B. Luzum et al.,
+``The IAU 2009 system of astronomical constants: the report of the IAU Working Group on Numerical Standards for Fundamental Astronomy,''
+\emph{Celestial Mechanics and Dynamical Astronomy} \textbf{110}, 293--304 (2011),
+\href{https://doi.org/10.1007/s10569-011-9352-4}{doi:\nolinkurl{10.1007/s10569-011-9352-4}}.
+
+\bibitem{IERS2010}
+G. Petit and B. Luzum, eds.,
+\emph{IERS Conventions (2010)}, IERS Technical Note 36, chapter 10 (2010).
+
+\bibitem{AshbyWeiss2013}
+N. Ashby and M. A. Weiss,
+``Why there is no noon-midnight red shift in the GPS,''
+arXiv:1307.6525 [gr-qc] (2013).
+
+\bibitem{Fairhead1990}
+L. Fairhead and P. Bretagnon,
+``An analytical formula for the time transformation TDB-TT,''
+\emph{Astronomy and Astrophysics} \textbf{229}, 240--247 (1990).
+
+\bibitem{Planck2020}
+Planck Collaboration,
+``Planck 2018 results. I. Overview and the cosmological legacy of Planck,''
+\emph{Astronomy and Astrophysics} \textbf{641}, A1 (2020),
+\href{https://doi.org/10.1051/0004-6361/201833880}{doi:\nolinkurl{10.1051/0004-6361/201833880}}.
+
+\bibitem{Deason2019}
+A. J. Deason, A. Fattahi, V. Belokurov, N. W. Evans, R. J. J. Grand, F. Marinacci, and R. Pakmor,
+``The local high-velocity tail and the Galactic escape speed,''
+\emph{Monthly Notices of the Royal Astronomical Society} \textbf{485}, 3514--3526 (2019),
+\href{https://doi.org/10.1093/mnras/stz623}{doi:\nolinkurl{10.1093/mnras/stz623}}.
+
+\end{thebibliography}
+
+\end{document}
