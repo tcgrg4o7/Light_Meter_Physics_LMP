@@ -1,0 +1,267 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Weight of Heat:\\
+Tolman--Ehrenfest Equilibrium in Clock-Rate Language}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+A system in thermal equilibrium in a static gravitational field need not have the same local temperature at every height. The Tolman--Ehrenfest relation states that the local temperature multiplied by the lapse is constant. Writing the static inverse clock rate as $\delta\tau_{\mathrm{static}}\equiv\mathrm{d}t/\mathrm{d}\tau=1/N$, the same relation is $T/T_*=\delta\tau_{\mathrm{static}}$, where $T_*$ is a reference normalization. Its spatial gradient equals the gradient of the logarithmic inverse clock rate, and in the weak field an upward temperature change is $\Delta T/T\simeq-g\Delta z/c^2$. For a 300-K reference temperature near Earth, the predicted difference is about 33 pK per kilometre. We derive the relation from photon redshift and equilibrium, connect it to the proper acceleration of static observers, and distinguish the prediction from atmospheric temperature profiles and direct thermometer measurements. The equations apply to a specified static equilibrium state; they do not describe heat physically settling downward, introduce a new field, or extend without qualification to rotating and time-dependent systems.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Tolman--Ehrenfest effect, gravitational redshift, thermal equilibrium, lapse, clock rates
+
+\section{Introduction}
+
+The phrase ``weight of heat'' is associated with the early relativistic question of how energy and thermal equilibrium behave in a gravitational field. Tolman analyzed thermal equilibrium in general relativity, and Tolman and Ehrenfest formulated the temperature condition for a static gravitational field \cite{Tolman1930,TolmanEhrenfest1930}. The result is often summarized by saying that the lower part of an equilibrium system is warmer than the upper part. That wording is useful only if it is not mistaken for a dynamical story in which heat simply sinks until the gradient appears.
+
+The central statement is about equilibrium. Local thermometers at different positions can read different temperatures while the complete system has no net heat flow. The difference compensates for the gravitational redshift of energy exchanged between locations. This paper derives that condition and rewrites it in terms of the static inverse clock rate. The resulting link is a relation among established quantities, not a new thermodynamic substance called ``temporal density.''
+
+The analysis is restricted to a static spacetime and a thermal state at rest with respect to its static observers. We distinguish the local temperature from a reference constant, use proper spatial distance for gradients, and keep the upward and inward directions explicit. The weak-field Earth estimate is illustrative; it is not a model of the atmosphere or a claim that the predicted temperature difference has been directly measured.
+
+\section{Static observers and inverse clock rate}
+
+Write a static spacetime in coordinates adapted to its time-translation symmetry as
+\begin{equation}
+  \mathrm{d}s^2=-N(\mathbf{x})^2c^2\mathrm{d}t^2
+    +h_{ij}(\mathbf{x})\,\mathrm{d}x^i\mathrm{d}x^j,
+  \qquad N(\mathbf{x})>0.
+  \label{eq:static-metric}
+\end{equation}
+Here $N$ is the lapse and $h_{ij}$ is the spatial metric on a constant-$t$ slice. With the same reference-time normalization used elsewhere in the series, $N=\alpha$ and $\delta\tau_{\mathrm{static}}=1/N=1/\alpha$. A static observer remains at fixed spatial coordinates. The metric along that worldline gives
+\begin{equation}
+  \mathrm{d}\tau=N\,\mathrm{d}t,
+  \qquad
+  \delta\tau_{\mathrm{static}}
+  \equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}=\frac{1}{N}.
+  \label{eq:static-rate}
+\end{equation}
+The symbol $\delta\tau_{\mathrm{static}}$ is a dimensionless rate ratio, not an elapsed proper-time interval.
+
+We take $\nabla$ to mean the spatial gradient formed with $h_{ij}$ and measured per unit proper distance in the local orthonormal frame of static observers. The time coordinate may be normalized so that $N\to1$ at infinity in an asymptotically flat spacetime. More generally, a reference observer or convention fixes its constant normalization. Changing that normalization rescales the displayed rate and temperature reference together but does not alter their local logarithmic gradients.
+
+Let $T(\mathbf{x})$ denote the local temperature measured by a thermometer comoving with the static thermal state. In thermal equilibrium the product $N T$ is spatially constant. We denote that constant by $T_*$:
+\begin{equation}
+  N(\mathbf{x})T(\mathbf{x})=T_*.
+  \label{eq:tolman-law}
+\end{equation}
+Using Eq.~\eqref{eq:static-rate}, this becomes
+\begin{equation}
+  \frac{T(\mathbf{x})}{T_*}
+  =\delta\tau_{\mathrm{static}}(\mathbf{x}).
+  \label{eq:temperature-inverse-rate}
+\end{equation}
+If the time coordinate is normalized by $N\to1$ at infinity and the equilibrium bath is defined there, $T_*$ is its corresponding reference temperature. The constant can also be used purely as a normalization; Eq.~\eqref{eq:tolman-law} does not require a physical thermometer or an infinite bath at infinity.
+
+\section{Photon redshift and thermal balance}
+
+The static metric has a time-translation symmetry. A photon therefore has a conserved energy $E_K$ associated with that symmetry. A static observer at position $\mathbf{x}$ measures the local photon energy
+\begin{equation}
+  E_{\mathrm{loc}}(\mathbf{x})=\frac{E_K}{N(\mathbf{x})}.
+  \label{eq:local-photon-energy}
+\end{equation}
+Since $E_{\mathrm{loc}}=h\nu_{\mathrm{loc}}$, two static observers at positions A and B compare frequencies by
+\begin{equation}
+  \frac{\nu_B}{\nu_A}
+  =\frac{N_A}{N_B}
+  =\frac{\delta\tau_{\mathrm{static},B}}
+         {\delta\tau_{\mathrm{static},A}}.
+  \label{eq:photon-frequency-ratio}
+\end{equation}
+For an upward signal in an ordinary attractive field, $N_B>N_A$, so the photon is received at lower frequency.
+
+The same redshift must be included when asking whether radiation exchanged between parts of a system is in thermal equilibrium. For a photon gas, the local Planck occupation number has the form
+\begin{equation}
+  n(E_K,\mathbf{x})
+  =\left[\exp\!\left(
+    \frac{E_{\mathrm{loc}}(\mathbf{x})}{k_{\mathrm{B}}T(\mathbf{x})}
+  \right)-1\right]^{-1}
+  =\left[\exp\!\left(
+    \frac{E_K}{k_{\mathrm{B}}N(\mathbf{x})T(\mathbf{x})}
+  \right)-1\right]^{-1}.
+  \label{eq:planck-occupation}
+\end{equation}
+A global equilibrium distribution must depend on the conserved energy using one position-independent temperature parameter. Equation~\eqref{eq:planck-occupation} then requires $N T=T_*$, which is the Tolman relation. The same endpoint condition is
+\begin{equation}
+  \frac{T_B}{T_A}
+  =\frac{N_A}{N_B}
+  =\frac{\nu_B}{\nu_A}.
+  \label{eq:endpoint-temperature-ratio}
+\end{equation}
+Thus a common local temperature at both heights would not represent thermal equilibrium for a static radiation bath: the photon energies are compared using different local standards. The equilibrium temperature profile accounts for that difference so that no net exchange is driven by the redshift alone.
+
+Maxwell's classical discussion of a gas column addressed thermal equilibrium within a nonrelativistic framework \cite{Maxwell1873}. The relativistic argument used here additionally accounts for gravitational redshift: radiation exchanged between heights changes its locally measured energy, so equilibrium requires a corresponding temperature variation. Modern redshift-based treatments make this extension explicit \cite{SantiagoVisserRedshift}.
+
+\section{The temperature slope and support acceleration}
+
+A static observer must be supported against free fall. The proper acceleration required to hold its position is the spatial gradient of the lapse,
+\begin{equation}
+  \mathbf{a}_{\mathrm{hold}}
+  =c^2\nabla\ln N.
+  \label{eq:holding-acceleration}
+\end{equation}
+For an ordinary spherical source, this support acceleration points outward. Taking the logarithmic gradient of Eq.~\eqref{eq:tolman-law} gives the exact equilibrium slope
+\begin{equation}
+  \boxed{\nabla\ln T
+  =-\nabla\ln N
+  =-\frac{\mathbf{a}_{\mathrm{hold}}}{c^2}.}
+  \label{eq:temperature-acceleration}
+\end{equation}
+If the inward gravitational direction is defined by $\mathbf{g}\equiv-\mathbf{a}_{\mathrm{hold}}$ for the static observer family, then
+\begin{equation}
+  \nabla\ln T
+  =\nabla\ln\delta\tau_{\mathrm{static}}
+  =\frac{\mathbf{g}}{c^2}.
+  \label{eq:shared-log-slope}
+\end{equation}
+The direction is important: temperature increases toward the support acceleration's tail, which is downward for a supported laboratory in Earth's field. Equations~\eqref{eq:temperature-acceleration} and \eqref{eq:shared-log-slope} relate variations across the family of static observers. They do not say that a single local thermometer measures an absolute temperature deficit.
+
+Santiago and Visser present a local acceleration formulation of Tolman-like temperature gradients and discuss its relation to equilibrium fluid flow \cite{SantiagoVisser2018}. In units with $c=1$, the spatial relation is commonly expressed as acceleration equal to minus the gradient of $\ln T$. Its application requires a specified equilibrium flow. A derivation for radiation or an ideal fluid should not be silently extended to arbitrary nonequilibrium matter without stating the thermodynamic assumptions.
+
+In a small freely falling laboratory, the uniform acceleration term can be removed locally by choosing a freely falling frame. That observation does not turn the static equilibrium state into a new temperature field felt by a freely falling thermometer; the latter follows a different worldline. Curvature and tidal effects are separate and are not captured by removing a uniform acceleration at one point.
+
+\section{Weak-field form and an Earth-scale example}
+
+In a weak, slowly varying gravitational field, write $N\simeq1+\Phi/c^2$, where $\Phi$ is the Newtonian potential. For a small upward displacement $\Delta z$ near a location where the gravitational-acceleration magnitude $g_{\mathrm{N}}$ is approximately constant, Eqs.~\eqref{eq:tolman-law} and \eqref{eq:static-rate} yield
+\begin{equation}
+  \frac{\Delta T}{T}
+  \simeq-\frac{\Delta\Phi}{c^2}
+  \simeq-\frac{g_{\mathrm{N}}\Delta z}{c^2}.
+  \label{eq:weak-field-gradient}
+\end{equation}
+The minus sign refers to an upward step: the equilibrium temperature is lower at the top. This finite-step expression is first order in $g_{\mathrm{N}}\Delta z/c^2$; the exact relation remains the lapse ratio in Eq.~\eqref{eq:endpoint-temperature-ratio}.
+
+For an illustrative near-Earth value $g_{\mathrm{N}}=9.81\ \mathrm{m\,s^{-2}}$, define the acceleration-derived inverse-time scale
+\begin{equation}
+  f_g\equiv\frac{g_{\mathrm{N}}}{c}.
+  \label{eq:gravity-frequency-scale}
+\end{equation}
+Then Eq.~\eqref{eq:weak-field-gradient} can be written
+\begin{equation}
+  \frac{\Delta T}{T}
+  \simeq-f_g\frac{\Delta z}{c}.
+  \label{eq:frequency-lighttime-product}
+\end{equation}
+Here $f_g\simeq32.7\ \mathrm{nHz}$ is a dimensional inverse-time scale, not an oscillation or a thermal spectral line. The factor $\Delta z/c$ is the vacuum light-time corresponding to the height; it is a unit conversion, not a claim that a signal must travel that path.
+
+At a reference temperature of $300\ \mathrm{K}$, $g_{\mathrm{N}}/c^2\simeq1.09\times10^{-16}\ \mathrm{m^{-1}}$. Define $\nu_T\equiv k_{\mathrm{B}}T/h$ as the thermal energy expressed in frequency units, where $h$ is Planck's constant. The resulting small differences are shown in Table~\ref{tab:earth-scale}.
+\begin{table}[ht]
+  \centering
+  \caption{First-order Tolman temperature differences near Earth for a 300-K reference temperature.}
+  \label{tab:earth-scale}
+  \begin{tabular}{lccc}
+    \toprule
+    Upward distance $\Delta z$ & $\Delta T/T$ & $\Delta T$ & $\Delta\nu_T$ \\
+    \midrule
+    $1\ \mathrm{m}$ & $-1.09\times10^{-16}$ & $-32.7\ \mathrm{fK}$ & $-0.68\ \mathrm{mHz}$ \\
+    $1\ \mathrm{km}$ & $-1.09\times10^{-13}$ & $-32.7\ \mathrm{pK}$ & $-0.68\ \mathrm{Hz}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+At $300\ \mathrm{K}$, $\nu_T\simeq6.25\ \mathrm{THz}$. The displayed $\Delta\nu_T$ is the corresponding fractional change in this energy scale. It is not a single frequency emitted by the thermal system.
+
+The associated length $c^2/g_{\mathrm{N}}\simeq9.16\times10^{15}\ \mathrm{m}$, or about $0.97$ light-years, is an acceleration length. In flat spacetime with uniform proper acceleration, the same scale sets the distance to a Rindler horizon for the reference observer \cite{Rindler1966}. Earth's gravitational acceleration is not uniform over that distance, so it is not a physical horizon distance or a global thermal scale height for Earth.
+
+These estimates describe an idealized equilibrium relation. The terrestrial atmosphere is not a static global thermal bath: convection, radiation, weather, and boundary conditions dominate its ordinary temperature profile. Equation~\eqref{eq:weak-field-gradient} should therefore not be used as an atmospheric lapse-rate model.
+
+\section{What redshift experiments do and do not measure}
+
+The temperature relation shares its redshift factor with clock and photon comparisons. Pound and Rebka measured the gravitational frequency shift of gamma rays exchanged over a laboratory height \cite{PoundRebka1960}. More recently, optical clocks resolved gravitational redshift across a millimetre-scale atomic sample \cite{Bothwell2022}. These experiments test the frequency or clock-rate side of the relation; they are not direct thermometer measurements of the Tolman temperature difference.
+
+The numerical temperature differences in Table~\ref{tab:earth-scale} are predictions from the equilibrium law. No direct thermometric observation at those listed scales is asserted here. Establishing such an observation would require a system genuinely in thermal equilibrium, a local temperature measurement with adequate sensitivity, and control of ordinary heat transfer and environmental gradients. The distinction keeps a measured gravitational redshift from being presented as a measurement of a thermal gradient.
+
+\section{Domain of the relation}
+
+The formula $T N=\mathrm{constant}$ is being used here for a static spacetime and a thermal state at rest with respect to the static observers. It is not a universal formula for arbitrary motion. In stationary but nonstatic situations, such as a rotating equilibrium state, the time-space structure and the chosen flow of the thermal system matter; one must specify that flow before assigning a local temperature law \cite{SantiagoVisser2018}.
+
+Likewise, the static-observer description requires $N>0$. At a surface where the lapse vanishes, no observer can remain static, so the static local temperature formula cannot be interpreted there as the reading of a realizable hovering thermometer. This paper does not infer a physical heat bath or a measurable infinite temperature at such a boundary.
+
+The terminology ``temporal density'' is retained only as shorthand for the dimensionless inverse static clock-rate ratio $\delta\tau_{\mathrm{static}}$. The temperature profile is a standard equilibrium consequence of redshift in a specified spacetime, not an independent density, force, or material field.
+
+\section{Conclusion}
+
+Thermal equilibrium in a static gravitational field is not generally isothermal with respect to local thermometers. The Tolman--Ehrenfest condition $TN=T_*$ follows from the redshift of energy and the requirement that the equilibrium distribution use a common conserved-energy parameter. Since a static clock has $\delta\tau_{\mathrm{static}}=1/N$, the same condition is $T/T_*=\delta\tau_{\mathrm{static}}$.
+
+With proper spatial gradients and the inward direction defined consistently, the logarithmic temperature slope equals the static inverse-rate slope and is set by the acceleration required to hold position. Near Earth, the first-order value is about 33 pK per kilometre for a 300-K reference temperature. This is a predicted equilibrium temperature contrast, not the atmospheric lapse rate and not a directly measured thermal signal. Clock and photon redshift tests support the frequency comparison underlying the derivation; they should not be described as thermometric detection. The ``weight of heat'' remains a useful historical framing for the Tolman law, not a new physical mechanism.
+
+\begin{thebibliography}{8}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Tolman1930}
+R. C. Tolman,
+``On the weight of heat and thermal equilibrium in general relativity,''
+\emph{Physical Review} \textbf{35}, 904--924 (1930),
+\href{https://doi.org/10.1103/PhysRev.35.904}{doi:\nolinkurl{10.1103/PhysRev.35.904}}.
+
+\bibitem{TolmanEhrenfest1930}
+R. C. Tolman and P. Ehrenfest,
+``Temperature equilibrium in a static gravitational field,''
+\emph{Physical Review} \textbf{36}, 1791--1798 (1930),
+\href{https://doi.org/10.1103/PhysRev.36.1791}{doi:\nolinkurl{10.1103/PhysRev.36.1791}}.
+
+\bibitem{Maxwell1873}
+J. C. Maxwell,
+``On the equilibrium of temperature of a gaseous column subjected to gravity,''
+\emph{Nature} \textbf{8}, 527--528 (1873),
+\href{https://doi.org/10.1038/008527b0}{doi:\nolinkurl{10.1038/008527b0}}.
+
+\bibitem{SantiagoVisserRedshift}
+J. Santiago and M. Visser,
+``Gravity's universality: The physics underlying Tolman temperature gradients,''
+arXiv:1805.05583 [gr-qc] (2018).
+
+\bibitem{SantiagoVisser2018}
+J. Santiago and M. Visser,
+``Tolman-like temperature gradients in stationary spacetimes,''
+\emph{Physical Review D} \textbf{98}, 064001 (2018),
+\href{https://doi.org/10.1103/PhysRevD.98.064001}{doi:\nolinkurl{10.1103/PhysRevD.98.064001}}.
+
+\bibitem{Rindler1966}
+W. Rindler,
+``Kruskal space and the uniformly accelerated frame,''
+\emph{American Journal of Physics} \textbf{34}, 1174--1178 (1966).
+
+\bibitem{PoundRebka1960}
+R. V. Pound and G. A. Rebka, Jr.,
+``Apparent weight of photons,''
+\emph{Physical Review Letters} \textbf{4}, 337--341 (1960),
+\href{https://doi.org/10.1103/PhysRevLett.4.337}{doi:\nolinkurl{10.1103/PhysRevLett.4.337}}.
+
+\bibitem{Bothwell2022}
+T. Bothwell et al.,
+``Resolving the gravitational redshift across a millimetre-scale atomic sample,''
+\emph{Nature} \textbf{602}, 420--424 (2022),
+\href{https://doi.org/10.1038/s41586-021-04349-7}{doi:\nolinkurl{10.1038/s41586-021-04349-7}}.
+
+\end{thebibliography}
+
+\end{document}
