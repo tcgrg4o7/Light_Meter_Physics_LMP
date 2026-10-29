@@ -1,0 +1,270 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+
+\title{Proper Time and Kinetic Energy in Special Relativity:\\
+A Rate Expansion and an Exact Identity}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+For a clock moving through flat spacetime, proper time and the coordinate time of a chosen inertial frame are related by $\mathrm{d}\tau/\mathrm{d}t=\sqrt{1-v^2/c^2}=1/\gamma$. Expanding this rate about zero speed gives a convergent series whose corrections are all negative. A separate but exact energy identity shows that the fractional reduction of the clock rate equals the kinetic-energy fraction of the particle's total energy in that same frame:
+\begin{equation*}
+1-\frac{\mathrm{d}\tau}{\mathrm{d}t}
+=\frac{K}{E}
+=1-\frac{1}{\gamma}.
+\end{equation*}
+The two fractions share the same leading Newtonian term but differ at higher orders when kinetic energy is instead normalized by rest energy. A worked example, the proper-time integral for variable speed, and a discussion of notation delimit the result and its interpretation. The analysis is kinematic: it does not invoke gravitational time dilation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} proper time, time dilation, Lorentz factor, relativistic kinetic energy, binomial expansion
+
+\section{Introduction}
+
+Proper time is the time recorded by an ideal clock along its own worldline. In special relativity, its relation to a coordinate time depends on the chosen inertial frame and the clock's speed in that frame. This relation is elementary but connects naturally to an exact energy statement: for a massive particle, the fraction of its total energy assigned to kinetic energy equals the fractional reduction of its proper-time rate relative to that frame's coordinate time.
+
+This manuscript derives the relation from the flat-spacetime interval, expands the rate in powers of $v/c$, and distinguishes the ratio $K/E$ from $K/(mc^2)$, which has a different higher-order expansion. The standard binomial series supplies the coefficients \cite{DLMF}, while MIT OpenCourseWare's notes on spacetime kinematics and four-momentum provide a broader special-relativistic context \cite{Hughes2024}.
+
+The word ``reduction'' below refers only to a comparison of rates, $1-\mathrm{d}\tau/\mathrm{d}t$, with respect to one selected inertial frame. It does not mean that the moving clock locally runs abnormally: the clock measures its own proper time in its instantaneous rest frame. Nor does the identity claim that kinetic energy causes time dilation; both expressions depend on the same Lorentz factor.
+
+\section{Proper-time rate in an inertial frame}
+
+In flat spacetime, the interval along a timelike worldline, using inertial coordinates $(t,\mathbf{x})$ and metric signature $(-,+,+,+)$, is
+\begin{equation}
+  \begin{aligned}
+    \mathrm{d}s^2&=-c^2\,\mathrm{d}\tau^2\\
+    &=-c^2\,\mathrm{d}t^2+\mathrm{d}\mathbf{x}\mathbin{\cdot}\mathrm{d}\mathbf{x}.
+  \end{aligned}
+  \label{eq:interval}
+\end{equation}
+Here $\mathrm{d}\tau$ is the positive proper-time increment of a future-directed clock. Let
+\begin{equation}
+  \mathbf{v}\equiv\frac{\mathrm{d}\mathbf{x}}{\mathrm{d}t},
+  \qquad
+  v\equiv|\mathbf{v}|,
+  \qquad
+  \beta\equiv\frac{v}{c},
+  \qquad
+  \gamma\equiv\frac{1}{\sqrt{1-\beta^2}}.
+  \label{eq:kinematic-variables}
+\end{equation}
+Dividing Eq.~\eqref{eq:interval} by $c^2\mathrm{d}t^2$ and taking the positive root gives
+\begin{equation}
+  \boxed{\frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =\sqrt{1-\frac{v^2}{c^2}}
+  =\frac{1}{\gamma}.}
+  \label{eq:clock-rate}
+\end{equation}
+The relation is exact for any timelike motion in flat spacetime, including accelerated motion, provided $v$ is evaluated instantaneously in the same inertial coordinate frame. For a massive clock, $0\leq v<c$.
+
+Equation~\eqref{eq:clock-rate} compares two different elapsed-time measures: the clock's proper time and the coordinate time in the selected frame. It is not a statement that the local laws of physics or the clock mechanism change in the clock's own rest frame. Although $\tau$ is invariant along a specified worldline, the coordinate time $t$, the speed $v$, and the ratio $\mathrm{d}\tau/\mathrm{d}t$ depend on the chosen inertial frame.
+
+\section{Series expansion of the rate}
+
+Introduce the dimensionless expansion variable
+\begin{equation}
+  x\equiv\frac{v^2}{c^2}=\beta^2,
+  \qquad 0\leq x<1.
+  \label{eq:x-definition}
+\end{equation}
+The rate function is $f(x)=(1-x)^{1/2}$. Applying the generalized binomial expansion \cite{DLMF} gives
+\begin{equation}
+  (1-x)^{1/2}
+  =1-\frac{x}{2}-\frac{x^2}{8}-\frac{x^3}{16}
+    -\frac{5x^4}{128}-\frac{7x^5}{256}-\cdots,
+  \qquad |x|<1.
+  \label{eq:rate-series}
+\end{equation}
+Restoring the speed variable,
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =1-\frac{1}{2}\left(\frac{v}{c}\right)^2
+    -\frac{1}{8}\left(\frac{v}{c}\right)^4
+    -\frac{1}{16}\left(\frac{v}{c}\right)^6
+    -\frac{5}{128}\left(\frac{v}{c}\right)^8-\cdots.
+  \label{eq:rate-speed-series}
+\end{equation}
+Every nonconstant coefficient is negative. Equivalently, define the fractional rate reduction
+\begin{equation}
+  R\equiv1-\frac{\mathrm{d}\tau}{\mathrm{d}t}.
+  \label{eq:rate-reduction}
+\end{equation}
+Then
+\begin{equation}
+  R=\frac{x}{2}+\frac{x^2}{8}+\frac{x^3}{16}
+      +\frac{5x^4}{128}+\frac{7x^5}{256}+\cdots.
+  \label{eq:reduction-series}
+\end{equation}
+The correction terms in the rate are all negative; the corresponding terms in the rate reduction are all positive.
+
+For integer $n\geq1$, the magnitude of the coefficient of $x^n$ in the correction to the rate is
+\begin{equation}
+  a_n\equiv\frac{(2n-3)!!}{2^n n!},
+  \qquad (-1)!!\equiv1,
+  \label{eq:rate-coefficient}
+\end{equation}
+so that
+\begin{equation}
+  \sqrt{1-x}=1-\sum_{n=1}^{\infty}a_nx^n.
+  \label{eq:rate-general-series}
+\end{equation}
+The power series has radius of convergence one. All physical speeds of a massive clock satisfy $x<1$, so the full infinite series converges throughout the physical domain. It also converges at the mathematical endpoint $x=1$ and sums there to zero, but $x=1$ means $\beta=1$: a null worldline, not a possible trajectory for a massive clock. For finite truncations, the omitted terms are positive in the series for $R$; correspondingly, truncating Eq.~\eqref{eq:rate-speed-series} overestimates the exact rate.
+
+\section{An exact identity with kinetic energy}
+
+For a particle of fixed rest mass $m>0$ in the same inertial frame, the total energy and kinetic energy are
+\begin{equation}
+  E=\gamma mc^2,
+  \qquad
+  K\equiv E-mc^2=(\gamma-1)mc^2.
+  \label{eq:energy-definitions}
+\end{equation}
+The rest-energy fraction of the total energy is
+\begin{equation}
+  \frac{mc^2}{E}=\frac{1}{\gamma}.
+  \label{eq:rest-fraction}
+\end{equation}
+Subtracting this fraction from unity gives the kinetic-energy fraction:
+\begin{equation}
+  \frac{K}{E}
+  =\frac{E-mc^2}{E}
+  =1-\frac{mc^2}{E}
+  =1-\frac{1}{\gamma}.
+  \label{eq:kinetic-fraction}
+\end{equation}
+Combining Eqs.~\eqref{eq:clock-rate} and \eqref{eq:kinetic-fraction} yields the exact identity
+\begin{equation}
+  \boxed{\frac{K}{E}
+  =1-\frac{\mathrm{d}\tau}{\mathrm{d}t}.}
+  \label{eq:exact-bridge}
+\end{equation}
+Thus the dimensionless kinetic-energy fraction equals the fractional reduction in proper-time rate relative to the selected inertial frame. Equivalently, the rest-energy fraction $mc^2/E$ equals the proper-time rate $\mathrm{d}\tau/\mathrm{d}t$. Both statements follow directly from $E=\gamma mc^2$ and do not introduce a new dynamical law.
+
+\subsection{Why the denominator matters}
+
+Normalizing kinetic energy by rest energy gives a different quantity:
+\begin{equation}
+  \frac{K}{mc^2}=\gamma-1.
+  \label{eq:kinetic-over-rest}
+\end{equation}
+Its series is
+\begin{equation}
+  \frac{K}{mc^2}
+  =\frac{x}{2}+\frac{3x^2}{8}+\frac{5x^3}{16}
+    +\frac{35x^4}{128}+\cdots,
+  \label{eq:kinetic-over-rest-series}
+\end{equation}
+whereas the exact kinetic fraction in Eq.~\eqref{eq:exact-bridge} is
+\begin{equation}
+  \frac{K}{E}
+  =\frac{x}{2}+\frac{x^2}{8}+\frac{x^3}{16}
+    +\frac{5x^4}{128}+\cdots.
+  \label{eq:kinetic-over-total-series}
+\end{equation}
+Both quantities begin with $x/2$. Only $K/E$ equals the rate reduction exactly; the two normalizations differ beyond leading order.
+
+\section{A numerical example}
+
+Consider constant speed $v=0.6c$. Then
+\begin{equation}
+  \beta=0.6,
+  \qquad
+  \gamma=\frac{1}{\sqrt{1-0.6^2}}=1.25,
+  \qquad
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}=0.80.
+  \label{eq:example-values}
+\end{equation}
+The energy fractions are
+\begin{equation}
+  \frac{mc^2}{E}=0.80,
+  \qquad
+  \frac{K}{E}=\frac{0.25mc^2}{1.25mc^2}=0.20.
+  \label{eq:example-energy-fractions}
+\end{equation}
+The proper-time-rate reduction is $1-0.80=0.20$, exactly the kinetic-energy fraction. Over a coordinate-time interval of $10\,\mathrm{s}$ in this frame, the clock accumulates
+\begin{equation}
+  \Delta\tau=\frac{\Delta t}{\gamma}
+  =\frac{10\,\mathrm{s}}{1.25}=8\,\mathrm{s}.
+  \label{eq:example-proper-time}
+\end{equation}
+The proper time accumulated along the specified worldline is invariant. The coordinate interval is assigned by the selected inertial frame; their numerical difference is a comparison in that frame, not a separate time interval accumulated by the clock.
+
+\section{Changing speed and accumulated proper time}
+
+If the clock's speed varies with coordinate time in a single inertial frame, integrate the instantaneous rate:
+\begin{equation}
+  \Delta\tau
+  =\tau(t_2)-\tau(t_1)
+  =\int_{t_1}^{t_2}
+    \sqrt{1-\frac{v(t)^2}{c^2}}\,\mathrm{d}t.
+  \label{eq:proper-time-integral}
+\end{equation}
+The rate-energy identity also holds instantaneously for the particle, so along the same history
+\begin{equation}
+  \Delta\tau
+  =\int_{t_1}^{t_2}
+    \left(1-\frac{K(t)}{E(t)}\right)\,\mathrm{d}t,
+  \label{eq:integrated-identity}
+\end{equation}
+where $E(t)$ and $K(t)$ are evaluated from the instantaneous speed in that frame. If an external agent changes the particle's speed, its energy need not be constant. Equation~\eqref{eq:integrated-identity} is therefore an integral of the instantaneous identity, not a claim that total proper time is determined by one endpoint energy ratio.
+
+
+\section{Notation and scope}
+
+For comparison, define the dimensionless reciprocal-rate notation
+\begin{equation}
+  \delta\tau_{\mathrm{kin}}\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}=\gamma,
+  \qquad
+  \delta\tau_{\mathrm{kin}}^{-1}
+  =\frac{\mathrm{d}\tau}{\mathrm{d}t}.
+  \label{eq:lmp-convention}
+\end{equation}
+The notation is nonstandard: $\delta\tau_{\mathrm{kin}}$ is a dimensionless reciprocal rate, not a proper-time interval, an elapsed-time difference, or an additive correction to $\tau$. The standard Lorentz-factor notation $\gamma$ is used in the derivation. With this convention, Eq.~\eqref{eq:exact-bridge} can also be written $K/E=1-\delta\tau_{\mathrm{kin}}^{-1}$.
+
+The result concerns kinematic time dilation in flat spacetime. It assumes energy and speed are evaluated in the same inertial frame and does not include gravitational redshift or gravitational clock-rate effects. The coordinate-time rate is frame dependent; proper time along a specified worldline is invariant. In a gravitational field, reference energy and a moving clock's inverse rate depend differently on the lapse and local motion, so the flat-spacetime identity does not carry over unchanged. The identity is an exact algebraic relation between two dimensionless quantities, not a claim that energy loss generates elapsed time.
+
+\section{Conclusion}
+
+Starting from the Minkowski interval gives the exact clock-rate relation $\mathrm{d}\tau/\mathrm{d}t=1/\gamma$. Its expansion in $x=(v/c)^2$ has negative corrections to the rate and positive terms in the rate reduction. For a massive particle, the exact total energy $E=\gamma mc^2$ implies that the kinetic-energy fraction $K/E$ equals this rate reduction at every subluminal speed in the same inertial frame.
+
+The leading terms of $K/E$ and $K/(mc^2)$ agree in the Newtonian limit, but the higher-order terms differ because the denominators are different. For variable speed, the proper time is obtained by integrating the instantaneous rate along the worldline. These results are special-relativistic kinematics; they do not extend by themselves to gravitational time dilation.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{DLMF}
+F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain, eds.,
+\emph{NIST Digital Library of Mathematical Functions}, Section 4.6(ii), Eq.~4.6.7, National Institute of Standards and Technology,
+\url{https://dlmf.nist.gov/4.6#E7}.
+
+\bibitem{Hughes2024}
+S. A. Hughes,
+\emph{Introduction to Relativity and Spacetime Physics}, Fall 2024, MIT 8.033, Lectures 6--8: ``Kinematics in Spacetime,'' ``4-Momentum and 4-Velocity,'' and ``Using 4-Momentum,'' Massachusetts Institute of Technology OpenCourseWare,
+\href{https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/pages/lecture-notes/}{lecture notes}.
+
+\end{thebibliography}
+
+\end{document}
