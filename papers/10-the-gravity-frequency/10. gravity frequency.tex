@@ -1,0 +1,385 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Gravity Frequency:\\
+A Static Clock-Rate Slope, Read by Clocks}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+For observers held static in a static gravitational field, the spatial gradient of the logarithm of the inverse clock rate gives the acceleration direction and magnitude required to remain at rest. This paper writes the relation using $\delta\tau\equiv\mathrm{d}t/\mathrm{d}\tau$, with the spatial gradient defined per unit proper distance. In a Schwarzschild exterior, $\mathbf{g}=c^2\nabla_{\mathrm{proper}}\ln\delta\tau$ is exact for the static observer family, while its weak-field limit is Newtonian gravity. The scale $f_g\equiv g_{\mathrm{N}}/c$ is an inverse time, not an oscillation frequency. A small vertical clock comparison obeys $|\Delta\nu/\nu|\simeq f_g(h/c)$ when the local field is approximately uniform. The manuscript separates this local slope from the accumulated clock-rate comparison, photon redshift, and the acceleration-associated Unruh temperature. Four laboratory scales are evaluated, with estimates kept distinct from experimental results. A brief comparison with entropic-gravity proposals is explicitly identified as interpretive and contested. The analysis introduces no new gravitational field or frequency signal.
+\end{abstract}
+
+\noindent\textbf{Keywords:} gravitational redshift, static observers, clock-rate gradient, proper acceleration, weak field
+
+\section{Introduction}
+
+A static clock's rate changes with position in a gravitational field. In a weak field outside a spherical source, the inverse rate relative to a reference at infinity is slightly larger near the source and decreases outward. Its logarithmic slope is proportional to the local gravitational acceleration. This connects a comparison of clock rates across space with the proper acceleration required to hold an observer static.
+
+The connection is a standard result for static observers, not a new law of gravity \cite{SantiagoVisser,Schwarzschild}. Here the inverse rate is
+\begin{equation}
+  \delta\tau\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau},
+  \qquad
+  \epsilon_{\mathrm{grav}}\equiv\delta\tau-1,
+  \label{eq:inverse-rate}
+\end{equation}
+where $\tau$ is proper time along the clock's worldline and $t$ is a static time coordinate normalized to proper time at infinity. Despite its notation, $\delta\tau$ is a dimensionless rate ratio, not a time interval. The informal word ``depth'' will refer only to the reference-dependent excess $\epsilon_{\mathrm{grav}}$.
+
+The paper first derives the exact Schwarzschild identity using proper spatial distance, then recovers the Newtonian slope in the weak field. It next relates the local slope to clock comparisons over a small height, gives Earth-scale examples, and distinguishes the established acceleration relation from more interpretive uses of the same mathematical gradient. Rotating and time-dependent spacetimes, realistic geoid corrections, and arbitrary moving observers are outside the exact treatment.
+
+\section{Static clock rate and its exact spatial gradient}
+
+In the vacuum exterior of a spherical, nonrotating source, the Schwarzschild metric is \cite{Schwarzschild}
+\begin{equation}
+  \mathrm{d}s^2
+  =-\alpha(r)^2c^2\mathrm{d}t^2
+   +\alpha(r)^{-2}\mathrm{d}r^2+r^2\mathrm{d}\Omega^2,
+  \qquad
+  \alpha(r)\equiv\sqrt{1-\frac{2GM}{rc^2}},
+  \label{eq:metric}
+\end{equation}
+where $r$ is the areal radius. A static clock has fixed spatial coordinates, so
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}=\alpha(r),
+  \qquad
+  \delta\tau(r)=\frac{\mathrm{d}t}{\mathrm{d}\tau}=\frac{1}{\alpha(r)}.
+  \label{eq:static-rate}
+\end{equation}
+The exterior formulas apply outside the material source. For a black hole, static observers exist only in the exterior static region $r>r_s=2GM/c^2$; a regular static matter model can also admit static observers in its interior, where the lapse is determined by the interior solution.
+
+The radial proper-distance increment on a constant-$t$ slice is $\mathrm{d}L=\mathrm{d}r/\alpha$. Write $\nabla_{\mathrm{proper}}$ for the spatial gradient per unit proper distance, expressed in the local orthonormal frame. For a radial scalar $F(r)$,
+\begin{equation}
+  \nabla_{\mathrm{proper}}F
+  =\alpha\frac{\mathrm{d}F}{\mathrm{d}r}\,\hat{\mathbf r},
+  \label{eq:proper-gradient}
+\end{equation}
+where $\hat{\mathbf r}$ points outward. Applying this to Eq.~\eqref{eq:static-rate} gives
+\begin{equation}
+  \mathbf{g}(r)
+  \equiv c^2\nabla_{\mathrm{proper}}\ln\delta\tau
+  =-\frac{GM}{r^2\alpha(r)}\,\hat{\mathbf r}.
+  \label{eq:exact-g}
+\end{equation}
+The vector points inward. The acceleration required to hold a static position is its negative:
+\begin{equation}
+  \mathbf{a}_{\mathrm{hold}}(r)
+  =-\mathbf{g}(r)
+  =c^2\nabla_{\mathrm{proper}}\ln\alpha(r),
+  \qquad
+  a_{\mathrm{hold}}(r)=\frac{GM}{r^2\alpha(r)}.
+  \label{eq:hold-acceleration}
+\end{equation}
+An accelerometer carried by a supported observer records this outward proper acceleration. A freely falling observer has zero proper acceleration; Eq.~\eqref{eq:exact-g} describes the static observer family, not every observer's motion.
+
+The distinction between coordinate and proper gradients is important. Direct differentiation by areal radius gives
+\begin{equation}
+  c^2\left|\frac{\mathrm{d}\ln\delta\tau}{\mathrm{d}r}\right|
+  =\frac{GM}{r^2\alpha(r)^2},
+  \qquad
+  c^2\left|\nabla_{\mathrm{proper}}\ln\delta\tau\right|
+  =\frac{GM}{r^2\alpha(r)}.
+  \label{eq:coordinate-v-proper}
+\end{equation}
+Only the second expression is the local hovering acceleration. The extra factor follows from measuring change per unit physical radial distance rather than per unit coordinate radius.
+
+\section{Weak-field slope and the inverse-time scale}
+
+Define the dimensionless compactness at radius $r$ by
+\begin{equation}
+  u(r)\equiv\frac{GM}{rc^2}\ll1.
+  \label{eq:compactness}
+\end{equation}
+Expansion of the lapse and inverse rate gives
+\begin{equation}
+  \alpha(r)\simeq1-u(r),
+  \qquad
+  \delta\tau(r)=(1-2u)^{-1/2}\simeq1+u,
+  \qquad
+  \epsilon_{\mathrm{grav}}(r)\simeq\ln\delta\tau(r)\simeq u(r).
+  \label{eq:weak-rate}
+\end{equation}
+The logarithm tracks fractional change. Differentiating the leading term yields
+\begin{equation}
+  \frac{\mathrm{d}\ln\delta\tau}{\mathrm{d}r}
+  \simeq-\frac{GM}{r^2c^2}.
+  \label{eq:coordinate-slope}
+\end{equation}
+The negative sign means that the inverse rate decreases outward. At leading weak-field order, coordinate and proper radial distances agree, and Eq.~\eqref{eq:exact-g} reduces to the inward Newtonian field $\mathbf{g}_{\mathrm{N}}=-GM\hat{\mathbf r}/r^2$.
+
+Let $g_{\mathrm{N}}(r)\equiv GM/r^2$ denote the positive Newtonian acceleration magnitude and define
+\begin{equation}
+  f_g(r)\equiv\frac{g_{\mathrm{N}}(r)}{c}
+  =\frac{GM}{r^2c}
+  =\frac{\tau_g}{t_r^2},
+  \qquad
+  \tau_g\equiv\frac{GM}{c^3},
+  \qquad
+  t_r\equiv\frac{r}{c}.
+  \label{eq:fg}
+\end{equation}
+Here $\tau_g$ is a characteristic gravitational time and $t_r$ is the light-time equivalent of the areal radius; neither is an elapsed time measured by a clock or a signal sent through the body. Combining Eqs.~\eqref{eq:exact-g} and \eqref{eq:fg},
+\begin{equation}
+  c\left|\nabla_{\mathrm{proper}}\ln\delta\tau\right|
+  =\frac{a_{\mathrm{hold}}}{c}
+  =f_g(r)\,\delta\tau(r)
+  \simeq f_g(r).
+  \label{eq:fg-gradient}
+\end{equation}
+The exact expression includes $\delta\tau$; $c|\nabla\ln\delta\tau|\simeq g_{\mathrm{N}}/c$ is the weak-field approximation. The symbol $f_g$ is used as compact notation for this inverse-time acceleration scale. It is not a cyclic frequency: no oscillation and no factor of $2\pi$ are implied.
+
+At the surface of an ideal spherical body with radius $R$, the Newtonian Schuler angular frequency satisfies $\omega_{\mathrm{S}}^2=g_{\mathrm{N}}/R=GM/R^3$ \cite{Schuler1923,WhittakerCrassidis}. With $t_R=R/c$, this gives the useful consistency relation
+\begin{equation}
+  f_g(R)=\frac{g_{\mathrm{N}}}{c}
+  =\omega_{\mathrm{S}}^2t_R.
+  \label{eq:schuler-check}
+\end{equation}
+This is an algebraic consequence of the Newtonian Schuler model and radius light-time. It does not make $f_g$ a Schuler oscillation or alter the Newtonian dynamics.
+
+\section{A small height compares clock rates}
+
+For static observers at radii $r_A$ and $r_B$, a photon exchanged between them has the exact frequency ratio
+\begin{equation}
+  \frac{\nu_B}{\nu_A}
+  =\frac{\alpha(r_A)}{\alpha(r_B)}
+  =\frac{\delta\tau(r_B)}{\delta\tau(r_A)}.
+  \label{eq:photon-ratio}
+\end{equation}
+For an outward photon, $r_B>r_A$, so $\nu_B<\nu_A$. This endpoint comparison of locally measured photon frequencies is related to, but distinct from, the proper-time rates of the two clocks.
+
+Now let two supported clocks be separated by a small outward height $h$, over which the local Newtonian field magnitude $g_{\mathrm{N}}$ is approximately constant. Their proper-time rates relative to the same reference time obey
+\begin{equation}
+  \frac{\alpha(r+h)}{\alpha(r)}-1
+  \simeq\frac{g_{\mathrm{N}}h}{c^2}.
+  \label{eq:clock-height}
+\end{equation}
+The upper clock accumulates more proper time per unit reference time. A photon sent upward instead arrives at lower frequency, with the opposite sign. Define the height light-time
+\begin{equation}
+  t_h\equiv\frac{h}{c}.
+  \label{eq:height-lighttime}
+\end{equation}
+Then the magnitude of either first-order fractional comparison can be written
+\begin{equation}
+  \left|\frac{\Delta\nu}{\nu}\right|
+  \simeq\frac{g_{\mathrm{N}}h}{c^2}
+  =f_g(r)\,t_h.
+  \label{eq:height-frequency}
+\end{equation}
+This compact product applies to a small height and a nearly uniform field. $t_h$ is a unit conversion, not an optical-fiber delay or the time required to perform the clock comparison. For larger separations, the varying field and actual path or endpoint comparison must be treated explicitly.
+
+\section{Earth-scale example and radial profile}
+
+For the series' ideal spherical-Earth reference set, use $GM_{\oplus}=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$ \cite{JPL}, $R_{\oplus}=6.371000\times10^6\ \mathrm{m}$ \cite{EarthFactSheet}, and the exact SI value $c=299\,792\,458\ \mathrm{m\,s^{-1}}$ \cite{BIPM}. Derive $g_{\mathrm{N}}=GM_{\oplus}/R_{\oplus}^2$ from these inputs rather than mixing in a separately rounded conventional acceleration:
+\begin{equation}
+  g_{\mathrm{N}}\simeq9.82025\ \mathrm{m\,s^{-2}},
+  \qquad
+  f_g(R_{\oplus})\simeq3.27568\times10^{-8}\ \mathrm{s^{-1}}
+  =32.7568\ \mathrm{nHz},
+  \label{eq:earth-fg}
+\end{equation}
+and
+\begin{equation}
+  \left|\nabla_{\mathrm{proper}}\ln\delta\tau\right|_{R_{\oplus}}
+  \simeq\frac{g_{\mathrm{N}}}{c^2}
+  =1.09265\times10^{-16}\ \mathrm{m^{-1}}.
+  \label{eq:earth-slope}
+\end{equation}
+The first-order inverse-rate excess at the surface is $GM_{\oplus}/(R_{\oplus}c^2)\simeq0.69613$ ppb. The corresponding Schuler period for this ideal model is about $84.35$ min.
+
+At other geocentric radii, the Earth-only weak-field profile is $\epsilon_{\mathrm{grav}}(r)\simeq GM_{\oplus}/(rc^2)=\tau_g/t_r$. Representative values are shown in Table~\ref{tab:radial-profile}. Contributions from the Moon, Sun, Earth rotation, and the actual geoid are omitted; infinity fixes the reference normalization and is not a required experimental clock.
+
+\begin{table}[ht]
+  \centering
+  \caption{Earth-only first-order inverse-rate excess at representative geocentric radii.}
+  \label{tab:radial-profile}
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+    Location & $r$ (km) & $r/R_{\oplus}$ & $t_r=r/c$ & $\epsilon_{\mathrm{grav}}$ \\
+    \midrule
+    Surface & 6,371 & 1.00 & 21.25 ms & 0.6961 ppb \\
+    GPS orbital radius & $\sim$26,560 & $\sim$4.17 & 88.6 ms & 0.1670 ppb \\
+    Mean Earth--Moon distance & $\sim$384,400 & $\sim$60.3 & 1.282 s & 0.01154 ppb \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+The GPS entry is a geocentric orbital radius, not satellite altitude above Earth's surface. The representative GPS altitude is approximately 20,200 km \cite{GPS}. All tabulated excesses are Earth-only estimates relative to infinity, not operational clock corrections.
+
+\section{Four experimental height scales}
+
+Using the same derived surface field, Eq.~\eqref{eq:height-frequency} gives the first-order magnitudes in Table~\ref{tab:height-scales}. The light-time column is simply $h/c$. The predicted shifts are scale calculations, not substitute measurements or experimental uncertainty budgets.
+
+\begin{table}[ht]
+  \centering
+  \caption{First-order fractional rate or photon-frequency shift magnitudes for representative terrestrial height separations.}
+  \label{tab:height-scales}
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    Example & $h$ & $t_h=h/c$ & $g_{\mathrm{N}}h/c^2$ \\
+    \midrule
+    JILA atomic sample \cite{Bothwell} & 1 mm & 3.34 ps & $1.09\times10^{-19}$ \\
+    NIST optical clocks \cite{Chou} & 33 cm & 1.10 ns & $3.61\times10^{-17}$ \\
+    Pound--Rebka tower \cite{PoundRebka} & 22.5 m & 75.1 ns & $2.46\times10^{-15}$ \\
+    Tokyo Skytree \cite{Takamoto} & $\sim$450 m & 1.50 $\mu$s & $4.92\times10^{-14}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+These examples do not all measure the same observable. The JILA work resolved a linear clock-frequency gradient within a millimetre-scale strontium sample \cite{Bothwell}. Chou et al. compared optical clocks at different gravitational potentials \cite{Chou}. Pound and Rebka measured a photon-frequency shift using recoil-free gamma rays \cite{PoundRebka}. Takamoto et al. used transportable optical lattice clocks across the Tokyo Skytree height difference \cite{Takamoto}. Their published results, apparatus corrections, and uncertainties should be quoted from the original reports; the simple $g_{\mathrm{N}}h/c^2$ column is only a common first-order reference scale.
+
+\section{Acceleration, Unruh temperature, and interpretive proposals}
+
+The acceleration in Eq.~\eqref{eq:hold-acceleration} is directly operational for a supported observer: an accelerometer measures the proper acceleration needed to remain static. The lapse-gradient identity itself is an established kinematic result for static spacetimes \cite{SantiagoVisser}. It should not be conflated with a universal coordinate acceleration or with the motion of a freely falling clock.
+
+Uniform proper acceleration in the Minkowski vacuum is associated with the Unruh temperature
+\begin{equation}
+  T_{\mathrm{U}}=\frac{\hbar a}{2\pi c k_{\mathrm{B}}}.
+  \label{eq:unruh}
+\end{equation}
+Substituting terrestrial $a\simeq g_{\mathrm{N}}$ gives a formal scale of about $4\times10^{-20}\ \mathrm{K}$ \cite{Unruh}. This is a theoretical detector-response scale under specified conditions, not evidence that Earth's gravity creates an ambient thermal bath or that an ordinary Earth-bound clock detects Unruh radiation. Applying the uniform-acceleration formula to a gravitational setting requires stating the observer, field state, and approximation.
+
+The same static potential can also be given proposed thermodynamic interpretations. Verlinde's entropic-gravity papers are examples \cite{Verlinde2011,Verlinde2017}, while objections and data-based tests of particular extensions include the analyses of Kobakhidze and of Lelli et al. \cite{Kobakhidze,Lelli}. These proposals and critiques are not needed to derive Eq.~\eqref{eq:exact-g}. If included, they should remain a short, explicitly contested discussion: sharing a logarithmic potential or its gradient does not establish an entropic mechanism.
+
+Near a Schwarzschild horizon, the local hovering acceleration in Eq.~\eqref{eq:hold-acceleration} diverges, and no static observer exists on the horizon. Any acceleration-associated temperature inferred from that limit concerns a family of increasingly accelerated observers outside the horizon; it is not a finite local measurement made by an observer at the horizon.
+
+\section{Conclusion}
+
+For a static observer family, the proper spatial gradient of the logarithmic inverse clock rate gives the inward gravitational direction, while the acceleration required to hold position points outward. In the Schwarzschild exterior this relation is exact and yields the local hovering acceleration $GM/(r^2\alpha)$. In the weak field it reduces to the Newtonian slope, with $f_g\equiv g_{\mathrm{N}}/c\simeq c|\nabla_{\mathrm{proper}}\ln\delta\tau|$.
+
+For a small height, the fractional clock-rate or photon-frequency comparison has magnitude $f_g(h/c)$, with opposite signs for an upper clock's rate and an upward photon's received frequency. The terrestrial examples illustrate this scale across several experimental regimes without treating estimates as measurements. The symbol $f_g$ remains an inverse-time acceleration scale, not an oscillation frequency, and neither the Unruh scale nor entropic-gravity proposals add a new consequence to the established static lapse-gradient identity.
+
+\begin{thebibliography}{99}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{SantiagoVisser}
+J. Santiago and M. Visser,
+``Tolman-like temperature gradients in stationary spacetimes,''
+\emph{Physical Review D} \textbf{98}, 064001 (2018),
+\href{https://doi.org/10.1103/PhysRevD.98.064001}{doi:\nolinkurl{10.1103/PhysRevD.98.064001}}.
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{Schuler1923}
+M. Schuler,
+``Die St\"orung von Pendel- und Kreiselapparaten durch die Beschleunigung des Fahrzeuges,''
+\emph{Physikalische Zeitschrift} \textbf{24}(16), 344--350 (1923).
+
+\bibitem{WhittakerCrassidis}
+M. P. Whittaker and J. L. Crassidis,
+``Linearized Analysis of Inertial Navigation Employing Common Frame Error Representations,''
+2018 AIAA Guidance, Navigation, and Control Conference,
+AIAA Paper 2018-1600,
+\href{https://doi.org/10.2514/6.2018-1600}{doi:\nolinkurl{10.2514/6.2018-1600}}.
+
+\bibitem{Bothwell}
+T. Bothwell et al.,
+``Resolving the gravitational redshift across a millimetre-scale atomic sample,''
+\emph{Nature} \textbf{602}, 420--424 (2022),
+\href{https://doi.org/10.1038/s41586-021-04349-7}{doi:\nolinkurl{10.1038/s41586-021-04349-7}}.
+
+\bibitem{Chou}
+C. W. Chou, D. B. Hume, T. Rosenband, and D. J. Wineland,
+``Optical clocks and relativity,''
+\emph{Science} \textbf{329}(5999), 1630--1633 (2010),
+\href{https://doi.org/10.1126/science.1192720}{doi:\nolinkurl{10.1126/science.1192720}}.
+
+\bibitem{PoundRebka}
+R. V. Pound and G. A. Rebka, Jr.,
+``Apparent weight of photons,''
+\emph{Physical Review Letters} \textbf{4}, 337--341 (1960),
+\href{https://doi.org/10.1103/PhysRevLett.4.337}{doi:\nolinkurl{10.1103/PhysRevLett.4.337}}.
+
+\bibitem{Takamoto}
+M. Takamoto et al.,
+``Test of general relativity by a pair of transportable optical lattice clocks,''
+\emph{Nature Photonics} \textbf{14}, 411--415 (2020),
+\href{https://doi.org/10.1038/s41566-020-0619-8}{doi:\nolinkurl{10.1038/s41566-020-0619-8}}.
+
+\bibitem{Unruh}
+W. G. Unruh,
+``Notes on black-hole evaporation,''
+\emph{Physical Review D} \textbf{14}, 870--892 (1976),
+\href{https://doi.org/10.1103/PhysRevD.14.870}{doi:\nolinkurl{10.1103/PhysRevD.14.870}}.
+
+\bibitem{Verlinde2011}
+E. Verlinde,
+``On the origin of gravity and the laws of Newton,''
+\emph{Journal of High Energy Physics} \textbf{2011}(4), 029,
+\href{https://doi.org/10.1007/JHEP04(2011)029}{doi:\nolinkurl{10.1007/JHEP04(2011)029}}.
+
+\bibitem{Verlinde2017}
+E. Verlinde,
+``Emergent gravity and the dark universe,''
+\emph{SciPost Physics} \textbf{2}, 016 (2017),
+\href{https://doi.org/10.21468/SciPostPhys.2.3.016}{doi:\nolinkurl{10.21468/SciPostPhys.2.3.016}}.
+
+\bibitem{Kobakhidze}
+A. Kobakhidze,
+``Gravity is not an entropic force,''
+\emph{Physical Review D} \textbf{83}, 021502(R) (2011),
+\href{https://doi.org/10.1103/PhysRevD.83.021502}{doi:\nolinkurl{10.1103/PhysRevD.83.021502}}.
+
+\bibitem{Lelli}
+F. Lelli, S. S. McGaugh, and J. M. Schombert,
+``Testing Verlinde's emergent gravity with the radial acceleration relation,''
+\emph{Monthly Notices of the Royal Astronomical Society: Letters} \textbf{468}, L68--L71 (2017),
+\href{https://doi.org/10.1093/mnrasl/slx031}{doi:\nolinkurl{10.1093/mnrasl/slx031}}.
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html}, and
+\emph{Planetary Physical Parameters},
+\url{https://ssd.jpl.nasa.gov/planets/phys_par.html},
+accessed October 27, 2026.
+
+\bibitem{EarthFactSheet}
+NASA/NSSDC,
+\emph{Earth Fact Sheet},
+\url{https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html},
+accessed October 27, 2026.
+
+\bibitem{BIPM}
+Bureau International des Poids et Mesures,
+\emph{The International System of Units (SI)}, 9th ed. (2019), updated 2026,
+\href{https://doi.org/10.59161/AUEZ1291}{doi:\nolinkurl{10.59161/AUEZ1291}}.
+
+\bibitem{GPS}
+U.S. Space Force,
+``GPS Space Segment,''
+\url{https://www.gps.gov/space-segment/},
+accessed October 27, 2026.
+
+\end{thebibliography}
+
+\end{document}
