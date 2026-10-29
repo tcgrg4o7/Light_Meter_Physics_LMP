@@ -1,0 +1,310 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{Mass as a Time:\\
+Gravitational Time, Clock-Rate Depth, and the Schuler Scale}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The gravitational parameter $GM$ can be expressed as a characteristic time $\tau_g\equiv GM/c^3$. This time is neither an elapsed proper time nor a clock period; it is a scale formed from mass, gravity, and the speed of light. For a spherical model of radius $R$, the radius light-time $t_R\equiv R/c$ gives the compactness $x_R=\tau_g/t_R$. In a static Schwarzschild exterior, the inverse clock-rate excess is exactly $(1-2x_R)^{-1/2}-1$ and equals $x_R$ only to first order. In the Newtonian Schuler model, $\omega_{\mathrm{S}}^2=GM/R^3=\tau_g/t_R^3$. These definitions produce three related scales: $\tau_g/t_R$ is dimensionless, $\tau_g/t_R^2=g_{\mathrm{N}}/c\equiv f_g$ is an inverse-time scale, and $\tau_g/t_R^3=\omega_{\mathrm{S}}^2$. An idealized Earth calculation gives $\tau_g\simeq14.79$ ps, $t_R\simeq21.25$ ms, and a first-order surface-clock lag of about $60.1\ \mu$s per reference day. The relationships are dimensional and algebraic, not a causal link between navigation and gravity.
+\end{abstract}
+
+\noindent\textbf{Keywords:} gravitational time scale, clock rate, Schwarzschild spacetime, Schuler tuning, weak field
+
+\section{Introduction}
+
+The combination $GM/c^3$ has units of time and appears naturally when gravitational effects are written in relativistic units. Calling it ``mass as a time'' is convenient shorthand, but it does not mean that mass itself has become elapsed time or that a clock accumulates this interval. The quantity is a characteristic scale built from the gravitational parameter $GM$ and the exact speed of light $c$.
+
+This paper relates that scale to two others. The first is the light-time equivalent $R/c$ of a chosen radius. The second is the inverse angular frequency of a Newtonian Schuler mode. Combining them recovers the weak-field static clock-rate comparison and the acceleration scale $g_{\mathrm{N}}/c$, here denoted $f_g$. The derivation keeps the exact Schwarzschild clock-rate formula distinct from its first-order approximation and keeps Schuler dynamics Newtonian.
+
+The model uses an ideal, spherical, nonrotating source with gravitational parameter $GM$ and radius $R$. For the exact static-clock expression, $R$ is an areal radius in the vacuum Schwarzschild exterior and must lie outside the source. The reference time $t$ is normalized to proper time at infinity; $\tau$ is the proper time of the static clock at $R$. Numerical Earth values are illustrative spherical-model inputs, not a geodetic clock-transfer model. Rotation, oblateness, altitude variation, other bodies, and the geoid are omitted.
+
+\section{The gravitational time scale}
+
+Define
+\begin{equation}
+  \tau_g\equiv\frac{GM}{c^3}.
+  \label{eq:mass-time}
+\end{equation}
+Since $[GM]=\mathrm{m^3\,s^{-2}}$ and $[c^3]=\mathrm{m^3\,s^{-3}}$, $\tau_g$ has units of seconds. The term ``mass time'' refers to this gravitational scale, not to a mass $M$ converted to seconds without the factor $G$.
+
+The Schwarzschild radius is
+\begin{equation}
+  r_s\equiv\frac{2GM}{c^2}=2c\tau_g.
+  \label{eq:schwarzschild-radius}
+\end{equation}
+Thus $\tau_g$ is half the Schwarzschild radius divided by $c$. This is a relation between scales; it does not imply that a body has that radius or that light physically traverses an interior path. The same combination occurs in relativistic pulsar timing, where the solar mass time $T_{\odot}=GM_{\odot}/c^3$ is used in timing parameters and gravitational propagation delays \cite{Edwards}.
+
+\section{Radius light-time and the static clock}
+
+For a chosen areal radius $R$, define the radius light-time
+\begin{equation}
+  t_R\equiv\frac{R}{c}.
+  \label{eq:radius-time}
+\end{equation}
+This is a unit conversion from length to time, not a claim about a signal traveling through the body. Their ratio is the dimensionless compactness
+\begin{equation}
+  x_R\equiv\frac{\tau_g}{t_R}
+  =\frac{GM}{Rc^2}.
+  \label{eq:compactness}
+\end{equation}
+
+In the Schwarzschild exterior, a static clock at radius $R$ has lapse $\alpha(R)=\mathrm{d}\tau/\mathrm{d}t=\sqrt{1-r_s/R}$ \cite{Schwarzschild}. Define its dimensionless inverse rate and excess by
+\begin{equation}
+  \delta\tau(R)\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}
+  =\frac{1}{\alpha(R)},
+  \qquad
+  \epsilon_{\mathrm{grav}}(R)\equiv\delta\tau(R)-1.
+  \label{eq:inverse-rate}
+\end{equation}
+Here $\delta\tau$ is a rate ratio, not an elapsed time interval. With $t$ normalized at infinity, the exact static relation becomes
+\begin{equation}
+  \delta\tau(R)
+  =\left(1-\frac{2\tau_g}{t_R}\right)^{-1/2},
+  \qquad
+  \epsilon_{\mathrm{grav}}(R)
+  =\left(1-2x_R\right)^{-1/2}-1.
+  \label{eq:exact-rate}
+\end{equation}
+This expression applies to a static clock in the exterior, where $R>r_s$. The horizon boundary corresponds to $t_R=2\tau_g$; a static observer cannot be placed there.
+
+For $x_R\ll1$, expansion of Eq.~\eqref{eq:exact-rate} gives
+\begin{equation}
+  \epsilon_{\mathrm{grav}}(R)
+  =x_R+\frac{3}{2}x_R^2+\frac{5}{2}x_R^3+\cdots
+  \simeq\frac{\tau_g}{t_R}.
+  \label{eq:weak-rate}
+\end{equation}
+Only the final equality is a first-order approximation. The excess depends on the reference time normalization; it is not a locally observed absolute clock deficit. In the Newtonian limit it is also $-\Phi(R)/c^2$ when $\Phi(\infty)=0$.
+
+\section{The Schuler timescale and the three powers}
+
+In the idealized linear Schuler model, a small navigation-error mode $q$ obeys
+\begin{equation}
+  \ddot q+\omega_{\mathrm{S}}^2q=0,
+  \qquad
+  \omega_{\mathrm{S}}^2=\frac{g_{\mathrm{N}}}{R},
+  \label{eq:schuler-mode}
+\end{equation}
+where $g_{\mathrm{N}}$ is the Newtonian surface-gravity magnitude of the spherical source. For a point-mass exterior, $g_{\mathrm{N}}=GM/R^2$, so
+\begin{equation}
+  \omega_{\mathrm{S}}^2=\frac{GM}{R^3}.
+  \label{eq:schuler-kepler}
+\end{equation}
+This is the standard Schuler angular-frequency scale \cite{Schuler1923,WhittakerCrassidis}. It has the same form as the Newtonian angular frequency squared of a circular orbit at radius $R$; the equality is a consequence of the model equations, not a claim that the navigation error mode is a physical orbit. Real navigation systems include sensor errors, damping, rotation, and other terms beyond this ideal oscillator.
+
+Let
+\begin{equation}
+  \tau_{\mathrm{S}}\equiv\frac{1}{\omega_{\mathrm{S}}},
+  \qquad
+  f_{\mathrm{S}}\equiv\frac{\omega_{\mathrm{S}}}{2\pi},
+  \qquad
+  T_{\mathrm{S}}\equiv\frac{2\pi}{\omega_{\mathrm{S}}}.
+  \label{eq:schuler-times}
+\end{equation}
+The quantity $\tau_{\mathrm{S}}$ is the one-radian phase timescale, not the full Schuler period $T_{\mathrm{S}}$; $f_{\mathrm{S}}$ is the cyclic frequency. Using $t_R=R/c$ and $\tau_g=GM/c^3$ in Eq.~\eqref{eq:schuler-kepler} yields
+\begin{equation}
+  \omega_{\mathrm{S}}^2
+  =\frac{\tau_g}{t_R^3},
+  \qquad
+  t_R^3=\tau_g\tau_{\mathrm{S}}^2.
+  \label{eq:three-time-law}
+\end{equation}
+The second form says that, on a logarithmic timescale, $t_R$ lies two-thirds of the way from $\tau_g$ to $\tau_{\mathrm{S}}$:
+\begin{equation}
+  \ln\!\left(\frac{t_R}{\tau_g}\right)
+  =\frac{2}{3}\ln\!\left(\frac{\tau_{\mathrm{S}}}{\tau_g}\right).
+  \label{eq:log-position}
+\end{equation}
+
+The same mass time divided by successive powers of the radius light-time gives
+\begin{align}
+  \frac{\tau_g}{t_R}
+  &=\frac{GM}{Rc^2}=x_R,
+  \label{eq:three-scales-depth}\\
+  \frac{\tau_g}{t_R^2}
+  &=\frac{GM}{R^2c}
+   =\frac{g_{\mathrm{N}}}{c}
+   =\omega_{\mathrm{S}}^2t_R,
+  \label{eq:three-scales-fg}\\
+  \frac{\tau_g}{t_R^3}
+  &=\frac{GM}{R^3}=\omega_{\mathrm{S}}^2.
+  \label{eq:three-scales-schuler}
+\end{align}
+For compactness of notation, define
+\begin{equation}
+  f_g\equiv\frac{g_{\mathrm{N}}}{c}.
+  \label{eq:fg-definition}
+\end{equation}
+Despite the symbol $f$, $f_g$ denotes an inverse-time scale, not a cyclic frequency or an oscillation. No factor of $2\pi$ is part of its definition. Equations~\eqref{eq:three-scales-depth}--\eqref{eq:three-scales-schuler} are exact algebraic identities within the stated Newtonian definitions. The identification of $\tau_g/t_R$ with the static inverse-rate excess is only first order, as shown in Eq.~\eqref{eq:weak-rate}.
+
+\section{A consistent Earth and Sun illustration}
+
+For the series' ideal spherical-Earth reference set, take $GM_{\oplus}=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$ \cite{JPL}, choose the volumetric mean radius $R_{\oplus}=6.371000\times10^6\ \mathrm{m}$ \cite{EarthFactSheet}, and use the exact SI value $c=299\,792\,458\ \mathrm{m\,s^{-1}}$ \cite{BIPM}. This defines one spherical model; the radius and gravitational parameter are not a claim that the real Earth is spherical. Rounded results are in Table~\ref{tab:body-scales}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Characteristic times and compactness for idealized spherical models. The solar inputs are IAU nominal conversion constants.}
+  \label{tab:body-scales}
+  \small
+  \begin{tabular}{lccccc}
+    \toprule
+    Model & $GM$ ($\mathrm{m^3\,s^{-2}}$) & $R$ ($\mathrm{m}$) & $\tau_g$ & $t_R$ & $x_R=\tau_g/t_R$ \\
+    \midrule
+    Earth & $3.98600435507\times10^{14}$ & $6.371000\times10^6$ & $14.7937\ \mathrm{ps}$ & $21.2514\ \mathrm{ms}$ & $0.69613\ \mathrm{ppb}$ \\
+    Sun & $1.3271244\times10^{20}$ & $6.957\times10^8$ & $4.92549\ \mu\mathrm{s}$ & $2.32061\ \mathrm{s}$ & $2.12250\ \mathrm{ppm}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The solar row uses the IAU nominal solar mass parameter and nominal radius \cite{Prsa}. These are defined conversion constants, not claims about the Sun's instantaneous measured mass or radius. For both rows, $x_R$ equals the inverse-rate excess only in the weak-field approximation. The exact expression for an ideal Schwarzschild exterior remains Eq.~\eqref{eq:exact-rate}.
+
+For the selected Earth model,
+\begin{equation}
+  g_{\mathrm{N}}=\frac{GM_{\oplus}}{R_{\oplus}^2}
+  \simeq9.82025\ \mathrm{m\,s^{-2}},
+  \qquad
+  f_g=\frac{g_{\mathrm{N}}}{c}
+  \simeq3.27568\times10^{-8}\ \mathrm{s^{-1}}
+  =32.7568\ \mathrm{nHz}.
+  \label{eq:earth-fg}
+\end{equation}
+The Schuler quantities for the same model are
+\begin{equation}
+  \omega_{\mathrm{S}}\simeq1.24153\times10^{-3}\ \mathrm{s^{-1}},
+  \qquad
+  \tau_{\mathrm{S}}\simeq805.46\ \mathrm{s},
+  \qquad
+  f_{\mathrm{S}}\simeq197.60\ \mu\mathrm{Hz},
+  \qquad
+  T_{\mathrm{S}}\simeq84.35\ \mathrm{min}.
+  \label{eq:earth-schuler}
+\end{equation}
+These use $g_{\mathrm{N}}=GM/R^2$ throughout. Substituting the conventional standard acceleration $g_{\mathrm{n}}=9.80665\ \mathrm{m\,s^{-2}}$ instead would give $g_{\mathrm{n}}/c\simeq32.710\ \mathrm{nHz}$, but that is a different input and not the surface field of this ideal spherical mass model \cite{CGPM1901}.
+
+\section{What the mass time means for an interval}
+
+For a static clock in the weak field, $\mathrm{d}\tau/\mathrm{d}t\simeq1-x_R$. Over a reference-time interval $\Delta t$, its accumulated lag relative to that reference is therefore
+\begin{equation}
+  \Delta t-\Delta\tau
+  \simeq x_R\,\Delta t
+  =\frac{\tau_g}{t_R}\,\Delta t.
+  \label{eq:lag}
+\end{equation}
+If the reference interval is exactly one radius light-time, $\Delta t=t_R$, then
+\begin{equation}
+  \Delta t-\Delta\tau\simeq\tau_g.
+  \label{eq:mass-time-lag}
+\end{equation}
+This equality is a first-order clock comparison, not an assertion that the mass time is stored in the clock or represents a separate physical delay.
+
+For the Earth example, the first-order lag is about $60.15\ \mu\mathrm{s}$ per $86\,400\ \mathrm{s}$ of reference time. Over one Schuler one-radian timescale it is about $0.561\ \mu\mathrm{s}$; over one full Schuler cycle it is about $3.523\ \mu\mathrm{s}$. Over one radius light-time, $21.2514$ ms, it is approximately $14.7937$ ps, equal to $\tau_g$ at this order. These are elapsed-interval comparisons between a static surface clock and the reference time, not operational clock errors.
+
+\section{The inverse-time scale and the static gradient}
+
+The relation to a spatial gradient can be shown directly in Schwarzschild coordinates \cite{Schwarzschild}. In the radial direction, proper distance satisfies $\mathrm{d}L=\mathrm{d}r/\alpha$, so for a radial scalar $F(r)$,
+\begin{equation}
+  \nabla F=\alpha\frac{\mathrm{d}F}{\mathrm{d}r}\,\hat{\mathbf r},
+  \label{eq:proper-gradient}
+\end{equation}
+where $\hat{\mathbf r}$ points outward. Applying this to the exact inverse rate gives
+\begin{equation}
+  c^2\nabla\ln\delta\tau
+  =-\frac{GM}{r^2\alpha(r)}\,\hat{\mathbf r}.
+  \label{eq:exact-gradient}
+\end{equation}
+The vector points inward and is the negative of the proper acceleration required to hold a static position. In the weak field, $\alpha\simeq1$, so its magnitude divided by $c$ is $g_{\mathrm{N}}/c=f_g$ to leading order. Thus the middle scale in Eq.~\eqref{eq:three-scales-fg} is consistent with the static inverse-rate gradient, while the exact hovering acceleration includes the factor $1/\alpha$.
+
+This gradient relation concerns a family of static observers and uses proper spatial distances. It does not turn $f_g$ into an independently detectable oscillation frequency, nor does it make the clock-rate ratio a new field or material density. The connection in this paper is between standard relativistic clock comparisons and a Newtonian navigation timescale through shared model parameters and unit conversions.
+
+\section{Conclusion}
+
+The characteristic gravitational time $\tau_g=GM/c^3$ expresses the gravitational parameter as a time scale. Paired with the radius light-time $t_R=R/c$, it gives the compactness $\tau_g/t_R$ and, in the weak field, the static inverse-rate excess. In a Newtonian spherical-Earth Schuler model, the additional relation $\omega_{\mathrm{S}}^2=GM/R^3$ yields $\tau_g/t_R^2=g_{\mathrm{N}}/c\equiv f_g$ and $\tau_g/t_R^3=\omega_{\mathrm{S}}^2$. The symbols organize dimensional relationships; they do not imply a causal mechanism between navigation and gravity. The exact static clock-rate formula is retained separately from its first-order approximation, and the inverse-time scale $f_g$ is not an oscillation frequency.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Schuler1923}
+M. Schuler,
+``Die St\"orung von Pendel- und Kreiselapparaten durch die Beschleunigung des Fahrzeuges,''
+\emph{Physikalische Zeitschrift} \textbf{24}(16), 344--350 (1923).
+
+\bibitem{WhittakerCrassidis}
+M. P. Whittaker and J. L. Crassidis,
+``Linearized Analysis of Inertial Navigation Employing Common Frame Error Representations,''
+2018 AIAA Guidance, Navigation, and Control Conference,
+AIAA Paper 2018-1600,
+\href{https://doi.org/10.2514/6.2018-1600}{doi:\nolinkurl{10.2514/6.2018-1600}}.
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html}, and
+\emph{Planetary Physical Parameters},
+\url{https://ssd.jpl.nasa.gov/planets/phys_par.html},
+accessed October 27, 2026.
+
+\bibitem{EarthFactSheet}
+NASA/NSSDC,
+\emph{Earth Fact Sheet},
+\url{https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html},
+accessed October 27, 2026.
+
+\bibitem{Edwards}
+R. T. Edwards, G. B. Hobbs, and R. N. Manchester,
+``TEMPO2, a new pulsar timing package---II. The timing model and precision estimates,''
+\emph{Monthly Notices of the Royal Astronomical Society} \textbf{372}, 1549--1574 (2006),
+\href{https://doi.org/10.1111/j.1365-2966.2006.10870.x}{doi:\nolinkurl{10.1111/j.1365-2966.2006.10870.x}}.
+
+\bibitem{BIPM}
+Bureau International des Poids et Mesures,
+\emph{The International System of Units (SI)}, 9th ed. (2019), updated 2026,
+\href{https://doi.org/10.59161/AUEZ1291}{doi:\nolinkurl{10.59161/AUEZ1291}}.
+
+\bibitem{Prsa}
+A. Pr\v{s}a et al.,
+``Nominal values for selected solar and planetary quantities: IAU 2015 Resolution B3,''
+\emph{The Astronomical Journal} \textbf{152}, 41 (2016),
+\href{https://doi.org/10.3847/0004-6256/152/2/41}{doi:\nolinkurl{10.3847/0004-6256/152/2/41}}.
+
+\bibitem{CGPM1901}
+Conf\'erence G\'en\'erale des Poids et Mesures,
+Declaration 2 of the 3rd CGPM (1901), ``Conventional value of $g_{\mathrm{n}}$,''
+\href{https://doi.org/10.59161/CGPM1901DECL2E}{doi:\nolinkurl{10.59161/CGPM1901DECL2E}}.
+
+\end{thebibliography}
+
+\end{document}
