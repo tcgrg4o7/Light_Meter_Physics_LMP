@@ -31,7 +31,7 @@ The manuscripts distinguish exact results from approximations and established ph
 | 17 | Counting the Horizon | [PDF](papers/17-counting-the-horizon/17.%20counting%20the%20horizon.pdf) | [Source](papers/17-counting-the-horizon/17.%20counting%20the%20horizon.tex) |
 | 18 | Action × Time | [PDF](papers/18-action-times-time/18.%20action%20x%20time.pdf) | [Source](papers/18-action-times-time/18.%20action%20x%20time.tex) |
 | 19 | When the Horizon Spins | [PDF](papers/19-when-the-horizon-spins/19.%20when%20the%20horizon%20spins.pdf) | [Source](papers/19-when-the-horizon-spins/19.%20when%20the%20horizon%20spins.tex) |
-| 20 | The Final Parsec Equilibrium | Forthcoming | Forthcoming |
+| 20 | The Final Parsec Equilibrium | [PDF](papers/20-the-final-parsec-equilibrium/20.%20the%20final%20parsec%20equilibrium.pdf) | [Source](papers/20-the-final-parsec-equilibrium/20.%20the%20final%20parsec%20equilibrium.tex) |
 
 ## License
 
