@@ -1,0 +1,256 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{Counting the Horizon:\\
+Area Units, Entropy, Energy, and Frequency}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+For a Schwarzschild black hole, the horizon area can be expressed as a dimensionless ratio to the Planck area, $n_{\mathrm A}\equiv A/\ell_P^2$. The Bekenstein--Hawking law gives $S_{\mathrm{BH}}/k_{\mathrm B}=n_{\mathrm A}/4$, while expressing the same entropy in bits gives $n_{\mathrm{bit}}=n_{\mathrm A}/(4\ln2)$. Combining the Hawking temperature with the Schwarzschild mass relation yields the exact identities $Mc^2=(n_{\mathrm A}/2)k_{\mathrm B}T_H=2\ln2\,n_{\mathrm{bit}}k_{\mathrm B}T_H$. Dividing by Planck's constant gives equivalent relations among energy-over-$h$ scales. We distinguish the area ratio, entropy in natural-log units, and entropy in bits, and explain why the half-$k_{\mathrm B}T_H$ form resembles equipartition without establishing physical degrees of freedom on the horizon. The identities assume a four-dimensional, asymptotically flat, uncharged, nonrotating black hole and standard semiclassical thermodynamic formulas; the area ratio is not a literal count of horizon tiles or stored bits.
+\end{abstract}
+
+\noindent\textbf{Keywords:} black-hole entropy, Planck area, information units, Hawking temperature, Smarr relation, equipartition
+
+\section{Introduction}
+
+A Schwarzschild black hole's mass-energy, Hawking temperature, horizon area, and entropy are linked by a short chain of standard relations. The horizon area divided by the Planck area is a dimensionless number. The Bekenstein--Hawking law assigns one quarter of that number to the entropy in units of $k_{\mathrm B}$. Converting that entropy to bits introduces a factor of $\ln2$. Combining the result with the Hawking temperature rewrites the mass-energy as an area-count-weighted thermal energy.
+
+The purpose of this paper is to keep three quantities distinct: the dimensionless area ratio $n_{\mathrm A}$, the entropy $S_{\mathrm{BH}}/k_{\mathrm B}$ in natural-log units, and the entropy value expressed in bits $n_{\mathrm{bit}}$. The area ratio is geometric bookkeeping. The bit value is an entropy-unit conversion. Neither, by itself, specifies microscopic horizon constituents or physical memory cells.
+
+The scope is a four-dimensional, asymptotically flat Schwarzschild black hole: zero spin and zero charge. We use the standard Hawking temperature normalized at infinity and Bekenstein--Hawking area entropy \cite{Bekenstein,Hawking,Smarr}. Any equipartition interpretation is identified separately as a hypothesis or analogy rather than as a consequence of the algebra. For a rotating Kerr black hole, the Smarr relation instead reads $Mc^2=2T_HS_{\mathrm{BH}}+2\Omega_HJ$, so the area-count thermal term corresponds to $Mc^2-2\Omega_HJ$, not the entire mass-energy. The later Kerr manuscript develops this distinction \cite{Smarr}.
+
+\section{Horizon area in Planck units}
+
+For mass $M$, the Schwarzschild radius, horizon area, and Planck area are
+\begin{equation}
+  r_s\equiv\frac{2GM}{c^2},
+  \qquad
+  A=4\pi r_s^2=\frac{16\pi G^2M^2}{c^4},
+  \qquad
+  \ell_P^2\equiv\frac{\hbar G}{c^3}.
+  \label{eq:area-and-planck-area}
+\end{equation}
+Define the dimensionless Planck-area ratio
+\begin{equation}
+  n_{\mathrm A}\equiv\frac{A}{\ell_P^2}
+  =\frac{16\pi G M^2}{\hbar c}.
+  \label{eq:area-count}
+\end{equation}
+The symbol $n_{\mathrm A}$ denotes area expressed in Planck-area units. It is not assumed to be an integer, and defining it does not tile the horizon with physical squares. A grid used to illustrate the ratio is only an area ruler.
+
+\section{One area, two entropy units}
+
+The Bekenstein--Hawking relation assigns entropy to the horizon area \cite{Bekenstein,Hawking}:
+\begin{equation}
+  S_{\mathrm{BH}}=\frac{k_{\mathrm B}A}{4\ell_P^2}.
+  \label{eq:bh-area-law}
+\end{equation}
+Using Eq.~\eqref{eq:area-count}, the entropy in dimensionless natural-log units is
+\begin{equation}
+  \frac{S_{\mathrm{BH}}}{k_{\mathrm B}}
+  =\frac{n_{\mathrm A}}{4}.
+  \label{eq:entropy-nats}
+\end{equation}
+The quantity $S_{\mathrm{BH}}/k_{\mathrm B}$ is commonly described as entropy in nats, corresponding to a logarithm with base $e$.
+
+One bit corresponds to an entropy increment $k_{\mathrm B}\ln2$. Therefore the same entropy, expressed in bits, is
+\begin{equation}
+  n_{\mathrm{bit}}\equiv\frac{S_{\mathrm{BH}}}{k_{\mathrm B}\ln2}
+  =\frac{n_{\mathrm A}}{4\ln2}
+  \simeq0.360674\,n_{\mathrm A}.
+  \label{eq:entropy-bits}
+\end{equation}
+Equivalently, one entropy bit corresponds to $4\ln2\simeq2.77259$ Planck-area units under this convention. This base conversion follows the information-unit convention associated with Shannon entropy \cite{Shannon}. It does not establish that the horizon contains individually addressable binary switches, nor does it provide a microscopic model for black-hole states.
+
+The phrase ``half the bits'' can therefore be misleading if read literally. The half in the energy formula below multiplies $k_{\mathrm B}T_H$ per unit of $n_{\mathrm A}$; it does not mean that half of the entropy bits are counted.
+
+\section{The area-count energy identity}
+
+The Hawking temperature for a Schwarzschild black hole, referred to time at infinity, is \cite{Hawking}
+\begin{equation}
+  T_H=\frac{\hbar c^3}{8\pi G M k_{\mathrm B}}.
+  \label{eq:hawking-temperature}
+\end{equation}
+Multiplying Eq.~\eqref{eq:area-count} by $k_{\mathrm B}T_H/2$ gives
+\begin{align}
+  \frac{1}{2}n_{\mathrm A}k_{\mathrm B}T_H
+  &=\frac{1}{2}
+    \left(\frac{16\pi G M^2}{\hbar c}\right)
+    \left(\frac{\hbar c^3}{8\pi G M}\right) \\
+  &=Mc^2.
+  \label{eq:area-count-energy}
+\end{align}
+Since $n_{\mathrm A}=4S_{\mathrm{BH}}/k_{\mathrm B}$, this is equivalently
+\begin{equation}
+  Mc^2=2T_HS_{\mathrm{BH}}.
+  \label{eq:smarr}
+\end{equation}
+This is the Schwarzschild form of the Smarr relation \cite{Smarr}. The derivation shows that the ``per-area-unit'' expression is the same thermodynamic identity regrouped; the constants cancel exactly within the stated formulas.
+
+Using Eq.~\eqref{eq:entropy-bits} to replace the area ratio instead gives
+\begin{equation}
+  Mc^2=2\ln2\,n_{\mathrm{bit}}k_{\mathrm B}T_H.
+  \label{eq:bit-energy}
+\end{equation}
+The coefficient changes because the count changes convention. Equations~\eqref{eq:area-count-energy} and \eqref{eq:bit-energy} describe the same energy and temperature; neither convention identifies actual horizon constituents.
+
+\section{First-law interpretation of the factor}
+
+The Schwarzschild first law along a quasistatic family is
+\begin{equation}
+  \mathrm{d}E=T_H\,\mathrm{d}S_{\mathrm{BH}},
+  \qquad E=Mc^2.
+  \label{eq:first-law}
+\end{equation}
+The area law gives $S_{\mathrm{BH}}\propto M^2\propto E^2$. If $S_{\mathrm{BH}}=C E^2$ along this family, then
+\begin{equation}
+  \frac{\mathrm{d}S_{\mathrm{BH}}}{\mathrm{d}E}
+  =\frac{2S_{\mathrm{BH}}}{E}.
+  \label{eq:entropy-slope}
+\end{equation}
+The first law also gives $\mathrm{d}S_{\mathrm{BH}}/\mathrm{d}E=1/T_H$. Equating the two slopes yields $E=2T_HS_{\mathrm{BH}}$. Thus the factor two records the quadratic entropy scaling; it is not an independent energy source or a separate equipartition derivation. This first-law argument concerns changes along the Schwarzschild family and does not alone fix the absolute entropy normalization.
+
+\section{Frequency form}
+
+An energy can be expressed in frequency units by dividing by Planck's constant. Define the mass-energy frequency and the Hawking thermal-energy frequency by
+\begin{equation}
+  \nu_C\equiv\frac{Mc^2}{h},
+  \qquad
+  f_H\equiv\frac{k_{\mathrm B}T_H}{h},
+  \qquad h=2\pi\hbar.
+  \label{eq:frequencies}
+\end{equation}
+Dividing Eq.~\eqref{eq:area-count-energy} by $h$ gives
+\begin{equation}
+  \nu_C=\frac{1}{2}n_{\mathrm A}f_H
+  =2\ln2\,n_{\mathrm{bit}}f_H.
+  \label{eq:frequency-identity}
+\end{equation}
+Here $\nu_C$ is the Compton frequency corresponding to the mass-energy under the $E=h\nu$ convention; its angular-frequency counterpart is $Mc^2/\hbar=2\pi\nu_C$. Likewise, $f_H$ expresses the thermal energy in hertz. It is not the peak frequency of the Hawking spectrum, nor does Eq.~\eqref{eq:frequency-identity} imply a physical oscillation of the horizon.
+
+\section{Equipartition form and its limits}
+
+Classical equipartition assigns an average energy $k_{\mathrm B}T/2$ to each independent quadratic degree of freedom in thermal equilibrium. Equation~\eqref{eq:area-count-energy} has that algebraic form if $n_{\mathrm A}$ is treated as the number of such degrees of freedom at temperature $T_H$. However, no step in the derivation demonstrates that Planck-area units are independent quadratic modes, or that the horizon is a classical material system in thermal equilibrium. That microscopic interpretation would require additional physical assumptions.
+
+Horizon-equipartition interpretations have been proposed in broader thermodynamic or emergent-gravity frameworks \cite{Padmanabhan,Verlinde}. This manuscript uses them only as context. Its result is narrower: given the Schwarzschild area count, Hawking temperature, and Bekenstein--Hawking entropy, Eq.~\eqref{eq:area-count-energy} follows algebraically. The equality does not determine the microstates or validate a particular microscopic theory.
+
+\section{Numerical examples}
+
+For illustration, use $GM_{\odot}=1.3271244\times10^{20}\ \mathrm{m^3\,s^{-2}}$ and $GM_{\oplus}=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$ \cite{JPL}, together with $G=6.67430\times10^{-11}\ \mathrm{m^3\,kg^{-1}\,s^{-2}}$ \cite{CODATA}. The values of $c$, $h$, and $k_{\mathrm B}$ are exact in the SI. Since $G$ is measured, quantities involving the mass or Planck area are rounded. Both examples describe hypothetical Schwarzschild black holes with the Sun's and Earth's masses, not the actual astronomical bodies.
+
+\begin{table}[ht]
+  \centering
+  \caption{Area, entropy, and energy-frequency quantities for hypothetical Schwarzschild black holes.}
+  \label{tab:counts}
+  \begin{tabular}{lcc}
+    \toprule
+    Quantity & Solar-mass black hole & Earth-mass black hole \\
+    \midrule
+    Area ratio $n_{\mathrm A}$ & $4.196\times10^{77}$ & $3.785\times10^{66}$ \\
+    Entropy $S_{\mathrm{BH}}/k_{\mathrm B}$ (nats) & $1.049\times10^{77}$ & $9.462\times10^{65}$ \\
+    Entropy $n_{\mathrm{bit}}$ (bits) & $1.513\times10^{77}$ & $1.365\times10^{66}$ \\
+    Hawking temperature $T_H$ & $61.70\ \mathrm{nK}$ & $20.54\ \mathrm{mK}$ \\
+    Thermal-energy scale $f_H$ & $1.286\ \mathrm{kHz}$ & $428.1\ \mathrm{MHz}$ \\
+    Mass-energy $Mc^2=2T_HS_{\mathrm{BH}}$ & $1.787\times10^{47}\ \mathrm{J}$ & $5.368\times10^{41}\ \mathrm{J}$ \\
+    Compton frequency $\nu_C$ & $2.697\times10^{80}\ \mathrm{Hz}$ & $8.101\times10^{74}\ \mathrm{Hz}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The solar-to-Earth mass ratio is about $3.329\times10^5$. The area ratio and entropy therefore scale by its square, about $1.109\times10^{11}$, while the Hawking temperature and thermal-energy frequency scale inversely with mass. These examples check the algebra at widely separated scales; they do not imply that either body's actual horizon has been measured or that the displayed frequencies are emitted spectral peaks.
+
+\section{Interpretation and limits}
+
+Three count-like quantities appear, but they answer different questions. The area ratio $n_{\mathrm A}$ expresses geometric area in Planck units. The dimensionless entropy $S_{\mathrm{BH}}/k_{\mathrm B}$ expresses the same area law in natural-log units. The bit value $n_{\mathrm{bit}}$ expresses that entropy using logarithms to base two. The fixed ratios among them are consequences of definitions and the area law, not separate measurements of horizon structure.
+
+The energy relation is specific to the Schwarzschild assumptions and to standard semiclassical black-hole thermodynamics. Rotation, charge, different spacetime dimensions, or different asymptotic conditions require their corresponding mass, temperature, and entropy relations. No claim is made here that the area units are physical tiles, that each unit stores a bit, or that the equipartition form reveals the microscopic degrees of freedom.
+
+\section{Conclusion}
+
+For a Schwarzschild horizon, $n_{\mathrm A}=A/\ell_P^2$ is a useful dimensionless area ratio. The Bekenstein--Hawking law converts it to entropy in natural-log units, $S_{\mathrm{BH}}/k_{\mathrm B}=n_{\mathrm A}/4$, or to entropy in bits, $n_{\mathrm{bit}}=n_{\mathrm A}/(4\ln2)$. Together with the Hawking temperature, these definitions rewrite the mass-energy as $Mc^2=(n_{\mathrm A}/2)k_{\mathrm B}T_H=2\ln2\,n_{\mathrm{bit}}k_{\mathrm B}T_H$.
+
+The half-$k_{\mathrm B}T_H$ form resembles equipartition, but it is an algebraic restatement of the Schwarzschild Smarr relation. It does not prove that Planck-area units are independent degrees of freedom or literal information bits. Keeping area ratios, entropy units, and microscopic interpretations distinct makes the counting useful without overstating what it establishes.
+
+\begin{thebibliography}{8}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Bekenstein}
+J. D. Bekenstein,
+``Black holes and entropy,''
+\emph{Physical Review D} \textbf{7}, 2333--2346 (1973),
+\href{https://doi.org/10.1103/PhysRevD.7.2333}{doi:\nolinkurl{10.1103/PhysRevD.7.2333}}.
+
+\bibitem{Hawking}
+S. W. Hawking,
+``Particle creation by black holes,''
+\emph{Communications in Mathematical Physics} \textbf{43}, 199--220 (1975),
+\href{https://doi.org/10.1007/BF02345020}{doi:\nolinkurl{10.1007/BF02345020}}.
+
+\bibitem{Smarr}
+L. Smarr,
+``Mass formula for Kerr black holes,''
+\emph{Physical Review Letters} \textbf{30}, 71--73 (1973),
+\href{https://doi.org/10.1103/PhysRevLett.30.71}{doi:\nolinkurl{10.1103/PhysRevLett.30.71}}.
+
+\bibitem{Shannon}
+C. E. Shannon,
+``A mathematical theory of communication,''
+\emph{The Bell System Technical Journal} \textbf{27}, 379--423, 623--656 (1948),
+\href{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}{doi:\nolinkurl{10.1002/j.1538-7305.1948.tb01338.x}}.
+
+\bibitem{Padmanabhan}
+T. Padmanabhan,
+``Equipartition of energy in the horizon degrees of freedom and the emergence of gravity,''
+\emph{Modern Physics Letters A} \textbf{25}, 1129--1136 (2010),
+\href{https://arxiv.org/abs/0912.3165}{arXiv:0912.3165}.
+
+\bibitem{Verlinde}
+E. Verlinde,
+``On the origin of gravity and the laws of Newton,''
+\emph{Journal of High Energy Physics} \textbf{2011}(4), 029,
+\href{https://doi.org/10.1007/JHEP04(2011)029}{doi:\nolinkurl{10.1007/JHEP04(2011)029}}.
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html},
+accessed October 27, 2026.
+
+\bibitem{CODATA}
+National Institute of Standards and Technology,
+\emph{2022 CODATA recommended values of the fundamental physical constants},
+Newtonian constant of gravitation $G$ and exact SI constants,
+\url{https://physics.nist.gov/cuu/Constants/},
+accessed October 27, 2026.
+
+\end{thebibliography}
+
+\end{document}
