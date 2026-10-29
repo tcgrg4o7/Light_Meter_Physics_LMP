@@ -1,0 +1,327 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Horizon's Thermometer:\\
+Clock Rates, Surface Gravity, and Schwarzschild Entropy}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+For a static observer outside a Schwarzschild black hole, the proper acceleration required to hover diverges as the horizon is approached. Its product with the lapse remains finite and tends to the Schwarzschild surface gravity. The same near-horizon limit connects the local acceleration temperature scale to the Hawking temperature normalized at infinity. We derive these relations from the exterior metric, distinguish the Unruh response of an accelerated detector from a universal local temperature, and specify the equilibrium-state assumption behind the Tolman temperature profile. Writing the gravitational timescale as $\tau_g\equiv GM/c^3$ gives $T_H=\hbar/(8\pi k_{\mathrm B}\tau_g)$. For a Schwarzschild black hole, integrating the first law yields entropy differences proportional to $M^2$; the standard Bekenstein--Hawking area law fixes the normalization and leads to the Smarr relation $2T_HS_{\mathrm{BH}}=Mc^2$. These are established results linked by clock-rate and temperature comparisons, not a claim that a physical thermometer can hover on the horizon or that the Unruh relation alone derives Hawking radiation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Schwarzschild black hole, lapse, surface gravity, Unruh effect, Hawking temperature, black-hole entropy
+
+\section{Introduction}
+
+A static clock near a black-hole horizon runs slowly relative to time normalized at infinity. At the same time, an observer held at fixed radius must accelerate more strongly as the horizon is approached. The lapse suppresses the distant comparison of this local acceleration, leaving a finite limiting quantity: the Schwarzschild surface gravity. That limit also sets the Hawking temperature.
+
+This manuscript develops the chain in a controlled order. We begin with static clock rates and the proper acceleration of a hovering observer. We then show how the lapse-redshifted acceleration approaches surface gravity and compare its near-horizon temperature scale with the Tolman temperature of an equilibrium state. Finally, we express the Hawking temperature in terms of the gravitational timescale, integrate the Schwarzschild first law, and write the resulting entropy in terms of horizon area.
+
+The exact geometric formulas assume the vacuum exterior of an uncharged, nonrotating black hole. The thermal discussion requires additional care: the Unruh temperature characterizes the response of an idealized accelerated detector in the Minkowski vacuum, whereas Hawking radiation is a quantum-field effect in curved spacetime. A static Tolman temperature profile describes thermal equilibrium, such as the ideal Hartle--Hawking state, not the general nonequilibrium state of an evaporating astrophysical black hole. No static observer exists on the horizon itself.
+
+\section{Static clock rate in Schwarzschild spacetime}
+
+In Schwarzschild coordinates with signature $(-,+,+,+)$, the exterior metric is \cite{Schwarzschild}
+\begin{equation}
+  \mathrm{d}s^2
+  =-\left(1-\frac{r_s}{r}\right)c^2\mathrm{d}t^2
+   +\left(1-\frac{r_s}{r}\right)^{-1}\mathrm{d}r^2
+   +r^2\mathrm{d}\Omega^2,
+  \qquad
+  r_s\equiv\frac{2GM}{c^2},
+  \label{eq:schwarzschild-metric}
+\end{equation}
+where $r$ is the areal radius and $\mathrm{d}\Omega^2=\mathrm{d}\theta^2+\sin^2\theta\,\mathrm{d}\phi^2$. Define the lapse
+\begin{equation}
+  \alpha(r)\equiv\sqrt{1-\frac{r_s}{r}}.
+  \label{eq:lapse}
+\end{equation}
+The time coordinate $t$ is normalized to agree with proper time for a static observer in the asymptotically flat limit. A static observer at fixed spatial coordinates has
+\begin{equation}
+  \mathrm{d}\tau=\alpha(r)\,\mathrm{d}t,
+  \qquad
+  \delta\tau(r)\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}
+  =\frac{1}{\alpha(r)}.
+  \label{eq:static-clock-rate}
+\end{equation}
+Here $\delta\tau$ is a dimensionless inverse rate relative to the stated reference time, not an elapsed proper-time interval. The static-observer family exists only for $r>r_s$; the lapse tends to zero at the horizon, where a static worldline cannot be maintained.
+
+\section{Hovering acceleration and its redshifted limit}
+
+A static observer must be supported against free fall. The magnitude of the proper acceleration required to remain at fixed $r$ is
+\begin{equation}
+  a_{\mathrm{hold}}(r)
+  =c^2\frac{\mathrm{d}\ln\alpha}{\mathrm{d}\ell}
+  =\frac{GM}{r^2\alpha(r)},
+  \qquad
+  \mathrm{d}\ell=\frac{\mathrm{d}r}{\alpha(r)},
+  \label{eq:hover-acceleration}
+\end{equation}
+where $\mathrm{d}\ell$ is outward proper radial distance on a static time slice. The acceleration points outward. Since $\alpha\to0$ as $r\to r_s^+$, the local acceleration diverges.
+
+Multiplying by the lapse gives a finite redshifted quantity:
+\begin{equation}
+  \alpha(r)a_{\mathrm{hold}}(r)=\frac{GM}{r^2}.
+  \label{eq:redshifted-acceleration}
+\end{equation}
+Its horizon limit defines the Schwarzschild surface gravity, expressed here in acceleration units,
+\begin{equation}
+  \kappa\equiv\lim_{r\to r_s^+}\alpha a_{\mathrm{hold}}
+  =\frac{GM}{r_s^2}
+  =\frac{c^4}{4GM}.
+  \label{eq:surface-gravity}
+\end{equation}
+Thus $\kappa$ is not the proper acceleration measured by an observer on the horizon. It is the finite limit of the hovering acceleration after redshift to the asymptotic time normalization. No observer can hover at $r=r_s$.
+
+The near-horizon behavior can also be expressed using the proper distance $\rho$ from the horizon. For $r-r_s\ll r_s$,
+\begin{equation}
+  \rho\simeq2\sqrt{r_s(r-r_s)},
+  \qquad
+  \alpha\simeq\frac{\rho}{2r_s}=\frac{\kappa\rho}{c^2},
+  \qquad
+  a_{\mathrm{hold}}\simeq\frac{c^2}{\rho}.
+  \label{eq:near-horizon-rindler}
+\end{equation}
+This is the local Rindler form: the lapse vanishes linearly with proper distance, while the proper acceleration of the static observers grows inversely with that distance. Their product tends to $\kappa$.
+
+\section{Unruh scale, Tolman redshift, and Hawking temperature}
+
+An ideal detector with uniform proper acceleration $a$ in the Minkowski vacuum has a thermal response characterized by the Unruh temperature \cite{Unruh}
+\begin{equation}
+  T_{\mathrm U}(a)=\frac{\hbar a}{2\pi c k_{\mathrm B}}.
+  \label{eq:unruh-temperature}
+\end{equation}
+Applying this formula to $a_{\mathrm{hold}}(r)$ defines an acceleration-associated temperature scale for a hovering observer. It should not be treated, without specifying the quantum state and detector, as a universal local temperature of the Schwarzschild vacuum.
+
+For a static thermal state, gravitational redshift requires the Tolman relation $\alpha T_{\mathrm{loc}}=T_*$, where $T_{\mathrm{loc}}$ is the local equilibrium temperature and $T_*$ is its normalization at infinity \cite{Tolman,TolmanEhrenfest}. In the ideal Hartle--Hawking equilibrium state, set $T_*=T_H$, the Hawking temperature \cite{Hawking,HartleHawking}. The local equilibrium profile is then
+\begin{equation}
+  T_{\mathrm{eq}}(r)=\frac{T_H}{\alpha(r)}.
+  \label{eq:tolman-profile}
+\end{equation}
+The local Tolman temperature and the acceleration-associated Unruh scale have the exact ratio
+\begin{equation}
+  \frac{T_{\mathrm U}(a_{\mathrm{hold}})}{T_{\mathrm{eq}}}
+  =\frac{\alpha a_{\mathrm{hold}}}{\kappa}
+  =\left(\frac{r_s}{r}\right)^2
+  \longrightarrow1
+  \quad\text{as }r\to r_s^+.
+  \label{eq:near-horizon-temperature-ratio}
+\end{equation}
+The equality is a near-horizon limit, not an exact identity at arbitrary radius. Both local scales grow without bound in this static description as the horizon is approached, but their ratio tends to unity.
+
+The redshifted Unruh scale has the limit
+\begin{equation}
+  \lim_{r\to r_s^+}\alpha T_{\mathrm U}(a_{\mathrm{hold}})
+  =\frac{\hbar\kappa}{2\pi c k_{\mathrm B}}
+  \equiv T_H.
+  \label{eq:hawking-temperature-surface-gravity}
+\end{equation}
+Hawking's quantum-field calculation identifies the temperature of radiation measured relative to time at infinity as \cite{Hawking}
+\begin{equation}
+  T_H
+  =\frac{\hbar\kappa}{2\pi c k_{\mathrm B}}
+  =\frac{\hbar c^3}{8\pi G M k_{\mathrm B}}.
+  \label{eq:hawking-temperature}
+\end{equation}
+Equation~\eqref{eq:hawking-temperature-surface-gravity} shows how the near-horizon acceleration scale and gravitational redshift reproduce this temperature scale. It is not a replacement for Hawking's quantum-field derivation.
+
+The quantum state matters. The Hartle--Hawking state represents an ideal equilibrium configuration with thermal radiation \cite{HartleHawking}, while the Unruh state models an evaporating black hole with outgoing radiation and no corresponding incoming thermal bath from infinity \cite{Unruh}. The Tolman profile in Eq.~\eqref{eq:tolman-profile} is used here for the equilibrium case; it should not be assigned without qualification to every black-hole state. In either case, a static observer cannot be placed on the horizon.
+
+\section{Mass, gravitational time, and thermal frequency scales}
+
+Define the gravitational time of the Schwarzschild mass by
+\begin{equation}
+  \tau_g\equiv\frac{GM}{c^3}.
+  \label{eq:gravitational-time}
+\end{equation}
+Equations~\eqref{eq:surface-gravity} and \eqref{eq:hawking-temperature} become
+\begin{equation}
+  \frac{\kappa}{c}=\frac{1}{4\tau_g},
+  \qquad
+  T_H=\frac{\hbar}{8\pi k_{\mathrm B}\tau_g}.
+  \label{eq:mass-time-temperature}
+\end{equation}
+The quantity $\kappa/c$ has units of inverse time; it is an acceleration-derived scale, not necessarily an oscillation frequency. To express the Hawking thermal energy in frequency units, define
+\begin{equation}
+  f_H\equiv\frac{k_{\mathrm B}T_H}{h}
+  =\frac{1}{16\pi^2\tau_g},
+  \qquad
+  \frac{\kappa}{c}=4\pi^2f_H,
+  \label{eq:thermal-frequency}
+\end{equation}
+where $h=2\pi\hbar$. The factor $4\pi^2$ follows from the conventions for angular and cyclic frequency and from the Hawking-temperature relation. $f_H$ is the thermal energy divided by Planck's constant, not a claim about a spectral peak.
+
+For an illustrative one-solar-mass black hole, use $GM_\odot\simeq1.3271244\times10^{20}\ \mathrm{m^3\,s^{-2}}$ \cite{JPL}. The resulting scales are listed in Table~\ref{tab:solar-mass-scales}.
+\begin{table}[ht]
+  \centering
+  \caption{Illustrative Schwarzschild scales for a one-solar-mass black hole.}
+  \label{tab:solar-mass-scales}
+  \begin{tabular}{lc}
+    \toprule
+    Quantity & Approximate value \\
+    \midrule
+    Gravitational time $\tau_g$ & $4.9255\ \mu\mathrm{s}$ \\
+    Surface-gravity scale $\kappa/c$ & $5.08\times10^4\ \mathrm{s^{-1}}$ \\
+    Hawking temperature $T_H$ & $61.7\ \mathrm{nK}$ \\
+    Thermal-energy frequency $f_H$ & $1.29\ \mathrm{kHz}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+The tabulated inverse-time scales are not additional black-hole oscillations. They are different ways of expressing the mass-dependent acceleration and thermal-energy scales.
+
+\section{From the Schwarzschild first law to entropy}
+
+For an uncharged, nonrotating black hole, the first law along a quasistatic Schwarzschild family is
+\begin{equation}
+  \mathrm{d}E=c^2\,\mathrm{d}M=T_H\,\mathrm{d}S,
+  \qquad E=Mc^2.
+  \label{eq:first-law}
+\end{equation}
+Substituting Eq.~\eqref{eq:hawking-temperature} gives
+\begin{equation}
+  \mathrm{d}S
+  =\frac{c^2}{T_H}\,\mathrm{d}M
+  =\frac{8\pi k_{\mathrm B}G}{\hbar c}M\,\mathrm{d}M.
+  \label{eq:entropy-differential}
+\end{equation}
+Integrating between two masses $M_a$ and $M_b$ yields the entropy difference
+\begin{equation}
+  S(M_b)-S(M_a)
+  =\frac{4\pi k_{\mathrm B}G}{\hbar c}
+   \left(M_b^2-M_a^2\right).
+  \label{eq:entropy-difference}
+\end{equation}
+Equivalently,
+\begin{equation}
+  S(M)=\frac{4\pi k_{\mathrm B}GM^2}{\hbar c}+C,
+  \label{eq:integrated-entropy}
+\end{equation}
+where the integration constant $C$ is not fixed by the differential first law alone. The standard Bekenstein--Hawking normalization is expressed by the horizon area \cite{Bekenstein,BardeenCarterHawking,Hawking}. With
+\begin{equation}
+  A=4\pi r_s^2=\frac{16\pi G^2M^2}{c^4},
+  \qquad
+  \ell_P^2\equiv\frac{\hbar G}{c^3},
+  \label{eq:area-planck-length}
+\end{equation}
+the entropy law is
+\begin{equation}
+  S_{\mathrm{BH}}=\frac{k_{\mathrm B}A}{4\ell_P^2}
+  =\frac{4\pi k_{\mathrm B}GM^2}{\hbar c}.
+  \label{eq:bh-entropy}
+\end{equation}
+This standard area-law normalization sets $C=0$ in Eq.~\eqref{eq:integrated-entropy}. The area law is a semiclassical black-hole result; it does not mean the horizon is a material surface made of literal entropy-carrying pixels.
+
+Combining Eqs.~\eqref{eq:hawking-temperature} and \eqref{eq:bh-entropy} gives
+\begin{equation}
+  2T_H S_{\mathrm{BH}}=Mc^2.
+  \label{eq:smarr}
+\end{equation}
+This is the Schwarzschild Smarr relation, a mass-energy balance for the ideal nonrotating, uncharged case \cite{Smarr}. It is not a statement that the black hole's total energy is ordinary thermal energy in a box; it follows from the mass dependence of the Hawking temperature and horizon entropy.
+
+\section{Interpretation and limits}
+
+The derivation relies on distinct notions that should remain separate. The lapse $\alpha$ compares the proper rate of a static clock with time normalized at infinity. The proper acceleration $a_{\mathrm{hold}}$ is a local quantity that diverges for hovering observers near the horizon. The surface gravity $\kappa$ is the finite redshifted limit, not an acceleration measured by an observer on the horizon.
+
+Likewise, the Unruh relation is an acceleration-associated detector temperature in its specified quantum-field setting. Its near-horizon agreement with the Tolman equilibrium temperature is exact only in the limit shown in Eq.~\eqref{eq:near-horizon-temperature-ratio}. Hawking radiation is a curved-spacetime quantum-field result; the comparison developed here illuminates its temperature scale but does not independently establish particle creation. The thermal Tolman profile presumes an equilibrium state, whereas an evaporating black hole is not in global equilibrium with a bath at infinity.
+
+Finally, the first law fixes entropy changes along the Schwarzschild family. The area law supplies the standard absolute normalization. Rotation, charge, non-equilibrium quantum states, backreaction, and a realistic formation history lie outside this paper's model. No result here requires a clock or thermometer at the horizon.
+
+\section{Conclusion}
+
+For a static observer outside a Schwarzschild black hole, $a_{\mathrm{hold}}=GM/(r^2\alpha)$ diverges near the horizon, while $\alpha a_{\mathrm{hold}}$ tends to the finite surface gravity $\kappa=c^4/(4GM)$. The corresponding redshifted Unruh temperature scale tends to $T_H=\hbar\kappa/(2\pi c k_{\mathrm B})$. The near-horizon matching with the Tolman equilibrium temperature is a limit and depends on clearly distinguishing the equilibrium state from an evaporating black hole's quantum state.
+
+The gravitational time $\tau_g=GM/c^3$ gives $T_H=\hbar/(8\pi k_{\mathrm B}\tau_g)$. Integrating the first law yields entropy differences proportional to $M^2$; expressing that result as $S_{\mathrm{BH}}=k_{\mathrm B}A/(4\ell_P^2)$ fixes its standard normalization and gives $2T_HS_{\mathrm{BH}}=Mc^2$. These relations connect clock rates, acceleration, temperature, and horizon area without introducing a new physical field or assigning a realizable static thermometer to the horizon.
+
+\begin{thebibliography}{10}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{Tolman}
+R. C. Tolman,
+``On the weight of heat and thermal equilibrium in general relativity,''
+\emph{Physical Review} \textbf{35}, 904--924 (1930),
+\href{https://doi.org/10.1103/PhysRev.35.904}{doi:\nolinkurl{10.1103/PhysRev.35.904}}.
+
+\bibitem{TolmanEhrenfest}
+R. C. Tolman and P. Ehrenfest,
+``Temperature equilibrium in a static gravitational field,''
+\emph{Physical Review} \textbf{36}, 1791--1798 (1930),
+\href{https://doi.org/10.1103/PhysRev.36.1791}{doi:\nolinkurl{10.1103/PhysRev.36.1791}}.
+
+\bibitem{Unruh}
+W. G. Unruh,
+``Notes on black-hole evaporation,''
+\emph{Physical Review D} \textbf{14}, 870--892 (1976),
+\href{https://doi.org/10.1103/PhysRevD.14.870}{doi:\nolinkurl{10.1103/PhysRevD.14.870}}.
+
+\bibitem{Hawking}
+S. W. Hawking,
+``Particle creation by black holes,''
+\emph{Communications in Mathematical Physics} \textbf{43}, 199--220 (1975),
+\href{https://doi.org/10.1007/BF02345020}{doi:\nolinkurl{10.1007/BF02345020}}.
+
+\bibitem{HartleHawking}
+J. B. Hartle and S. W. Hawking,
+``Path-integral derivation of black-hole radiance,''
+\emph{Physical Review D} \textbf{13}, 2188--2203 (1976),
+\href{https://doi.org/10.1103/PhysRevD.13.2188}{doi:\nolinkurl{10.1103/PhysRevD.13.2188}}.
+
+\bibitem{Bekenstein}
+J. D. Bekenstein,
+``Black holes and entropy,''
+\emph{Physical Review D} \textbf{7}, 2333--2346 (1973),
+\href{https://doi.org/10.1103/PhysRevD.7.2333}{doi:\nolinkurl{10.1103/PhysRevD.7.2333}}.
+
+\bibitem{BardeenCarterHawking}
+J. M. Bardeen, B. Carter, and S. W. Hawking,
+``The four laws of black hole mechanics,''
+\emph{Communications in Mathematical Physics} \textbf{31}, 161--170 (1973),
+\href{https://doi.org/10.1007/BF01645742}{doi:\nolinkurl{10.1007/BF01645742}}.
+
+\bibitem{Smarr}
+L. Smarr,
+``Mass formula for Kerr black holes,''
+\emph{Physical Review Letters} \textbf{30}, 71--73 (1973),
+\href{https://doi.org/10.1103/PhysRevLett.30.71}{doi:\nolinkurl{10.1103/PhysRevLett.30.71}}.
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html},
+accessed October 27, 2026.
+
+\end{thebibliography}
+
+\end{document}
