@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Smarr Relation:\\
+Temperature, Entropy, and Schwarzschild Mass-Energy}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+For a four-dimensional, asymptotically flat Schwarzschild black hole, the Hawking temperature and Bekenstein--Hawking entropy satisfy $2T_HS_{\mathrm{BH}}=Mc^2$. We derive the relation from the Schwarzschild radius, the horizon area law, and the Hawking temperature, then explain the factor of two through the first law and the quadratic scaling $S_{\mathrm{BH}}\propto E^2$. The gravitational timescale $\tau_g\equiv GM/c^3$ makes the scaling transparent: the horizon radius is $2c\tau_g$, the Hawking temperature is inversely proportional to $\tau_g$, and the entropy grows as $M^2$. Illustrative solar-mass and Earth-mass black-hole calculations check the identity numerically. The result is exact within the stated semiclassical Schwarzschild thermodynamic relations; it is not a universal formula for rotating or charged black holes, nor does the derivation claim that Hawking radiation has been directly measured from an astrophysical black hole.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Smarr relation, Schwarzschild black hole, Hawking temperature, black-hole entropy, gravitational timescale
+
+\section{Introduction}
+
+For a Schwarzschild black hole, the product of Hawking temperature and horizon entropy is exactly half the mass-energy:
+\begin{equation}
+  2T_HS_{\mathrm{BH}}=Mc^2.
+  \label{eq:smarr-preview}
+\end{equation}
+This compact relation combines a quantum temperature, a gravitational horizon, and a thermodynamic entropy. Its factor of two is not an extra energy contribution. It records how the entropy scales with the black-hole mass, together with the first law.
+
+The discussion is restricted to an uncharged, nonrotating black hole in four-dimensional, asymptotically flat general relativity, using the standard semiclassical Hawking temperature and Bekenstein--Hawking area entropy \cite{Bekenstein,Hawking,BardeenCarterHawking,Schwarzschild}. We first connect mass to gravitational time, horizon radius, and area; then derive the entropy and temperature scalings, verify Eq.~\eqref{eq:smarr-preview} directly, and explain its first-law interpretation. The final numerical examples use the Sun's and Earth's masses only as hypothetical black-hole masses.
+
+The relation is the Schwarzschild specialization of a broader black-hole mass formula. For rotating or charged solutions, additional terms associated with angular momentum or charge enter; Eq.~\eqref{eq:smarr-preview} should not be presented as the formula for every black hole \cite{BardeenCarterHawking,Smarr}.
+
+\section{Mass, gravitational time, and horizon area}
+
+The Schwarzschild radius and gravitational timescale are
+\begin{equation}
+  r_s\equiv\frac{2GM}{c^2},
+  \qquad
+  \tau_g\equiv\frac{GM}{c^3}.
+  \label{eq:radius-and-time}
+\end{equation}
+They obey the algebraic identity
+\begin{equation}
+  r_s=2c\tau_g.
+  \label{eq:radius-time-identity}
+\end{equation}
+Here $\tau_g$ is a mass-dependent timescale, not a statement that a signal or material object traverses the black hole.
+
+The event-horizon area is the area of the spherical horizon, not the projected area of a disk:
+\begin{equation}
+  A=4\pi r_s^2
+   =\frac{16\pi G^2M^2}{c^4}.
+  \label{eq:horizon-area}
+\end{equation}
+Thus doubling $M$ doubles $r_s$ and multiplies $A$ by four. The quadratic mass dependence of the area is the geometric origin of the entropy scaling used below.
+
+\section{Area entropy and Hawking temperature}
+
+The Bekenstein--Hawking entropy is one quarter of the horizon area measured in Planck areas \cite{Bekenstein,Hawking}:
+\begin{equation}
+  S_{\mathrm{BH}}=\frac{k_{\mathrm B}A}{4\ell_P^2},
+  \qquad
+  \ell_P^2\equiv\frac{\hbar G}{c^3}.
+  \label{eq:area-law}
+\end{equation}
+Substituting Eq.~\eqref{eq:horizon-area} gives
+\begin{equation}
+  S_{\mathrm{BH}}
+  =\frac{4\pi k_{\mathrm B}GM^2}{\hbar c}.
+  \label{eq:entropy-mass}
+\end{equation}
+For the Schwarzschild family, entropy therefore grows as $M^2$.
+
+The Hawking temperature, normalized to the time coordinate at infinity, is \cite{Hawking}
+\begin{equation}
+  T_H=\frac{\hbar c^3}{8\pi G M k_{\mathrm B}}
+  =\frac{\hbar}{8\pi k_{\mathrm B}\tau_g}.
+  \label{eq:hawking-temperature}
+\end{equation}
+It scales as $1/M$: doubling the mass halves the temperature. In terms of the gravitational time, the thermal inverse-energy timescale is
+\begin{equation}
+  \tau_T\equiv\frac{\hbar}{k_{\mathrm B}T_H}=8\pi\tau_g.
+  \label{eq:thermal-timescale}
+\end{equation}
+This is a timescale associated with the thermal energy, not an oscillation period.
+
+\section{The product relation}
+
+Combining Eqs.~\eqref{eq:entropy-mass} and \eqref{eq:hawking-temperature} gives
+\begin{align}
+  2T_HS_{\mathrm{BH}}
+  &=2\left(\frac{\hbar c^3}{8\pi G M k_{\mathrm B}}\right)
+      \left(\frac{4\pi k_{\mathrm B}G M^2}{\hbar c}\right) \\
+  &=Mc^2.
+  \label{eq:smarr}
+\end{align}
+The constants $\hbar$, $k_{\mathrm B}$, and $G$ cancel; one power of mass remains, and the powers of $c$ combine to $c^2$. This is an exact algebraic consequence of the standard Schwarzschild temperature and area-entropy formulas.
+
+The same cancellation can be expressed using a thermal energy in frequency units. Define
+\begin{equation}
+  f_H\equiv\frac{k_{\mathrm B}T_H}{h}
+  =\frac{1}{16\pi^2\tau_g},
+  \qquad h=2\pi\hbar.
+  \label{eq:thermal-frequency}
+\end{equation}
+The quantity $f_H$ expresses thermal energy divided by Planck's constant; it is not a spectral peak or a black-hole oscillation frequency. The $2\pi$ convention is explicit in Eq.~\eqref{eq:thermal-frequency}.
+
+\section{Why the factor of two appears}
+
+The first law for a quasistatic sequence of Schwarzschild black holes is
+\begin{equation}
+  \mathrm{d}E=T_H\,\mathrm{d}S_{\mathrm{BH}},
+  \qquad E=Mc^2.
+  \label{eq:first-law}
+\end{equation}
+Using Eq.~\eqref{eq:entropy-mass}, or integrating Eq.~\eqref{eq:first-law}, gives entropy differences
+\begin{equation}
+  S(M_b)-S(M_a)
+  =\frac{4\pi k_{\mathrm B}G}{\hbar c}
+   \left(M_b^2-M_a^2\right).
+  \label{eq:entropy-difference}
+\end{equation}
+The differential first law determines these differences; by itself it leaves an additive constant undetermined. The standard absolute normalization is supplied by the Bekenstein--Hawking area law.
+
+To expose the scaling argument, write Eq.~\eqref{eq:entropy-mass} in terms of energy as $S_{\mathrm{BH}}(E)=C E^2$, with $C=4\pi k_{\mathrm B}G/(\hbar c^5)$. Differentiating along the Schwarzschild family yields
+\begin{equation}
+  \frac{\mathrm{d}S_{\mathrm{BH}}}{\mathrm{d}E}
+  =\frac{2S_{\mathrm{BH}}}{E}.
+  \label{eq:entropy-slope}
+\end{equation}
+The first law says $\mathrm{d}S_{\mathrm{BH}}/\mathrm{d}E=1/T_H$. Equating the two expressions gives
+\begin{equation}
+  \frac{1}{T_H}=\frac{2S_{\mathrm{BH}}}{E}
+  \quad\Longrightarrow\quad
+  E=2T_HS_{\mathrm{BH}}.
+  \label{eq:scaling-derivation}
+\end{equation}
+The numerical factor two is the exponent in $S\propto E^2$. More generally, for a one-parameter family with a fixed entropy normalization, no additive offset, and no additional work terms, if $S(E)=C E^n$ with constant $C$, the same first-law argument yields $E=nTS$ along that family. That scaling observation does not replace the geometry or thermodynamics needed to establish the entropy and temperature laws in the first place.
+
+\section{Numerical checks}
+
+The numerical examples use $GM_{\odot}=1.3271244\times10^{20}\ \mathrm{m^3\,s^{-2}}$ and $GM_{\oplus}=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$ \cite{JPL}, together with $G=6.67430\times10^{-11}\ \mathrm{m^3\,kg^{-1}\,s^{-2}}$ \cite{CODATA}. The mass and entropy entries depend on the measured value of $G$, so figures are rounded to reflect that precision; $c$, $h$, and $k_{\mathrm B}$ use their SI-defined values. Both columns describe hypothetical Schwarzschild black holes, not the actual Sun or Earth.
+
+\begin{table}[ht]
+  \centering
+  \caption{Illustrative Schwarzschild quantities for black-hole masses equal to the Sun's and Earth's masses.}
+  \label{tab:examples}
+  \begin{tabular}{lcc}
+    \toprule
+    Quantity & Solar-mass black hole & Earth-mass black hole \\
+    \midrule
+    $\tau_g$ & $4.9255\ \mu\mathrm{s}$ & $14.79\ \mathrm{ps}$ \\
+    $T_H$ & $61.70\ \mathrm{nK}$ & $20.54\ \mathrm{mK}$ \\
+    $S_{\mathrm{BH}}/k_{\mathrm B}$ & $1.049\times10^{77}$ & $9.462\times10^{65}$ \\
+    $2T_HS_{\mathrm{BH}}=Mc^2$ & $1.787\times10^{47}\ \mathrm{J}$ & $5.368\times10^{41}\ \mathrm{J}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The mass ratio is approximately $3.329\times10^5$. Accordingly, the solar-mass black hole is that factor colder, while its entropy is larger by the square of the mass ratio, approximately $1.109\times10^{11}$. In both examples the independently evaluated product $2T_HS_{\mathrm{BH}}$ agrees with $Mc^2$ to the shown precision. These numerical checks illustrate the formulas; they are not observations of black holes with either mass.
+
+\section{Interpretation and limits}
+
+The relation $2T_HS_{\mathrm{BH}}=Mc^2$ applies here to the Schwarzschild case under the semiclassical Hawking-temperature and Bekenstein--Hawking area-entropy descriptions. It is not an additional energy reservoir, and it does not mean the black hole's energy is the ordinary thermal energy of a box of radiation. It follows from the specified temperature, entropy, and first-law relations.
+
+For rotating or charged black holes, the mass formula includes additional terms associated with angular momentum and electric charge \cite{BardeenCarterHawking,Smarr}. Likewise, changing the spacetime dimension, asymptotic boundary conditions, or thermodynamic variables changes the relevant scaling relation. This paper does not generalize the Schwarzschild identity to those settings, nor does it claim an experimental measurement of Hawking radiation.
+
+\section{Conclusion}
+
+For a Schwarzschild black hole, $r_s=2c\tau_g$ and $A\propto M^2$. The area law therefore gives $S_{\mathrm{BH}}\propto M^2$, while the Hawking temperature obeys $T_H\propto M^{-1}$. Their product is half the mass-energy, and the first law explains the factor of two as the quadratic entropy exponent along the Schwarzschild family.
+
+The equality is a compact expression of established semiclassical black-hole thermodynamics. Its assumptions matter: the calculation is for an uncharged, nonrotating, four-dimensional Schwarzschild black hole, with the standard area-law normalization and Hawking temperature. Within that scope, the doubled thermal product recovers $Mc^2$ without implying a new physical mechanism.
+
+\begin{thebibliography}{7}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Bekenstein}
+J. D. Bekenstein,
+``Black holes and entropy,''
+\emph{Physical Review D} \textbf{7}, 2333--2346 (1973),
+\href{https://doi.org/10.1103/PhysRevD.7.2333}{doi:\nolinkurl{10.1103/PhysRevD.7.2333}}.
+
+\bibitem{Hawking}
+S. W. Hawking,
+``Particle creation by black holes,''
+\emph{Communications in Mathematical Physics} \textbf{43}, 199--220 (1975),
+\href{https://doi.org/10.1007/BF02345020}{doi:\nolinkurl{10.1007/BF02345020}}.
+
+\bibitem{BardeenCarterHawking}
+J. M. Bardeen, B. Carter, and S. W. Hawking,
+``The four laws of black hole mechanics,''
+\emph{Communications in Mathematical Physics} \textbf{31}, 161--170 (1973),
+\href{https://doi.org/10.1007/BF01645742}{doi:\nolinkurl{10.1007/BF01645742}}.
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{Smarr}
+L. Smarr,
+``Mass formula for Kerr black holes,''
+\emph{Physical Review Letters} \textbf{30}, 71--73 (1973),
+\href{https://doi.org/10.1103/PhysRevLett.30.71}{doi:\nolinkurl{10.1103/PhysRevLett.30.71}}.
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html},
+accessed October 27, 2026.
+
+\bibitem{CODATA}
+National Institute of Standards and Technology,
+\emph{2022 CODATA recommended values of the fundamental physical constants},
+Newtonian constant of gravitation $G$.
+\end{thebibliography}
+
+\end{document}
