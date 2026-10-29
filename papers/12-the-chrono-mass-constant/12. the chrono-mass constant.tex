@@ -1,0 +1,308 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Chrono-Mass Constant:\\
+Rescaling $G$ and Rewriting Poisson's Equation for Clocks}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The quantity $G_{\tau}\equiv G/c^3$ expresses Newton's measured gravitational constant in seconds per kilogram. It is a rescaling of $G$, not a new independent constant. Multiplying it by a mass gives the characteristic gravitational time $\tau_g=G_{\tau}M=GM/c^3$, while $c\tau_g=GM/c^2$ is a gravitational length scale. In the weak, static Newtonian limit, define the dimensionless clock potential $\psi\equiv\ln\delta\tau$, where $\delta\tau=\mathrm{d}t/\mathrm{d}\tau$ compares a static clock with time normalized at infinity. Since $\psi\simeq-\Phi/c^2$, Newtonian Poisson's equation becomes $\nabla^2\psi\simeq-4\pi cG_{\tau}\rho$, and the inward gravitational field is $\mathbf{g}_{\mathrm{N}}\simeq c^2\nabla\psi$. A uniform sphere gives a quadratic interior clock-potential profile and a $1/r$ exterior profile: the center has zero field but nonzero clock-rate offset, while the vacuum exterior has zero Laplacian but nonzero slope. A PREM-based spherical Earth calculation gives a central inverse-rate excess of about 1.24 parts per billion. The paper also lists Hawking temperatures for hypothetical Schwarzschild black holes with Moon, Earth, and Sun masses; these are not temperatures of the ordinary bodies. All clock-potential equations are leading weak-field relations, not new field equations or strong-field results.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Newtonian potential, gravitational time dilation, Poisson equation, clock rates, Hawking temperature
+
+\section{Introduction}
+
+The familiar Newtonian constant $G$ can be combined with the exact speed of light $c$ to form a quantity with units of seconds per kilogram. Call this rescaling the chrono-mass constant,
+\begin{equation}
+  G_{\tau}\equiv\frac{G}{c^3}.
+  \label{eq:chrono-mass-constant}
+\end{equation}
+The name is descriptive shorthand used in this manuscript. $G_{\tau}$ is not a new independent physical constant, and it does not change the predictions of gravity. Because $c$ is exact in the SI while $G$ is measured, the uncertainty in $G_{\tau}$ is inherited from the uncertainty in $G$ \cite{CODATA2022}.
+
+The central change of variables is similarly modest. In a weak, static gravitational field, the logarithm of a static clock's inverse rate is proportional to the negative Newtonian potential. Substituting that relation into Poisson's equation rewrites the familiar density source in clock-rate language. A uniform sphere makes the distinction between a field's local slope and its accumulated potential particularly clear: the field vanishes at the center even though the clock-rate comparison there is finite.
+
+The scope is deliberately limited. The clock-potential source equation below uses the flat-space Laplacian and Newtonian mass density in the weak-field, static limit. It is not an exact equation of general relativity. A separate short section gives the standard Hawking temperature for ideal Schwarzschild black holes solely to illustrate how the mass-derived time scale enters another established result. No claim is made that ordinary Moon-, Earth-, or Sun-mass bodies are black holes or have those temperatures.
+
+\section{A mass-derived time and length}
+
+In SI units,
+\begin{equation}
+  [G]=\mathrm{m^3\,kg^{-1}\,s^{-2}},
+  \qquad
+  [c]=\mathrm{m\,s^{-1}},
+  \qquad
+  [G_{\tau}]=\mathrm{s\,kg^{-1}}.
+  \label{eq:units}
+\end{equation}
+Using the 2022 CODATA value $G=6.67430(15)\times10^{-11}\ \mathrm{m^3\,kg^{-1}\,s^{-2}}$ and the exact SI value of $c$ gives
+\begin{equation}
+  G_{\tau}=2.47710(6)\times10^{-36}\ \mathrm{s\,kg^{-1}}.
+  \label{eq:numerical-Gtau}
+\end{equation}
+The parenthetical uncertainty is one standard uncertainty in the final quoted digits. This definition is exact; its displayed numerical value is rounded and carries the relative uncertainty of $G$.
+
+For a mass $M$, define the characteristic gravitational time and corresponding length
+\begin{equation}
+  \tau_g\equiv G_{\tau}M=\frac{GM}{c^3},
+  \qquad
+  r_g\equiv c\tau_g=\frac{GM}{c^2}.
+  \label{eq:gravitational-scales}
+\end{equation}
+Neither $\tau_g$ nor $r_g$ is, by itself, an elapsed time or a physical radius of the object. For a Schwarzschild black hole the Schwarzschild radius is $r_s=2r_g$ \cite{Schwarzschild1916}; for an ordinary body, $r_g$ is simply a characteristic length.
+
+For a chosen spherical radius $R$, it is useful to introduce its vacuum light-time and compactness,
+\begin{equation}
+  t_R\equiv\frac{R}{c},
+  \qquad
+  x_R\equiv\frac{GM}{Rc^2}=\frac{\tau_g}{t_R}.
+  \label{eq:compactness}
+\end{equation}
+The light-time is a conversion of units; it does not imply that a signal travels through the body's interior. If the Newtonian surface acceleration is $g_{\mathrm{N}}=GM/R^2$, then
+\begin{equation}
+  f_g\equiv\frac{g_{\mathrm{N}}}{c}
+  =\frac{\tau_g}{t_R^2}.
+  \label{eq:fg}
+\end{equation}
+Here $f_g$ is an inverse-time acceleration scale, not a cyclic frequency or a claim of periodic motion.
+
+\section{From Newtonian potential to clock potential}
+
+Let $\Phi$ be the Newtonian gravitational potential, with $\Phi\to0$ at infinity, and define the inward gravitational field by $\mathbf{g}_{\mathrm{N}}=-\nabla\Phi$. For a static clock in a weak field, its rate relative to the time coordinate normalized at infinity is
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  \simeq1+\frac{\Phi}{c^2}.
+  \label{eq:static-rate}
+\end{equation}
+Use the dimensionless inverse rate and its logarithm
+\begin{equation}
+  \delta\tau\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau},
+  \qquad
+  \psi\equiv\ln\delta\tau.
+  \label{eq:clock-potential}
+\end{equation}
+Then, to leading order in $|\Phi|/c^2$,
+\begin{equation}
+  \delta\tau\simeq1-\frac{\Phi}{c^2},
+  \qquad
+  \psi\simeq-\frac{\Phi}{c^2}\equiv\psi^{(1)},
+  \qquad
+  \delta\tau=e^{\psi}\simeq1+\psi^{(1)}.
+  \label{eq:weak-clock-potential}
+\end{equation}
+The symbol $\delta\tau$ denotes a dimensionless rate ratio, not an elapsed-time interval. Its value depends on the chosen time reference; the infinity normalization is convenient for an asymptotically flat model. The spatial gradient is insensitive to an additive constant in $\psi$.
+
+In Newtonian gravity, mass density $\rho$ sources the flat-space Poisson equation \cite{Poisson1813},
+\begin{equation}
+  \nabla^2\Phi=4\pi G\rho.
+  \label{eq:poisson}
+\end{equation}
+Substituting Eq.~\eqref{eq:weak-clock-potential} gives the leading weak-field clock form
+\begin{equation}
+  \boxed{\nabla^2\psi^{(1)}
+  =-\frac{4\pi G}{c^2}\rho
+  =-4\pi cG_{\tau}\rho.}
+  \label{eq:clock-poisson}
+\end{equation}
+Likewise, the Newtonian acceleration can be written
+\begin{equation}
+  \boxed{\mathbf{g}_{\mathrm{N}}
+  =-\nabla\Phi=c^2\nabla\psi^{(1)}.}
+  \label{eq:clock-gradient}
+\end{equation}
+The sign in Eq.~\eqref{eq:clock-poisson} follows from defining the leading clock potential as $\psi^{(1)}=-\Phi/c^2$, the first-order term of the inverse-rate logarithm. Near a positive mass, $\Phi<0$ and $\psi^{(1)}>0$ relative to infinity; its gradient points inward. In the equivalent lapse variable $\alpha=\mathrm{d}\tau/\mathrm{d}t$, the logarithm has the opposite sign.
+
+Equations~\eqref{eq:clock-poisson} and \eqref{eq:clock-gradient} do not add a new field to Newtonian gravity: they are Eq.~\eqref{eq:poisson} and $\mathbf{g}_{\mathrm{N}}=-\nabla\Phi$ expressed using $\psi^{(1)}=-\Phi/c^2$. The Laplacian here is Euclidean, the source is Newtonian mass density, and the approximation is weak-field and static. The equation is not the Einstein field equation, does not use spacetime curvature as its Laplacian, and is not valid as an exact strong-field source law. Orbital motion contributes a separate kinematic time-dilation term and is not included in the static clock potential.
+
+\section{Uniform sphere: interior and exterior profiles}
+
+Consider a static, uniform-density sphere of radius $R$, total mass $M$, and density $\rho_0=3M/(4\pi R^3)$. In Newtonian gravity the inward field magnitude inside is
+\begin{equation}
+  g_{\mathrm{N}}(r)=\frac{GM(r)}{r^2}
+  =\frac{GM}{R^3}r,
+  \qquad 0\leq r\leq R.
+  \label{eq:uniform-field}
+\end{equation}
+Using $\psi^{(1)}(R)=GM/(Rc^2)=x_R$ and integrating the radial slope inward gives
+\begin{equation}
+  \psi^{(1)}_{\mathrm{in}}(r)
+  =x_R+\frac{1}{c^2}\int_r^R g_{\mathrm{N}}(s)\,\mathrm{d}s
+  =\frac{x_R}{2}\left(3-\frac{r^2}{R^2}\right),
+  \qquad 0\leq r\leq R.
+  \label{eq:interior-profile}
+\end{equation}
+The corresponding exterior solution, matched to the value at $R$ and vanishing at infinity, is
+\begin{equation}
+  \psi^{(1)}_{\mathrm{out}}(r)
+  =\frac{GM}{rc^2}
+  =\frac{\tau_g}{t_r},
+  \qquad
+  t_r\equiv\frac{r}{c},
+  \qquad r\geq R.
+  \label{eq:exterior-profile}
+\end{equation}
+Both $\psi^{(1)}$ and its first radial derivative are continuous at the surface. Since $\delta\tau=e^{\psi}$, the central inverse-rate excess is
+\begin{equation}
+  \epsilon_{\mathrm{grav}}(0)\equiv\delta\tau(0)-1
+  =e^{\psi(0)}-1\simeq\psi^{(1)}_{\mathrm{in}}(0)=\frac{3}{2}x_R,
+  \qquad
+  g_{\mathrm{N}}(0)=0.
+  \label{eq:central-uniform}
+\end{equation}
+The center has the largest potential offset relative to infinity but zero local field by spherical symmetry. These are different properties: the field is the slope of the potential, whereas the potential records its value relative to the selected boundary condition.
+
+For a radial scalar, the flat-space spherical Laplacian is
+\begin{equation}
+  \nabla^2\psi^{(1)}
+  =\frac{1}{r^2}\frac{\mathrm{d}}{\mathrm{d}r}
+    \left(r^2\frac{\mathrm{d}\psi^{(1)}}{\mathrm{d}r}\right).
+  \label{eq:spherical-laplacian}
+\end{equation}
+Inside the uniform sphere it gives
+\begin{equation}
+  \nabla^2\psi^{(1)}_{\mathrm{in}}
+  =-\frac{3GM}{R^3c^2}
+  =-\frac{4\pi G}{c^2}\rho_0,
+  \label{eq:interior-laplacian}
+\end{equation}
+while outside $\nabla^2\psi^{(1)}_{\mathrm{out}}=0$ even though $\nabla\psi^{(1)}_{\mathrm{out}}\neq0$. These are exact statements for the leading Newtonian clock potential; a zero Laplacian means there is no local matter source in that region, not that the field or its slope is zero.
+
+\section{Gravitational times and hypothetical black-hole temperatures}
+
+The same mass-derived time appears in the Hawking temperature of an ideal, uncharged, nonrotating Schwarzschild black hole \cite{Hawking1975}:
+\begin{equation}
+  T_{\mathrm{H}}
+  =\frac{\hbar c^3}{8\pi G M k_{\mathrm{B}}}
+  =\frac{\hbar}{8\pi k_{\mathrm{B}}\tau_g}.
+  \label{eq:hawking-temperature}
+\end{equation}
+Table~\ref{tab:mass-times} uses the DE440 gravitational parameters for the Moon, Earth, and Sun \cite{Park2021}. Here $\tau_g=GM/c^3$ is evaluated directly from $GM$; the temperature column asks what the Hawking temperature would be for a Schwarzschild black hole with that same mass parameter. It does not assign a Hawking temperature to the ordinary celestial body.
+
+\begin{table}[ht]
+  \centering
+  \caption{Gravitational time scales and hypothetical Schwarzschild black-hole temperatures.}
+  \label{tab:mass-times}
+  \begin{tabular}{lccc}
+    \toprule
+    Mass parameter & $GM$ ($\mathrm{m^3\,s^{-2}}$) & $\tau_g=GM/c^3$ & $T_{\mathrm{H}}$ if a black hole \\
+    \midrule
+    Moon & $4.902800118\times10^{12}$ & $0.182\ \mathrm{ps}$ & $1.67\ \mathrm{K}$ \\
+    Earth & $3.98600435507\times10^{14}$ & $14.79\ \mathrm{ps}$ & $20.5\ \mathrm{mK}$ \\
+    Sun & $1.32712440041279419\times10^{20}$ & $4.9255\ \mathrm{\mu s}$ & $61.7\ \mathrm{nK}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The gravitational time is a characteristic scale, not an age, a tick period, or a signal travel time. Hawking's formula is a theoretical result for a black-hole spacetime and its quantum fields; these entries are illustrative counterfactuals, not temperatures of the Moon, Earth, or Sun.
+
+\section{Earth-scale illustrations}
+
+For an ideal uniform-density Earth, take $GM=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$ and $R=6.371\times10^6\ \mathrm{m}$ \cite{Park2021}. The surface compactness is
+\begin{equation}
+  x_R=\frac{GM}{Rc^2}\simeq6.9613\times10^{-10}
+  =0.6961\ \mathrm{ppb}.
+  \label{eq:earth-compactness}
+\end{equation}
+The leading uniform-sphere profile therefore gives
+\begin{equation}
+  \begin{aligned}
+    \psi^{(1)}(0)&=\frac{3}{2}x_R\simeq1.044\ \mathrm{ppb},\\
+    \epsilon_{\mathrm{grav}}(0)&=e^{\psi(0)}-1\simeq\psi^{(1)}(0),\\
+    \psi^{(1)}(R)&=x_R\simeq\epsilon_{\mathrm{grav}}(R)\simeq0.6961\ \mathrm{ppb}.
+  \end{aligned}
+  \label{eq:earth-uniform-values}
+\end{equation}
+The center value follows from the potential relative to infinity, not from a nonzero central acceleration.
+
+For a general spherical density profile, the Newtonian potential at the center is
+\begin{equation}
+  \Phi(0)=-4\pi G\int_0^R\rho(r)r\,\mathrm{d}r,
+  \qquad
+  \epsilon_{\mathrm{grav}}(0)
+  \simeq\psi^{(1)}(0)=-\frac{\Phi(0)}{c^2}
+  =\frac{4\pi G}{c^2}\int_0^R\rho(r)r\,\mathrm{d}r.
+  \label{eq:center-integral}
+\end{equation}
+Integrating the published PREM piecewise radial density profile with $R=6371\ \mathrm{km}$ gives a spherical-model center excess of approximately $1.24\ \mathrm{ppb}$ \cite{PREM}. The increase over the uniform-density estimate reflects the PREM model's central concentration. This is a first-order, spherical, nonrotating potential comparison relative to infinity; it is not a full geoid or operational clock-transfer result.
+
+\section{Interpretation and limits}
+
+The source density, clock potential, and gravitational field are related but are not interchangeable. Density determines the Laplacian of the potential through Poisson's equation. Boundary conditions are also needed to determine the potential itself. Its gradient gives the Newtonian acceleration, while the potential value sets the leading static clock-rate comparison relative to the chosen time normalization. Thus zero density in a region permits a nonzero field, and zero field at a symmetry point permits a nonzero potential offset.
+
+The terminology should not obscure these distinctions. $G_{\tau}$ is just $G/c^3$; $\tau_g$ is a mass-dependent scale; and $\psi$ is a convenient dimensionless rewriting of the weak-field potential. None is an additional source, force, or material density. The exact strong-field Hawking result is separate from the weak-field clock-Poisson equation, and the black-hole examples do not describe ordinary planetary bodies.
+
+\section{Conclusion}
+
+Rescaling Newton's constant as $G_{\tau}=G/c^3$ expresses the same coupling in seconds per kilogram. It gives the characteristic gravitational time $\tau_g=G_{\tau}M$ and, with the speed of light, the length scale $r_g=c\tau_g$. In a weak, static Newtonian field, the leading clock potential $\psi^{(1)}=-\Phi/c^2$ is the first-order term of $\psi=\ln\delta\tau$; Poisson's equation then gives $\nabla^2\psi^{(1)}=-4\pi cG_{\tau}\rho$, while $c^2\nabla\psi^{(1)}$ is the inward Newtonian field.
+
+The uniform sphere makes the consequences explicit: the clock potential has a finite central value and zero central slope, and its exterior slope persists in vacuum where its Laplacian vanishes. A PREM-based radial Earth model gives a central first-order inverse-rate excess of about 1.24 ppb. These are established Newtonian and weak-field relationships expressed in clock variables. The ``chrono-mass constant'' is a useful dimensional rescaling, not a new physical constant or a new theory of gravity.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{CODATA2022}
+P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga,
+``CODATA recommended values of the fundamental physical constants: 2022,''
+\emph{Reviews of Modern Physics} \textbf{97}, 025002 (2025),
+\href{https://doi.org/10.1103/RevModPhys.97.025002}{doi:\nolinkurl{10.1103/RevModPhys.97.025002}}.
+See also NIST Special Publication 961 (May 2024).
+
+\bibitem{Poisson1813}
+S.-D. Poisson,
+``Remarques sur une \"equation qui se pr\'esente dans la th\'eorie des attractions des sph\'ero\"ides,''
+\emph{Nouveau Bulletin des Sciences, par la Soci\'et\'e philomathique de Paris} \textbf{3}, 388--392 (1813).
+
+\bibitem{Schwarzschild1916}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{Park2021}
+R. S. Park, W. M. Folkner, J. G. Williams, and D. H. Boggs,
+``The JPL Planetary and Lunar Ephemerides DE440 and DE441,''
+\emph{The Astronomical Journal} \textbf{161}, 105 (2021),
+\href{https://doi.org/10.3847/1538-3881/abd414}{doi:\nolinkurl{10.3847/1538-3881/abd414}}.
+
+\bibitem{Hawking1975}
+S. W. Hawking,
+``Particle creation by black holes,''
+\emph{Communications in Mathematical Physics} \textbf{43}, 199--220 (1975),
+\href{https://doi.org/10.1007/BF02345020}{doi:\nolinkurl{10.1007/BF02345020}}.
+
+\bibitem{PREM}
+A. M. Dziewonski and D. L. Anderson,
+``Preliminary reference Earth model,''
+\emph{Physics of the Earth and Planetary Interiors} \textbf{25}, 297--356 (1981),
+\href{https://doi.org/10.1016/0031-9201(81)90046-7}{doi:\nolinkurl{10.1016/0031-9201(81)90046-7}}.
+
+\end{thebibliography}
+
+\end{document}
