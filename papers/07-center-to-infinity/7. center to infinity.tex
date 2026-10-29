@@ -1,0 +1,367 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{Center to Infinity:\\
+Static Clock-Rate Profiles Inside and Outside Spherical Bodies}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+A clock's rate at a location inside or outside a gravitating body can be compared with a reference time normalized at infinity. This paper uses the dimensionless inverse rate $\delta\tau\equiv\mathrm{d}t/\mathrm{d}\tau$ and its excess above unity to describe that comparison. We first connect static-clock rates to the frequency shift of light between two heights, then derive the weak-field depth profile inside a uniform sphere and continue it through the exterior to infinity. In this model, the center's first-order inverse-rate excess is $3GM/(2Rc^2)$, even though the gravitational acceleration vanishes there. The same first-order value applies to a clock in a circular orbit just above the surface of the uniform sphere; this equality is a weak-field result, not an exact orbital law. We next give the exact interior lapse for a constant-density Schwarzschild fluid, state the assumptions and limitations of the Buchdahl compactness bound, and compare a uniform Earth with a spherical PREM-based Earth model. The term ``depth'' is a reference-dependent clock-rate comparison, not a new substance or local force.
+\end{abstract}
+
+\noindent\textbf{Keywords:} gravitational redshift, clock rates, Schwarzschild interior, uniform sphere, Earth model, Buchdahl bound
+
+\section{Introduction}
+
+In a static gravitational field, clocks at different locations accumulate different amounts of proper time relative to a common time coordinate. A photon exchanged between two stationary clocks provides an observable comparison of their rates: the emitter and receiver assign different local frequencies to the same conserved photon energy. Einstein discussed the gravitational shift of light frequency in an early analysis of light propagation \cite{Einstein1911}, and the Pound--Rebka experiment later tested it directly \cite{PoundRebka}. Inside a gravitating body, the local acceleration can decrease toward zero at the center even as the clock-rate comparison continues to grow. The center can therefore be a location of zero gravitational acceleration and, relative to infinity, the greatest static clock-rate deficit.
+
+The aim here is to build the comparison from the exterior reference inward through a spherical body and back outward to infinity. We begin with the Schwarzschild exterior and the static photon-frequency ratio. In the weak field, a constant-density sphere gives a simple interior profile that can be integrated directly. We then use the exact constant-density interior solution to examine the strong-field limit and its assumptions. Finally, we compare this idealized model with a spherical Earth model based on PREM, the Preliminary Reference Earth Model \cite{PREM}.
+
+Throughout, $\tau$ denotes proper time on the clock being discussed, and $t$ is a static time coordinate normalized to agree with proper time at infinity. We restrict exact strong-field statements to static, spherical perfect-fluid models. Earth calculations use a weak-field, spherical, nonrotating approximation. A real rotating planet, realistic equation of state, or dynamical spacetime requires additional modeling. The circular-orbit comparison below is kept at first order; deriving the exact rate of an orbiting clock is a separate problem.
+
+\section{Static rate, reference time, and photon comparison}
+
+For a spherical, nonrotating source of mass $M$, the Schwarzschild exterior metric is \cite{SchwarzschildExterior}
+\begin{equation}
+  \mathrm{d}s^2
+  =-\left(1-\frac{r_s}{r}\right)c^2\mathrm{d}t^2
+   +\left(1-\frac{r_s}{r}\right)^{-1}\mathrm{d}r^2
+   +r^2\mathrm{d}\Omega^2,
+  \qquad
+  r_s\equiv\frac{2GM}{c^2}.
+  \label{eq:exterior-metric}
+\end{equation}
+The coordinate $r$ is the areal radius. A clock held static has fixed spatial coordinates, and its proper-time rate is
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  =\alpha(r)\equiv\sqrt{1-\frac{r_s}{r}}.
+  \label{eq:exterior-lapse}
+\end{equation}
+We use the reciprocal rate and its excess
+\begin{equation}
+  \delta\tau(r)\equiv\frac{\mathrm{d}t}{\mathrm{d}\tau}
+  =\frac{1}{\alpha(r)},
+  \qquad
+  \epsilon_{\mathrm{grav}}(r)\equiv\delta\tau(r)-1.
+  \label{eq:inverse-rate}
+\end{equation}
+Both quantities are dimensionless. $\delta\tau$ is not an elapsed-time interval, and $\epsilon_{\mathrm{grav}}$ is not a local force or a material density. Their values depend on the chosen reference time; the normalization at infinity sets $\delta\tau\to1$ as $r\to\infty$. The rate ratio between two finite locations, in contrast, can be measured without placing a clock at infinity.
+
+Let a photon be emitted at a lower radius $r_A$ and received at a higher radius $r_B$. Stationarity gives a conserved photon energy associated with the time-translation symmetry. A static observer measures the photon energy as that conserved energy divided by the local lapse, so its frequency ratio is
+\begin{equation}
+  \frac{\nu_B}{\nu_A}
+  =\frac{\alpha(r_A)}{\alpha(r_B)}
+  =\frac{\delta\tau(r_B)}{\delta\tau(r_A)}.
+  \label{eq:photon-ratio}
+\end{equation}
+Since $\alpha$ increases outward, an upward photon is received at a lower frequency. This gravitational redshift was tested by Pound and Rebka using the Mössbauer effect \cite{PoundRebka}; Pound and Snider later improved the measurement \cite{PoundSnider}. The frequency shift is a comparison of the two endpoint measurements, not a direct reading of an absolute clock depth.
+
+\section{Parts per billion and the tower test}
+
+In a weak field, define $\Phi(\infty)=0$ and use the Newtonian convention $\Phi<0$ near the source. To first order,
+\begin{equation}
+  \frac{\mathrm{d}\tau}{\mathrm{d}t}
+  \simeq1+\frac{\Phi}{c^2},
+  \qquad
+  \delta\tau-1
+  \simeq-\frac{\Phi}{c^2}.
+  \label{eq:weak-rate}
+\end{equation}
+For a point-mass exterior, set $u=GM/(rc^2)$; then $\epsilon_{\mathrm{grav}}\simeq u$. One part per billion (ppb) is $10^{-9}$ in the rate ratio. A static clock with $\epsilon_{\mathrm{grav}}=1$ ppb accumulates about $86.4\ \mu\mathrm{s}$ less proper time than the reference in one reference day, to first order.
+
+In this weak-field limit, with $\nabla$ the spatial gradient per unit distance, the inward Newtonian field satisfies $\mathbf{g}=-\nabla\Phi$ and
+\begin{equation}
+  \nabla\epsilon_{\mathrm{grav}}
+  \simeq\frac{\mathbf{g}}{c^2}.
+  \label{eq:weak-depth-gradient}
+\end{equation}
+The rate excess is accumulated potential depth; its spatial slope tracks the local gravitational field.
+
+At Earth's surface, use the spherical, nonrotating model values $GM_{\oplus}=3.98600435507\times10^{14}\ \mathrm{m^3\,s^{-2}}$ and $R_{\oplus}=6.371\times10^6\ \mathrm{m}$ \cite{JPL}. This gives $x_R\equiv GM_{\oplus}/(R_{\oplus}c^2)\simeq0.696$ ppb. For the GPS orbital radius, the corresponding Earth-only gravitational term is about $0.167$ ppb; the surface-to-orbit difference is about $0.529$ ppb, or $45.7\ \mu\mathrm{s}$ per day before the satellite's motion is included \cite{Ashby}. These are idealized gravitational comparisons, not the net operational GPS clock correction.
+
+For the Pound--Rebka tower height $H\simeq22.5\ \mathrm{m}$, the predicted one-way fractional frequency shift is
+\begin{equation}
+  \left|\frac{\Delta\nu}{\nu}\right|
+  \simeq\frac{gH}{c^2}
+  \simeq2.46\times10^{-15}
+  =2.46\times10^{-6}\ \mathrm{ppb}.
+  \label{eq:tower-shift}
+\end{equation}
+The shift corresponds to roughly $0.21\ \mathrm{ns}$ of accumulated clock difference per day. The original experiment reported a measured-to-predicted ratio of $1.05\pm0.10$; the later Pound--Snider measurement brought the result to within about one percent \cite{PoundRebka,PoundSnider}. The laboratory test concerns a small difference between two heights. It does not measure the much larger rate comparison between Earth's surface and infinity.
+
+\begin{table}[ht]
+  \centering
+  \caption{Illustrative Earth-only gravitational inverse-rate excesses in a spherical model. Values are relative to infinity; orbital motion is excluded.}
+  \label{tab:earth-depths}
+  \begin{tabular}{lccc}
+    \toprule
+    Location & $r/R_{\oplus}$ & $\epsilon_{\mathrm{grav}}$ (ppb) & First-order lag per day ($\mu\mathrm{s}$) \\
+    \midrule
+    Center, uniform-density Earth & 0 & 1.044 & 90.2 \\
+    Surface & 1 & 0.696 & 60.1 \\
+    GPS orbital radius & 4.17 & 0.167 & 14.4 \\
+    Lunar distance ($60R_{\oplus}$) & 60 & 0.0116 & 1.0 \\
+    Infinity & $\infty$ & 0 & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+The center row uses the uniform-density model derived below. The GPS and lunar entries use the exterior point-mass approximation. All daily lags are relative to the same reference and should not be subtracted or interpreted without preserving that convention.
+
+\section{Weak-field profile inside a uniform sphere}
+
+Consider a static sphere of total mass $M$ and radius $R$ with uniform density. Let $r$ denote distance from its center and define the surface compactness
+\begin{equation}
+  x_R\equiv\frac{GM}{Rc^2}.
+  \label{eq:surface-compactness}
+\end{equation}
+For $0\leq r\leq R$, the enclosed mass and Newtonian gravitational-acceleration magnitude are
+\begin{equation}
+  M(r)=M\frac{r^3}{R^3},
+  \qquad
+  g(r)=\frac{GM(r)}{r^2}=\frac{GM}{R^3}r.
+  \label{eq:uniform-g}
+\end{equation}
+The inward field vanishes at the center and grows linearly with radius. In the weak field, the rate excess changes with potential according to $\epsilon_{\mathrm{grav}}\simeq-\Phi/c^2$. Matching to the exterior at the surface gives $\epsilon_{\mathrm{grav}}(R)\simeq x_R$. Integrating inward therefore yields
+\begin{align}
+  \epsilon_{\mathrm{grav}}(r)
+  &\simeq x_R+\frac{1}{c^2}\int_r^R g(s)\,\mathrm{d}s \\
+  &=x_R+\frac{x_R}{2}\left(1-\frac{r^2}{R^2}\right)
+   =\frac{x_R}{2}\left(3-\frac{r^2}{R^2}\right),
+  \qquad x_R\ll1.
+  \label{eq:uniform-depth}
+\end{align}
+The surface contribution remains in this expression. While exterior spherical shells exert no Newtonian force at an interior point, they contribute to the potential relative to infinity through the boundary value at $R$.
+
+At the center,
+\begin{equation}
+  \epsilon_{\mathrm{grav}}(0)\simeq\frac{3}{2}x_R,
+  \qquad
+  g(0)=0.
+  \label{eq:uniform-center}
+\end{equation}
+For the idealized Earth, $x_R\simeq0.696$ ppb, giving a uniform-sphere center excess of $1.044$ ppb. The result illustrates why local acceleration and accumulated clock-rate comparison are different quantities: the gradient vanishes at the center, but the potential difference from infinity does not.
+
+Outside the sphere, the weak-field profile continues as
+\begin{equation}
+  \epsilon_{\mathrm{grav}}(r)\simeq\frac{GM}{rc^2}
+  =x_R\frac{R}{r},
+  \qquad r\geq R.
+  \label{eq:exterior-profile}
+\end{equation}
+The interior curve is quadratic in $r$ for this model, while the exterior curve falls as $1/r$ and approaches zero only at infinity.
+
+\section{Why the center matches a skimming orbit at first order}
+
+The leading weak-field rate of a slowly moving clock, with speed $v$ measured in the stated reference frame, is
+\begin{equation}
+  \delta\tau-1
+  \simeq-\frac{\Phi}{c^2}+\frac{v^2}{2c^2}.
+  \label{eq:moving-rate}
+\end{equation}
+For a Newtonian circular test-particle orbit at radius $R$, force balance gives $v^2=GM/R=c^2x_R$. The static gravitational contribution at the surface is $x_R$, and the kinetic contribution is $x_R/2$. Thus
+\begin{equation}
+  \epsilon_{\mathrm{orbit}}\simeq x_R+\frac{x_R}{2}
+  =\frac{3}{2}x_R
+  \simeq\epsilon_{\mathrm{grav}}(0).
+  \label{eq:center-orbit-match}
+\end{equation}
+This equality is a first-order comparison for a uniform sphere and a circular orbit just above its surface. It is not a general identity between central and orbital clocks, and it does not include higher-order relativistic terms. For the nonuniform Earth model below, the center and the skimming-orbit clock do not match.
+
+\begin{samepage}
+The higher-order difference can be made explicit within the same models. For the uniform-density Schwarzschild interior, the central rate follows from Eq.~\eqref{eq:center-lapse}; for a test clock on a circular geodesic in the Schwarzschild exterior, the exact rate is set by the orbit's areal radius. With time normalized at infinity, the comparison at the surface is
+\begin{equation}
+\begin{aligned}
+  \epsilon_{\mathrm{grav,int}}(0)
+  &=\frac{2}{3\sqrt{1-2x_R}-1}-1
+   =\frac{3}{2}x_R+3x_R^2+O(x_R^3),\\
+  \epsilon_{\mathrm{orbit}}(R)
+  &=\frac{1}{\sqrt{1-3x_R}}-1
+   =\frac{3}{2}x_R+\frac{27}{8}x_R^2+O(x_R^3),\\
+  \epsilon_{\mathrm{orbit}}(R)-\epsilon_{\mathrm{grav,int}}(0)
+  &=\frac{3}{8}x_R^2+O(x_R^3).
+\end{aligned}
+\label{eq:center-orbit-second-order}
+\end{equation}
+The orbit expression is the exterior limit at $r=R$; a timelike circular geodesic exists for $R>3GM/c^2$ and is stable for $R\geq6GM/c^2$ \cite{SchwarzschildExterior}. Thus the first-order match does not persist at second order, even for the uniform-density model.
+\end{samepage}
+
+The uniform-sphere interior field is harmonic: writing $\omega^2=GM/R^3$, Eq.~\eqref{eq:uniform-g} becomes $g(r)=\omega^2r$. A freely falling body in an ideal straight tunnel through this nonrotating sphere therefore follows simple harmonic motion. The surface-to-surface transit time is half an oscillation period,
+\begin{equation}
+  t_{\mathrm{tunnel}}
+  =\pi\sqrt{\frac{R^3}{GM}}
+  \simeq42.2\ \mathrm{min}
+  \quad\text{for the uniform-Earth model}.
+  \label{eq:uniform-tunnel}
+\end{equation}
+The corresponding circular-orbit period is twice this value. This idealization neglects rotation, friction, and density variation.
+
+\section{Exact constant-density interior and compactness limit}
+
+The uniform-density model also has an exact static solution of Einstein's equations, the Schwarzschild interior solution \cite{SchwarzschildInterior}. For an incompressible perfect fluid of total mass $M$ and radius $R$, matched to the Schwarzschild exterior, the interior lapse is
+\begin{equation}
+  \alpha_{\mathrm{int}}(r)
+  =\frac{1}{2}\left[
+    3\sqrt{1-\frac{r_s}{R}}
+    -\sqrt{1-\frac{r_s r^2}{R^3}}
+  \right],
+  \qquad 0\leq r\leq R.
+  \label{eq:interior-lapse}
+\end{equation}
+It matches Eq.~\eqref{eq:exterior-lapse} at $r=R$. The exact clock-rate ratio and excess inside are
+\begin{equation}
+  \delta\tau_{\mathrm{int}}(r)=\frac{1}{\alpha_{\mathrm{int}}(r)},
+  \qquad
+  \epsilon_{\mathrm{grav,int}}(r)
+  =\frac{1}{\alpha_{\mathrm{int}}(r)}-1.
+  \label{eq:interior-inverse-rate}
+\end{equation}
+Expanding Eq.~\eqref{eq:interior-lapse} for $x_R\ll1$ recovers the weak-field center result $\epsilon_{\mathrm{grav}}(0)\simeq3x_R/2$.
+
+At the center,
+\begin{equation}
+  \alpha_{\mathrm{int}}(0)
+  =\frac{1}{2}\left(3\sqrt{1-\frac{r_s}{R}}-1\right).
+  \label{eq:center-lapse}
+\end{equation}
+For this constant-density fluid, the central pressure is
+\begin{equation}
+  p(0)=\rho c^2
+  \frac{1-\sqrt{1-r_s/R}}
+       {3\sqrt{1-r_s/R}-1},
+  \label{eq:center-pressure}
+\end{equation}
+where $\rho$ is the uniform mass-equivalent density (the energy density divided by $c^2$). As $R$ approaches $9r_s/8$, the denominator in Eqs.~\eqref{eq:center-lapse} and \eqref{eq:center-pressure} tends to zero: the formal central lapse tends to zero while the central pressure diverges. The limiting solution does not contain a regular static clock at its center. A regular member of this constant-density family with finite central pressure requires $R>9r_s/8$; equality is only the singular limiting case.
+
+Buchdahl's theorem gives the limiting bound $R\geq9r_s/8$ under its assumptions for a regular, static, spherical perfect fluid with isotropic pressure, nonnegative density and pressure, and density that does not increase outward \cite{Buchdahl}. It is not a universal compactness limit for every conceivable matter model; anisotropic stresses or violations of the theorem's hypotheses require separate analysis. The constant-density solution is itself an ideal incompressible-fluid model, not a causal equation of state for a realistic star.
+
+As a numerical illustration, take a uniform-density object with mass $1.4M_{\odot}$ and radius $12\ \mathrm{km}$. The exact interior solution gives approximately
+\begin{equation}
+  \epsilon_{\mathrm{grav,int}}(0)\simeq0.400,
+  \qquad
+  \epsilon_{\mathrm{grav}}(R)\simeq0.235.
+  \label{eq:compact-star-example}
+\end{equation}
+These are large, non-perturbative rate excesses in the mathematical constant-density model. They should not be interpreted as precise predictions for a neutron star, whose interior density and pressure require a realistic equation of state.
+
+\section{A nonuniform Earth: PREM profile}
+
+For a spherically symmetric density profile $\rho(r)$, define the enclosed mass and Newtonian gravitational-field magnitude by
+\begin{equation}
+  M(r)=4\pi\int_0^r\rho(s)s^2\,\mathrm{d}s,
+  \qquad
+  g(r)=\frac{GM(r)}{r^2}.
+  \label{eq:mass-profile}
+\end{equation}
+In the weak field, the center's inverse-rate excess relative to infinity is
+\begin{equation}
+  \epsilon_{\mathrm{grav}}(0)
+  \simeq\frac{GM}{Rc^2}
+   +\frac{1}{c^2}\int_0^R g(r)\,\mathrm{d}r.
+  \label{eq:center-general-profile}
+\end{equation}
+The first term is the surface-to-infinity contribution; the integral is the additional center-to-surface potential difference. This expression makes clear why a local measurement $g(0)=0$ does not imply zero depth.
+
+Using the PREM density profile in Eq.~\eqref{eq:mass-profile} gives a spherical PREM-model center excess of about $1.24$ ppb, compared with $1.044$ ppb for the uniform-density model \cite{PREM}. Since the surface value is about $0.696$ ppb, the spherical PREM-model center excess is approximately $1.79$ times the surface value. In this spherical model, the gravitational acceleration reaches about $10.7\ \mathrm{m\,s^{-2}}$ near the core--mantle boundary. Numerical integration of the same radial profile gives a surface-to-surface gravity-tunnel transit time of about 38 min 11 s \cite{PREM,Klotz}. These figures depend on the adopted Earth model; they do not include rotation or the full geoid and external-field corrections relevant to practical clock transfer.
+
+The uniform and PREM-based models share the qualitative feature that the center has zero gravitational acceleration by spherical symmetry while its static clock rate is lower than at the surface. They differ quantitatively because the real Earth is centrally concentrated. Accordingly, the first-order equality between central and skimming-orbit clock excesses in Eq.~\eqref{eq:center-orbit-match} holds for the uniform-density sphere, not for the PREM Earth.
+
+\section{Conclusion}
+
+With time normalized at infinity, the inverse clock-rate excess $\epsilon_{\mathrm{grav}}=\delta\tau-1$ organizes static rate comparisons through the interior and exterior of a spherical body. The photon redshift between finite radii is the ratio of the corresponding static clock rates. In a weak-field uniform sphere, integrating the interior gravitational field gives a central excess of $3GM/(2Rc^2)$ even though the acceleration vanishes at the center. A circular orbit skimming the surface has the same leading-order excess for this model, while an ideal gravity tunnel traverses the sphere in half the circular-orbit period.
+
+The exact constant-density Schwarzschild interior solution extends the analysis into strong fields, but its vanishing central lapse occurs only at a singular limiting configuration with divergent central pressure. Buchdahl's compactness bound must be stated with its perfect-fluid assumptions rather than generalized to all possible matter. For the Earth, a PREM-based weak-field integration places the center deeper than a uniform-density estimate and again separates clock-rate depth from local acceleration. These results use standard relativistic and Newtonian models; ``depth'' remains a reference-dependent description of clock rates, not an additional physical field.
+
+\begin{thebibliography}{99}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Einstein1911}
+A. Einstein,
+``\"Uber den Einflu\ss{} der Schwerkraft auf die Ausbreitung des Lichtes,''
+\emph{Annalen der Physik} \textbf{35}, 898--908 (1911),
+\href{https://doi.org/10.1002/andp.19113401005}{doi:\nolinkurl{10.1002/andp.19113401005}}.
+
+\bibitem{PoundRebka}
+R. V. Pound and G. A. Rebka, Jr.,
+``Apparent weight of photons,''
+\emph{Physical Review Letters} \textbf{4}, 337--341 (1960),
+\href{https://doi.org/10.1103/PhysRevLett.4.337}{doi:\nolinkurl{10.1103/PhysRevLett.4.337}}.
+
+\bibitem{PoundSnider}
+R. V. Pound and J. L. Snider,
+``Effect of gravity on gamma radiation,''
+\emph{Physical Review} \textbf{140}, B788--B803 (1965),
+\href{https://doi.org/10.1103/PhysRev.140.B788}{doi:\nolinkurl{10.1103/PhysRev.140.B788}}.
+
+\bibitem{SchwarzschildExterior}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{SchwarzschildInterior}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld einer Kugel aus inkompressibler Fl\"ussigkeit nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 424--434 (1916).
+
+\bibitem{Buchdahl}
+H. A. Buchdahl,
+``General relativistic fluid spheres,''
+\emph{Physical Review} \textbf{116}, 1027--1034 (1959),
+\href{https://doi.org/10.1103/PhysRev.116.1027}{doi:\nolinkurl{10.1103/PhysRev.116.1027}}.
+
+\bibitem{PREM}
+A. M. Dziewonski and D. L. Anderson,
+``Preliminary reference Earth model,''
+\emph{Physics of the Earth and Planetary Interiors} \textbf{25}, 297--356 (1981),
+\href{https://doi.org/10.1016/0031-9201(81)90046-7}{doi:\nolinkurl{10.1016/0031-9201(81)90046-7}}.
+
+\bibitem{Klotz}
+A. R. Klotz,
+``The gravity tunnel in a non-uniform Earth,''
+\emph{American Journal of Physics} \textbf{83}, 231--237 (2015),
+\href{https://doi.org/10.1119/1.4898780}{doi:\nolinkurl{10.1119/1.4898780}}.
+
+\bibitem{Ashby}
+N. Ashby,
+``Relativity in the Global Positioning System,''
+\emph{Living Reviews in Relativity} \textbf{6}, 1 (2003),
+\href{https://doi.org/10.12942/lrr-2003-1}{doi:\nolinkurl{10.12942/lrr-2003-1}}.
+
+\bibitem{JPL}
+NASA/JPL Solar System Dynamics,
+\emph{Astrodynamic Parameters},
+\url{https://ssd.jpl.nasa.gov/astro_par.html}, and
+\emph{Planetary Physical Parameters},
+\url{https://ssd.jpl.nasa.gov/planets/phys_par.html},
+accessed October 27, 2026.
+
+\end{thebibliography}
+
+\end{document}
