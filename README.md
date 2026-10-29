@@ -10,6 +10,8 @@ The manuscripts distinguish exact results from approximations and established ph
 
 ## License
 
-The manuscripts and supporting materials that is added to this repository, now and in the future, are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), but only to the extent that this account's user owns or is authorized to license the relevant rights. Third-party material identified as being under different terms is excluded and remains subject to those terms. This license does not apply to other repository material.
+The manuscripts and supporting materials that is added to this repository, now and in the future, are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), but only to the extent that this account's user owns or is authorized to license the relevant rights. This includes the manuscripts’ LaTeX source files and PDFs.
+
+Third-party material identified as subject to different terms is excluded and remains subject to those terms. Other repository material is not covered by this license notice.
 
 See [LICENSE](LICENSE) for the official, unmodified legal code.
