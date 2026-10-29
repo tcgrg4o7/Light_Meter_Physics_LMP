@@ -1,0 +1,316 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Absorber and the Window:\\
+Wheeler--Feynman Theory and the Temporal Propagator}
+\author{Light-Meter Physics}
+\date{Draft Manuscript}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Wheeler--Feynman absorber theory gives a time-symmetric, direct-action account of electromagnetic interaction in which the response of other charges is invoked to explain radiation reaction and the observed retarded radiation description. This paper introduces that proposal and its absorber assumptions, then derives a separate mathematical construction: finite averages of a signal over future- and past-sampling time windows. The window operators admit an exact even--odd decomposition and, under suitable regularity, a derivative expansion. The shared use of symmetric and antisymmetric parts is a structural analogy only. Finite time-window averages are not electromagnetic Green functions and do not reproduce the absorber dynamics. A possible weak-field relation between an acceleration average and a clock-rate comparison is stated as an additional model step, with the required path and time-coordinate assumptions made explicit. The aim is an accessible comparison that preserves the distinction between physical theory, exact operator algebra, and project-specific modeling.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Wheeler--Feynman absorber theory, direct action, advanced and retarded Green functions, radiation reaction, finite-window average, temporal propagator
+
+\section{Introduction}
+
+Electromagnetic radiation presents an apparent asymmetry. The fundamental field equations admit both retarded solutions, supported by sources in the past light cone, and advanced solutions, supported by sources in the future light cone. Ordinary observations are described using retarded radiation. Wheeler and Feynman asked whether this familiar direction could be understood from a time-symmetric interaction between charges together with the response of the rest of the charged universe, rather than imposed as a separate radiation condition \cite{WheelerFeynman1945,WheelerFeynman1949}.
+
+This paper explains that absorber proposal and a mathematical object called the \emph{temporal propagator} in the Light-Meter Physics materials. Here the latter term means a finite interval average of a specified time-dependent signal. It is not a standard electromagnetic Green function. Both topics can be organized into symmetric and antisymmetric parts, but they act on different objects and answer different questions. The absorber theory concerns interactions among charges and the boundary conditions on their collective response; the finite-window operators are exact averages defined directly from a function of time.
+
+The distinction matters because similar algebra does not establish a physical mechanism. In particular, the two-window identities below do not derive radiation reaction, impose a cosmological absorber condition, or show that advanced electromagnetic fields are finite-duration averages. A possible connection to gravitational clock-rate comparisons is also conditional on a specified field, path, and time mapping; it is not a consequence of Wheeler--Feynman electrodynamics.
+
+\section{Retarded and advanced solutions}
+
+For a linear wave equation, retarded and advanced Green functions are distinct solutions with different support conditions. Schematically, if $\mathcal{L}$ denotes the relevant wave operator and $x,x'$ spacetime events, they satisfy
+\begin{equation}
+  \mathcal{L}G_{\mathrm{ret}}(x,x')=\delta(x-x'),
+  \qquad
+  \mathcal{L}G_{\mathrm{adv}}(x,x')=\delta(x-x'),
+  \label{eq:green-equations}
+\end{equation}
+with retarded or advanced boundary conditions, respectively. The normalization and tensor structure depend on the field and convention; Eq.~\eqref{eq:green-equations} displays only the shared schematic source equation.
+
+The time-symmetric and antisymmetric combinations can be defined as
+\begin{equation}
+  G_{\mathrm{sym}}\equiv\frac{1}{2}
+  \left(G_{\mathrm{ret}}+G_{\mathrm{adv}}\right),
+  \qquad
+  G_{\mathrm{rad}}\equiv\frac{1}{2}
+  \left(G_{\mathrm{ret}}-G_{\mathrm{adv}}\right).
+  \label{eq:green-split}
+\end{equation}
+Thus $G_{\mathrm{ret}}=G_{\mathrm{sym}}+G_{\mathrm{rad}}$ and $G_{\mathrm{adv}}=G_{\mathrm{sym}}-G_{\mathrm{rad}}$. These expressions concern spacetime Green functions: their support lies on or within the appropriate light cone, depending on the equation and spacetime.
+
+Because the retarded and advanced Green functions obey the same sourced equation, their half-difference is homogeneous while their half-sum retains the source:
+\begin{equation}
+  \mathcal{L}G_{\mathrm{rad}}=0,
+  \qquad
+  \mathcal{L}G_{\mathrm{sym}}=\delta(x-x').
+  \label{eq:green-split-equations}
+\end{equation}
+This follows from linearity of the stated wave operator; it is separate from the finite-window identities introduced below.
+
+In Wheeler--Feynman electrodynamics, the interaction is formulated directly between charged particles using a time-symmetric kernel, rather than treating the electromagnetic field as an independent intermediary with its own freely specified initial data. The Green-function language is a useful way to display the time symmetry of the interaction; it should not be confused with an average of a scalar signal over a chosen time interval. The 1949 paper develops the direct-interparticle-action formulation, following the absorber proposal of 1945 \cite{WheelerFeynman1945,WheelerFeynman1949}.
+
+\section{The absorber proposal and radiation reaction}
+
+The absorber argument considers the source and the other charged particles as a coupled system. In the time-symmetric description, the source's interaction has equal retarded and advanced parts. The source perturbs absorber charges; their collective response then acts back on the source. Under the theory's idealized absorber conditions, that response supplies the radiative contribution needed for radiation damping, while the source-associated disturbance away from the source has the familiar retarded form.
+
+Let $F$ denote the electromagnetic field tensor, or a consistently chosen component of it. At a field point $x$ away from the source worldline, let $F_{\mathrm{src}}^{\mathrm{ret}}(x)$ and $F_{\mathrm{src}}^{\mathrm{adv}}(x)$ be fields of the same source trajectory, and let $F_{\mathrm{resp}}(x)$ denote the collective absorber contribution. The idealized bookkeeping is
+\begin{align}
+  F_{\mathrm{src}}^{\mathrm{sym}}(x)
+  &\equiv\frac{1}{2}\left(
+  F_{\mathrm{src}}^{\mathrm{ret}}(x)
+  +F_{\mathrm{src}}^{\mathrm{adv}}(x)\right),
+  \notag\\
+  F_{\mathrm{resp}}(x)
+  &\mathrel{\mathop{\simeq}^{\mathrm{ideal\ absorber}}}
+  \frac{1}{2}\left(
+  F_{\mathrm{src}}^{\mathrm{ret}}(x)
+  -F_{\mathrm{src}}^{\mathrm{adv}}(x)\right),
+  \notag\\
+  F_{\mathrm{eff}}(x)
+  &\equiv F_{\mathrm{src}}^{\mathrm{sym}}(x)+F_{\mathrm{resp}}(x)
+  \mathrel{\mathop{\simeq}^{\mathrm{ideal\ absorber}}}
+  F_{\mathrm{src}}^{\mathrm{ret}}(x).
+  \label{eq:absorber-schematic}
+\end{align}
+The identification of $F_{\mathrm{resp}}$ is conditional on the absorber construction; the final relation combines it algebraically with the source's symmetric field. This is not a global identity for arbitrary fields throughout the absorber. At the emitter, radiation reaction is attributed to the regular absorber response; the singular source field is not added as a direct force on that same particle \cite{WheelerFeynman1945,WheelerFeynman1949}. The response is physical bookkeeping for the absorber argument, not a time average of the source signal.
+
+\section{What the absorber condition assumes}
+
+Time symmetry alone does not select retarded rather than advanced radiation. The absorber argument requires additional physical input about the absorber's response and the relevant boundary or statistical conditions. In the classical proposal, the idealization of complete absorption is central to obtaining the desired collective response \cite{WheelerFeynman1945}. Whether a given cosmological model meets a complete-absorption condition is a separate problem, not a consequence of the local half-retarded plus half-advanced interaction. Davies analyzed this cosmological requirement for classes of models, illustrating that the condition must be checked rather than assumed to hold universally \cite{Davies1972}.
+
+Accordingly, this paper presents Wheeler--Feynman theory as a physical proposal with explicit conditions, not as a derivation of the radiation arrow from time symmetry alone or as a settled description that follows for every possible universe. Later quantum direct-action developments are beyond the present scope. The restricted goal is to explain the classical absorber mechanism at a conceptual level and to keep its physical assumptions visible.
+
+\section{The temporal propagator as a finite-window average}
+
+Now consider a distinct mathematical construction. Fix a positive window duration $\tau_L=L/c$, a specified time coordinate $t$, and a scalar signal $g$ that is locally integrable on a domain containing both windows. Define the future- and past-sampling averages by
+\begin{equation}
+  \mathcal{P}_{+}[g](t)
+  \equiv\frac{1}{\tau_L}\int_0^{\tau_L}g(t+u)\,\mathrm{d}u,
+  \qquad
+  \mathcal{P}_{-}[g](t)
+  \equiv\frac{1}{\tau_L}\int_0^{\tau_L}g(t-u)\,\mathrm{d}u.
+  \label{eq:window-definitions}
+\end{equation}
+Both operators preserve a constant input. They average one prescribed function over two intervals of equal duration; neither includes spatial propagation, a source-to-observer light cone, or a response of absorber particles.
+
+Let $D\equiv\mathrm{d}/\mathrm{d}t$. Translation of the input gives the compact notation
+\begin{equation}
+  \mathcal{P}_{+}
+  =\frac{e^{\tau_LD}-1}{\tau_LD},
+  \qquad
+  \mathcal{P}_{-}
+  =\frac{1-e^{-\tau_LD}}{\tau_LD}.
+  \label{eq:window-operators}
+\end{equation}
+The apparent singularities at $D=0$ are removable: the scalar functions $(e^x-1)/x$ and $(1-e^{-x})/x$ have finite limits there. Equation~\eqref{eq:window-operators} is shorthand for the exact translation averages in Eq.~\eqref{eq:window-definitions}; it does not require an inverse-derivative operation or an integration constant. In particular, $\mathcal{P}_{-}$ is not the inverse of $\mathcal{P}_{+}$. The identity $\mathcal{P}_{-}=e^{-\tau_LD}\mathcal{P}_{+}$ simply relates the two translated windows. The past-sampling window uses values available up to $t$; evaluating the future-sampling window requires later data, a prediction, or delayed reporting, and its definition provides no advance access.
+
+If the Taylor series of $g$ about $t$ converges uniformly on $[t-\tau_L,t+\tau_L]$, integrating term by term yields
+\begin{equation}
+  \mathcal{P}_{\pm}[g](t)
+  =\sum_{n=0}^{\infty}
+  \frac{(\pm \tau_L)^n}{(n+1)!}D^ng(t)
+  =g\pm\frac{\tau_L}{2}Dg
+  +\frac{\tau_L^2}{6}D^2g
+  \pm\frac{\tau_L^3}{24}D^3g+\cdots,
+  \label{eq:window-series}
+\end{equation}
+Every derivative is evaluated at $t$ and is a derivative of the specified signal in the specified time coordinate. If $g$ is a signed acceleration component in a specified fixed inertial basis and $t$ is that frame's time, then $Dg$, $D^2g$, and $D^3g$ are the corresponding jerk, snap, and crackle components; otherwise they are simply derivatives of $g$, not automatically proper-time or covariant derivatives. The integral averages need only local integrability, not differentiability. More generally, if $g\in C^{n+1}$ on the interval and $M_{n+1}\equiv\sup_{|v-t|\le \tau_L}|g^{(n+1)}(v)|$, Taylor's theorem gives
+\begin{equation}
+  \mathcal{P}_{\pm}[g](t)
+  =\sum_{k=0}^{n}\frac{(\pm \tau_L)^k}{(k+1)!}g^{(k)}(t)
+  +R_{n,\pm},
+  \qquad
+  |R_{n,\pm}|\le\frac{M_{n+1}\tau_L^{n+1}}{(n+2)!}.
+  \label{eq:window-remainder}
+\end{equation}
+
+For an affine signal $g(t+u)=g(t)+uDg(t)$, direct integration gives $\mathcal{P}_{\pm}[g](t)=g(t)\pm \tau_LDg(t)/2$ exactly. This simple check shows how the window direction appears in the odd derivative term without invoking any electromagnetic absorber.
+
+\section{Even and odd parts of the window pair}
+
+Adding and subtracting the window operators separates parity. From the integral definitions,
+\begin{align}
+  \frac{\mathcal{P}_{+}[g](t)+\mathcal{P}_{-}[g](t)}{2}
+  &=\frac{1}{2\tau_L}\int_{-\tau_L}^{\tau_L}g(t+u)\,\mathrm{d}u,
+  \label{eq:centered-window}\\
+  \frac{\mathcal{P}_{+}[g](t)-\mathcal{P}_{-}[g](t)}{2}
+  &=\frac{1}{2\tau_L}\int_0^{\tau_L}
+  \left[g(t+u)-g(t-u)\right] \,\mathrm{d}u.
+  \label{eq:odd-window}
+\end{align}
+The first is a centered average over total width $2\tau_L$; the second compares the two half-windows with opposite signs. In operator notation, with $x\equiv \tau_LD$,
+\begin{equation}
+  \frac{\mathcal{P}_{+}+\mathcal{P}_{-}}{2}
+  =\frac{\sinh x}{x},
+  \qquad
+  \frac{\mathcal{P}_{+}-\mathcal{P}_{-}}{2}
+  =\frac{\cosh x-1}{x}.
+  \label{eq:hyperbolic-window-split}
+\end{equation}
+The even part retains even derivatives of $g$; the odd part retains odd derivatives. Their first terms are
+\begin{align}
+  \frac{\mathcal{P}_{+}[g]+\mathcal{P}_{-}[g]}{2}
+  &=g+\frac{\tau_L^2}{6}D^2g
+  +\frac{\tau_L^4}{120}D^4g+\cdots,\\
+  \frac{\mathcal{P}_{+}[g]-\mathcal{P}_{-}[g]}{2}
+  &=\frac{\tau_L}{2}Dg
+  +\frac{\tau_L^3}{24}D^3g+\cdots.
+\end{align}
+The hyperbolic notation is a compact form of the exact integral relations; its derivative series has the same convergence qualifications as Eq.~\eqref{eq:window-series}.
+
+The window pair also has a simple frequency response. For the convention $g(t)=e^{i\omega t}$, direct integration gives
+\begin{equation}
+  \mathcal{P}_{\pm}(i\omega)
+  =e^{\pm i\omega \tau_L/2}
+  \operatorname{sinc}\!\left(\frac{\omega \tau_L}{2}\right),
+  \qquad
+  \operatorname{sinc}(y)\equiv\frac{\sin y}{y},
+  \quad \operatorname{sinc}(0)\equiv1.
+  \label{eq:window-frequency-response}
+\end{equation}
+The sinc factor is the averaging envelope, so the magnitude response is $|\operatorname{sinc}(\omega \tau_L/2)|$; the phase records that the future or past window is centered half an interval away from $t$. Both windows suppress modes with $\omega \tau_L=2\pi n$ for nonzero integer $n$, and their composition has multiplier $\operatorname{sinc}^2(\omega \tau_L/2)$. This is the transfer function of a finite-window average, not the frequency-domain retarded or advanced electromagnetic Green function.
+
+\section{A structural analogy, not an identification}
+
+The two constructions can be compared at the level of their paired decompositions:
+\begin{table}[ht]
+  \centering
+  \small
+  \begin{tabular}{@{}p{0.22\linewidth}p{0.34\linewidth}p{0.34\linewidth}@{}}
+    \toprule
+    Feature & Wheeler--Feynman theory & Temporal-window operators \\
+    \midrule
+    Mathematical object & Electromagnetic interaction kernel & Average of a specified function $g(t)$ \\
+    Pair being split & Retarded and advanced Green functions & Future- and past-sampling windows \\
+    Physical ingredients & Charges and absorber response & Interval length and signal history \\
+    Role of the split & Describes time-symmetric interaction and absorber response & Separates even and odd parts of the window operator \\
+    \bottomrule
+  \end{tabular}
+  \caption{A structural comparison between Wheeler--Feynman theory and finite-window averages.}
+  \label{tab:absorber-window-comparison}
+\end{table}
+
+The common feature is the organization into symmetric and antisymmetric parts. The physical objects, inputs, and consequences are different. Green functions encode spacetime support and the field equation; $\mathcal{P}_{\pm}$ act on a one-dimensional time history over finite intervals. The window algebra neither supplies the absorber's advanced response nor proves the complete-absorber condition. Conversely, Wheeler--Feynman theory does not imply the finite-window derivative ladder or its sinc response.
+
+For this reason, the terms \emph{retarded} and \emph{advanced} should be reserved for Green functions and source support when discussing electrodynamics. When describing $\mathcal{P}_{\pm}$, \emph{past-sampling} and \emph{future-sampling} are less ambiguous: the labels describe which values of $g$ enter the integral, not causal boundary conditions for a field equation.
+
+\section{A conditional interface with clock-rate models}
+
+Some Light-Meter Physics materials use the dimensionless reciprocal clock-rate convention $\delta\tau\equiv\mathrm{d}t/\mathrm{d}\tau$, where $t$ is a static coordinate time with a specified reference normalization and $\tau$ is the proper time of a static observer. The notation follows the clock-rate and gradient discussions in Manuscripts 5 and 6. In a static region, write the metric as
+\begin{equation}
+  \mathrm{d}s^2=-\alpha(\mathbf{x})^2c^2\mathrm{d}t^2
+  +h_{ij}(\mathbf{x})\,\mathrm{d}x^i\mathrm{d}x^j,
+  \qquad
+  \delta\tau=\frac{\mathrm{d}t}{\mathrm{d}\tau}=\frac{1}{\alpha},
+  \label{eq:static-metric-clock-rate}
+\end{equation}
+where $\alpha>0$ is the lapse and $h_{ij}$ is the spatial metric. With the proper spatial gradient formed from $h_{ij}$, define the inward gravitational field for static observers by
+\begin{equation}
+  \mathbf{g}_{\mathrm{in}}
+  \equiv-\mathbf{a}_{\mathrm{hold}}
+  =-c^2\nabla_{\mathrm{proper}}\ln\alpha
+  =c^2\nabla_{\mathrm{proper}}\ln\delta\tau.
+  \label{eq:static-inward-field}
+\end{equation}
+This is the static-observer identity, not a universal equation for a moving body's acceleration \cite{SantiagoVisser}. For a directed spatial path $C:1\to2$ within the static region, integration gives the exact endpoint relation
+\begin{equation}
+  \Delta\psi\equiv\ln\!\left(\frac{\delta\tau_2}{\delta\tau_1}\right)
+  =\ln\!\left(\frac{\alpha_1}{\alpha_2}\right)
+  =\frac{1}{c^2}\int_C\mathbf{g}_{\mathrm{in}}
+  \cdot\mathrm{d}\boldsymbol{\ell},
+  \label{eq:static-clock-gradient-integral}
+\end{equation}
+where $\mathrm{d}\boldsymbol{\ell}$ is the directed proper spatial line element. The integral depends only on the endpoints because its integrand is a gradient. In the weak-field limit, $\alpha\simeq1+\Phi/c^2$ and $\mathbf{g}_{\mathrm{N}}=-\nabla\Phi$, so
+\begin{equation}
+  \Delta\psi\simeq-\frac{\Phi_2-\Phi_1}{c^2}
+  =\frac{1}{c^2}\int_1^2\mathbf{g}_{\mathrm{N}}
+  \cdot\mathrm{d}\boldsymbol{\ell}.
+  \label{eq:weak-field-clock-integral}
+\end{equation}
+
+The relation to a finite-window average can now be stated explicitly without identifying path parameter with coordinate time. Parametrize $C$ by proper arclength $\ell\in[0,L]$, with directed unit tangent $\hat{\mathbf n}(\ell)$, and define the time-dimensioned path parameter $u\equiv\ell/c$, $\tau_L\equiv L/c$, and the scalar path profile
+\begin{equation}
+  g_C(u)\equiv\mathbf{g}_{\mathrm{in}}\!\left(\mathbf{x}(cu)\right)
+  \cdot\hat{\mathbf n}(cu).
+  \label{eq:path-field-profile}
+\end{equation}
+Applying the same averaging formula to this path parameter gives
+\begin{equation}
+  \Delta\psi
+  =\frac{1}{c}\int_0^{\tau_L}g_C(u)\,\mathrm{d}u
+  =\frac{L}{c^2}\mathcal{P}_{+}^{(u)}[g_C](0)
+  =\frac{L}{c^2}\mathcal{P}_{-}^{(u)}[g_C](\tau_L),
+  \label{eq:clock-window-map}
+\end{equation}
+where $\mathcal{P}_{\pm}^{(u)}$ denotes the window operator acting on $u$, not on the static coordinate time $t$. Reversing the path reverses its tangent and the sign of $\Delta\psi$. The parameter $u=\ell/c$ is a path reparametrization, not generally the coordinate travel time of a photon; for a null ray in the metric of Eq.~\eqref{eq:static-metric-clock-rate}, $\mathrm{d}\ell=c\alpha\,\mathrm{d}t$. Thus the window representation is a way to express a known static clock comparison, not a gravitational law derived from an arbitrary acceleration history. In an attractive field, for upward propagation from 1 to 2, $\Delta\psi<0$: the higher static clock runs faster, while a photon emitted at 1 and received at 2 has $\nu_2/\nu_1=\alpha_1/\alpha_2=e^{\Delta\psi}$.
+
+This clock-rate application is logically separate from Wheeler--Feynman electrodynamics. The exact identity above applies to static observers in a specified static geometry; it does not extend without further assumptions to arbitrary evolving spacetimes or moving clocks. Nor do the absorber theory or finite-window algebra alone establish a universal strong-field clock law.
+
+\section{Conclusion}
+
+Wheeler--Feynman absorber theory is a physical proposal in which charged particles interact through a time-symmetric direct-action structure and the collective response of an absorber is invoked to account for radiation reaction and an effective retarded radiation description. Its account depends on absorber and boundary assumptions; time symmetry alone does not choose a radiation arrow.
+
+The temporal propagator considered here is a different object: an exact finite-window average of a specified signal. Its future- and past-sampling versions have a precise even--odd decomposition, a conditional Taylor series, and a simple frequency response. Those properties can make it a useful mathematical comparison, but they do not turn it into an electromagnetic Green function. Keeping this distinction explicit allows the two subjects to illuminate one another structurally without conflating a window identity with the physical absorber mechanism.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{WheelerFeynman1945}
+J. A. Wheeler and R. P. Feynman,
+``Interaction with the Absorber as the Mechanism of Radiation,''
+\emph{Reviews of Modern Physics} \textbf{17}, 157--181 (1945),
+\href{https://doi.org/10.1103/RevModPhys.17.157}{doi:\nolinkurl{10.1103/RevModPhys.17.157}}.
+
+\bibitem{WheelerFeynman1949}
+J. A. Wheeler and R. P. Feynman,
+``Classical Electrodynamics in Terms of Direct Interparticle Action,''
+\emph{Reviews of Modern Physics} \textbf{21}, 425--433 (1949),
+\href{https://doi.org/10.1103/RevModPhys.21.425}{doi:\nolinkurl{10.1103/RevModPhys.21.425}}.
+
+\bibitem{Davies1972}
+P. C. W. Davies,
+``Is the Universe Transparent or Opaque?''
+\emph{Journal of Physics A: General Physics} \textbf{5}, 1722--1737 (1972),
+\href{https://doi.org/10.1088/0305-4470/5/12/012}{doi:\nolinkurl{10.1088/0305-4470/5/12/012}}.
+
+\bibitem{SantiagoVisser}
+J. Santiago and M. Visser,
+``Tolman-like temperature gradients in stationary spacetimes,''
+\emph{Physical Review D} \textbf{98}, 064001 (2018),
+\href{https://doi.org/10.1103/PhysRevD.98.064001}{doi:\nolinkurl{10.1103/PhysRevD.98.064001}}.
+
+
+\end{thebibliography}
+
+\end{document}
