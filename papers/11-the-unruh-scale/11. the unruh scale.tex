@@ -1,0 +1,273 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+
+\title{The Unruh Scale:\\
+Acceleration, Thermal Response, and Horizon Limits}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Proper acceleration sets a characteristic length and inverse-time scale. In flat spacetime, an ideal uniformly accelerated detector coupled to a quantum field in the Minkowski vacuum has a thermal response at the Unruh temperature. Expressing that thermal energy in frequency units introduces a factor $4\pi^2$: $f_{\mathrm{U}}\equiv k_{\mathrm{B}}T_{\mathrm{U}}/h=a/(4\pi^2c)$. This is an energy scale, not an oscillation or a spectral line. The paper distinguishes the Rindler horizon of ideal uniform acceleration from Earth's varying gravitational field, then shows an algebraic relation between the Unruh scale and the Schuler frequency in a simplified spherical-Earth model. In a separate Schwarzschild calculation, the local acceleration required to hover diverges at the horizon while its lapse-redshifted limit is finite. That limit sets the Hawking temperature normalized at infinity; Tolman's relation gives the local equilibrium temperature, whose near-horizon behavior agrees to leading order with the hovering observer's Unruh scale. These connections use standard kinematics, quantum field theory, and general relativity. They do not imply an ambient terrestrial thermal bath, a new gravity-generated frequency, or a causal link between navigation dynamics and quantum radiation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Unruh effect, acceleration, Rindler horizon, Hawking temperature, clock rates
+
+\section{Introduction}
+
+The phrase ``Unruh scale'' can refer to several related but distinct quantities: an acceleration length, its light-crossing time, the thermal response temperature associated with an accelerated detector, or that temperature's energy expressed in frequency units. Keeping these meanings separate prevents dimensional coincidences from being mistaken for observable oscillations or new physical mechanisms.
+
+For a proper acceleration magnitude $a$, define the inverse-time acceleration scale
+\begin{equation}
+  f_a\equiv\frac{a}{c},
+  \qquad
+  \ell_a\equiv\frac{c^2}{a},
+  \qquad
+  \tau_a\equiv\frac{\ell_a}{c}=\frac{c}{a}=\frac{1}{f_a}.
+  \label{eq:acceleration-scales}
+\end{equation}
+The symbol $f_a$ is shorthand for an inverse-time scale. It does not specify a periodic process, and no factor of $2\pi$ is implicit. In an Earth-surface estimate it is convenient to write $f_g\equiv g_{\mathrm{N}}/c$, where $g_{\mathrm{N}}$ is a chosen Newtonian acceleration magnitude.
+The terrestrial numerical examples below use $a=g_{\mathrm{N}}=9.81\ \mathrm{m\,s^{-2}}$ as a rounded illustration; this differs slightly from the series' ideal spherical-Earth model value $g_{\mathrm{N}}\simeq9.82025\ \mathrm{m\,s^{-2}}$.
+
+The analysis proceeds from uniform acceleration in flat spacetime to the Unruh detector response and its frequency-unit representation. It then gives two explicitly limited comparisons: an algebraic identity involving the Newtonian Schuler frequency, and a Schwarzschild horizon calculation connecting hovering acceleration, surface gravity, and Hawking temperature. The results do not treat an ordinary clock as a thermometer, nor do they assume a static observer can exist on a horizon.
+
+\section{Uniform acceleration and the Rindler horizon}
+
+For a reference observer with constant proper acceleration $a$ in flat spacetime, coordinates on the Rindler wedge $(\eta,\xi,y,z)$ can be written as \cite{Rindler}
+\begin{equation}
+  \mathrm{d}s^2
+  =-\left(1+\frac{a\xi}{c^2}\right)^2c^2\mathrm{d}\eta^2
+   +\mathrm{d}\xi^2+\mathrm{d}y^2+\mathrm{d}z^2,
+  \qquad \xi>-\frac{c^2}{a}.
+  \label{eq:rindler-metric}
+\end{equation}
+The reference worldline is at $\xi=0$, where $\eta$ is its proper time. The lapse of this coordinate system vanishes at $\xi=-c^2/a$. That boundary is the Rindler horizon for this uniformly accelerated family; its distance from the reference worldline on a constant-$\eta$ slice is
+\begin{equation}
+  \ell_a=\frac{c^2}{a}.
+  \label{eq:rindler-distance}
+\end{equation}
+Observers at other fixed values of $\xi$ have proper acceleration $a/(1+a\xi/c^2)$, so the coordinates describe a family of accelerated observers, not a rigid collection all having the same proper acceleration.
+
+For the illustrative value $a=9.81\ \mathrm{m\,s^{-2}}$, Eqs.~\eqref{eq:acceleration-scales} give
+\begin{equation}
+  f_a\simeq32.7\ \mathrm{nHz},
+  \qquad
+  \ell_a\simeq9.16\times10^{15}\ \mathrm{m}\simeq0.97\ \mathrm{ly},
+  \qquad
+  \tau_a\simeq354\ \mathrm{days}.
+  \label{eq:earth-acceleration-scales}
+\end{equation}
+The last quantity is the light-crossing time of the acceleration length. It is not a period, a signal travel time through Earth, or a claim that Earth's gravitational field has a horizon almost one light-year away. The Rindler horizon is a feature of the ideal uniformly accelerated worldline in flat spacetime; Earth's field is spatially varying and does not realize that global geometry.
+
+\section{The Unruh detector response}
+
+The Unruh effect concerns a detector's response, not a material temperature assigned to empty space independently of an observer. In the idealized setting, a uniformly accelerated detector coupled to a quantum field in the Minkowski vacuum has thermal transition statistics characterized by \cite{Unruh}
+\begin{equation}
+  T_{\mathrm{U}}
+  =\frac{\hbar a}{2\pi c k_{\mathrm{B}}}.
+  \label{eq:unruh-temperature}
+\end{equation}
+The response depends on the detector-field coupling, its trajectory, and the state of the field. The equation alone does not imply that a clock with no suitable detector coupling reads a temperature, or that an inertial observer sees the Minkowski vacuum as an ordinary thermal bath.
+
+Using $a=9.81\ \mathrm{m\,s^{-2}}$ gives the formal scale
+\begin{equation}
+  T_{\mathrm{U}}\simeq3.98\times10^{-20}\ \mathrm{K}.
+  \label{eq:earth-unruh-temperature}
+\end{equation}
+This value illustrates the size of the effect in the ideal formula. It is not a prediction that an Earth-bound observer is immersed in a detectable ambient bath at this temperature. Applying Eq.~\eqref{eq:unruh-temperature} to an observer supported in a gravitational field requires specifying the observer, quantum state, and approximation; the uniform-acceleration result is not by itself a general formula for arbitrary curved spacetimes.
+
+\section{Thermal energy in frequency units}
+
+An energy can be expressed in frequency units using $E=hf$. Define the Unruh thermal frequency scale by
+\begin{equation}
+  f_{\mathrm{U}}\equiv\frac{k_{\mathrm{B}}T_{\mathrm{U}}}{h}.
+  \label{eq:unruh-frequency-definition}
+\end{equation}
+Since $\hbar=h/(2\pi)$, substitution of Eq.~\eqref{eq:unruh-temperature} yields
+\begin{equation}
+  f_{\mathrm{U}}
+  =\frac{\hbar}{h}\frac{a}{2\pi c}
+  =\frac{a}{4\pi^2c}
+  =\frac{f_a}{4\pi^2}.
+  \label{eq:unruh-frequency}
+\end{equation}
+One factor of $2\pi$ comes from the Unruh temperature and the other from converting $\hbar$ to $h$. The result is bookkeeping in established formulas, not an extra physical suppression mechanism. For $a=9.81\ \mathrm{m\,s^{-2}}$,
+\begin{equation}
+  f_{\mathrm{U}}\simeq0.829\ \mathrm{nHz}.
+  \label{eq:earth-unruh-frequency}
+\end{equation}
+Although this has units of hertz, it denotes the thermal energy scale $k_{\mathrm{B}}T_{\mathrm{U}}$ divided by Planck's constant. It does not predict a single spectral line, an oscillation of the detector, or radiation at that frequency.
+
+\section{An algebraic Schuler comparison}
+
+In a simplified Newtonian inertial-navigation model near a spherical body of radius $R$, the Schuler angular frequency is \cite{Schuler}
+\begin{equation}
+  \omega_{\mathrm{S}}^2=\frac{g_{\mathrm{N}}}{R},
+  \qquad
+  f_{\mathrm{S}}\equiv\frac{\omega_{\mathrm{S}}}{2\pi}.
+  \label{eq:schuler-frequency}
+\end{equation}
+Let $t_R\equiv R/c$ be the radius expressed as a vacuum light-time. Then
+\begin{equation}
+  f_{\mathrm{S}}^2t_R
+  =\frac{g_{\mathrm{N}}}{4\pi^2c}.
+  \label{eq:schuler-product}
+\end{equation}
+When the same numerical acceleration is used for $a$ and $g_{\mathrm{N}}$, Eq.~\eqref{eq:schuler-product} equals the Unruh thermal frequency scale:
+\begin{equation}
+  f_{\mathrm{S}}^2t_R
+  =\frac{f_g}{4\pi^2}
+  =f_{\mathrm{U}},
+  \qquad f_g\equiv\frac{g_{\mathrm{N}}}{c}.
+  \label{eq:schuler-unruh-bridge}
+\end{equation}
+For the illustrative pair $g_{\mathrm{N}}=9.81\ \mathrm{m\,s^{-2}}$ and $R=6.371\times10^6\ \mathrm{m}$, $f_{\mathrm{S}}\simeq197.5\ \mathrm{\mu Hz}$ and $t_R\simeq21.25\ \mathrm{ms}$, giving $f_{\mathrm{S}}^2t_R\simeq0.829\ \mathrm{nHz}$. This is an algebraic comparison between a Newtonian navigation model and a quantum-field thermal scale. It does not make the Schuler mode a cause, detector, or physical component of the Unruh response. The factor $2\pi$ in Eq.~\eqref{eq:schuler-frequency} is essential because $f_{\mathrm{S}}$ is cyclic frequency while $\omega_{\mathrm{S}}$ is angular frequency.
+
+\section{Static hovering and the Schwarzschild horizon}
+
+For a spherical, nonrotating source of mass $M$, the Schwarzschild exterior lapse is \cite{Schwarzschild}
+\begin{equation}
+  \alpha(r)=\sqrt{1-\frac{r_s}{r}},
+  \qquad
+  r_s\equiv\frac{2GM}{c^2}.
+  \label{eq:schwarzschild-lapse}
+\end{equation}
+A static observer's proper-time rate relative to Schwarzschild time is $\mathrm{d}\tau/\mathrm{d}t=\alpha$, and its inverse rate is $\delta\tau\equiv\mathrm{d}t/\mathrm{d}\tau=1/\alpha$. The proper radial distance satisfies $\mathrm{d}L=\mathrm{d}r/\alpha$, so the outward proper gradient of $\ln\alpha$ is $\alpha\,\mathrm{d}\ln\alpha/\mathrm{d}r$. The acceleration vector needed to remain static is $c^2$ times the spatial gradient of $\ln\alpha$; its radial magnitude is
+\begin{equation}
+  a_{\mathrm{hold}}(r)
+  =\frac{GM}{r^2\alpha(r)}.
+  \label{eq:hover-acceleration}
+\end{equation}
+As $r\to r_s^+$, this local acceleration diverges. No static observer exists on the horizon. There is nevertheless a finite lapse-redshifted limit, called the Schwarzschild surface gravity here and expressed in acceleration units:
+\begin{equation}
+  \kappa\equiv\lim_{r\to r_s^+}\alpha(r)a_{\mathrm{hold}}(r)
+  =\frac{GM}{r_s^2}
+  =\frac{c^4}{4GM}.
+  \label{eq:surface-gravity}
+\end{equation}
+The finite quantity $\kappa$ is not the local acceleration of an observer at the horizon; it is defined using the static time normalized at infinity.
+
+Introduce the gravitational time $\tau_g\equiv GM/c^3$. Equation~\eqref{eq:surface-gravity} then gives
+\begin{equation}
+  \frac{\kappa}{c}=\frac{1}{4\tau_g}.
+  \label{eq:kappa-frequency}
+\end{equation}
+For the nominal solar gravitational parameter $(GM)_{\odot,\mathrm{N}}=1.3271244\times10^{20}\ \mathrm{m^3\,s^{-2}}$ \cite{Prsa}, $\tau_g\simeq4.9255\ \mathrm{\mu s}$ and $\kappa/c\simeq50.8\ \mathrm{kHz}$. As with $f_a$, this is an inverse-time scale, not an oscillation associated with the black hole.
+
+\section{Hawking temperature and Tolman scaling}
+
+Hawking's result assigns a temperature at infinity to a Schwarzschild black hole through its surface gravity \cite{Hawking}:
+\begin{equation}
+  T_{\mathrm{H}}
+  =\frac{\hbar\kappa}{2\pi c k_{\mathrm{B}}}.
+  \label{eq:hawking-temperature}
+\end{equation}
+Expressing the corresponding thermal energy in frequency units gives
+\begin{equation}
+  f_{\mathrm{H}}\equiv\frac{k_{\mathrm{B}}T_{\mathrm{H}}}{h}
+  =\frac{\kappa}{4\pi^2c}
+  =\frac{1}{16\pi^2\tau_g}.
+  \label{eq:hawking-frequency}
+\end{equation}
+For the nominal solar mass parameter this is approximately $T_{\mathrm{H}}\simeq61.7\ \mathrm{nK}$ and $f_{\mathrm{H}}\simeq1.29\ \mathrm{kHz}$. The local hovering acceleration diverges at the horizon, whereas $\kappa$ and the temperature normalized at infinity remain finite.
+
+For a static system in thermal equilibrium, the Tolman relation is \cite{Tolman}
+\begin{equation}
+  T_{\mathrm{loc}}(r)\,\alpha(r)=T_{\infty},
+  \qquad
+  T_{\mathrm{loc}}(r)=T_{\infty}\delta\tau(r).
+  \label{eq:tolman}
+\end{equation}
+If the equilibrium temperature at infinity is set to $T_{\mathrm{H}}$, the local equilibrium temperature grows as $r$ approaches $r_s$. Near the horizon, $a_{\mathrm{hold}}\simeq\kappa/\alpha$, so the local Unruh scale for the hovering observer satisfies
+\begin{equation}
+  T_{\mathrm{U,loc}}(r)
+  =\frac{\hbar a_{\mathrm{hold}}(r)}{2\pi c k_{\mathrm{B}}}
+  \simeq\frac{T_{\mathrm{H}}}{\alpha(r)}.
+  \label{eq:near-horizon-match}
+\end{equation}
+This is a leading near-horizon comparison. The Tolman formula assumes static thermal equilibrium; an isolated evaporating black hole need not be in global equilibrium. Nor does Eq.~\eqref{eq:near-horizon-match} mean that a static observer can be placed on the horizon or that Unruh detector response and Hawking radiation are the same phenomenon. The former is a trajectory-dependent response in a specified field state; the latter is particle creation in a black-hole spacetime \cite{Unruh,Tolman,Hawking}.
+
+\section{Interpretation and limits}
+
+The formulas involve several inverse-time quantities, but they enter for different reasons. The acceleration scale $a/c$ and the light-time $c/a$ are kinematic dimensional scales. The Unruh temperature characterizes the response of an ideal accelerated detector in the Minkowski vacuum. The frequency $k_{\mathrm{B}}T_{\mathrm{U}}/h$ is only a way to express that thermal energy in frequency units. The Schuler product is an algebraic consequence of a Newtonian navigation model. Finally, the Schwarzschild surface gravity and Hawking temperature refer to a static black-hole exterior and a time normalization at infinity.
+
+None of these relations says that terrestrial gravity creates an ordinary bath at $T_{\mathrm{U}}$, that a clock by itself measures this temperature, or that the numerical value $f_{\mathrm{U}}$ is a radiation line. The Rindler acceleration length is not a horizon distance in Earth's varying gravitational field. The Schwarzschild local hovering acceleration has no finite value on the horizon, even though its redshifted surface-gravity limit is finite. Conclusions beyond these ideal settings require an explicit observer, spacetime, detector coupling, and quantum state.
+
+\section{Conclusion}
+
+Uniform proper acceleration determines the length $c^2/a$ and inverse-time scale $a/c$. In quantum field theory, an ideal uniformly accelerated detector in the Minkowski vacuum has an Unruh thermal response. Expressing its thermal energy as $k_{\mathrm{B}}T/h$ gives $a/(4\pi^2c)$, a scale rather than an oscillation. The same expression equals $f_{\mathrm{S}}^2t_R$ in the stated Newtonian Schuler model when its acceleration equals $a$; that equality is algebraic and does not imply a causal connection.
+
+In Schwarzschild spacetime, the hovering acceleration diverges toward the horizon while the lapse-redshifted surface gravity remains finite. That surface gravity sets the Hawking temperature normalized at infinity. Under the additional assumption of static thermal equilibrium, Tolman's relation gives the local temperature and its near-horizon leading behavior matches the Unruh scale of a hovering observer. Keeping these observer, state, and reference distinctions explicit organizes the scales without adding a new physical field or signal.
+
+\begin{thebibliography}{9}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{Rindler}
+W. Rindler,
+``Kruskal space and the uniformly accelerated frame,''
+\emph{American Journal of Physics} \textbf{34}, 1174--1178 (1966),
+\href{https://doi.org/10.1119/1.1972547}{doi:\nolinkurl{10.1119/1.1972547}}.
+
+\bibitem{Unruh}
+W. G. Unruh,
+``Notes on black-hole evaporation,''
+\emph{Physical Review D} \textbf{14}, 870--892 (1976),
+\href{https://doi.org/10.1103/PhysRevD.14.870}{doi:\nolinkurl{10.1103/PhysRevD.14.870}}.
+
+\bibitem{Schuler}
+M. Schuler,
+``Die St\"orung von Pendel- und Kreiselapparaten durch die Beschleunigung des Fahrzeuges,''
+\emph{Physikalische Zeitschrift} \textbf{24}(16), 344--350 (1923).
+
+\bibitem{Schwarzschild}
+K. Schwarzschild,
+``\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie,''
+\emph{Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften zu Berlin}, 189--196 (1916).
+
+\bibitem{Tolman}
+R. C. Tolman,
+``On the weight of heat and thermal equilibrium in general relativity,''
+\emph{Physical Review} \textbf{35}, 904--924 (1930),
+\href{https://doi.org/10.1103/PhysRev.35.904}{doi:\nolinkurl{10.1103/PhysRev.35.904}}.
+
+\bibitem{Hawking}
+S. W. Hawking,
+``Particle creation by black holes,''
+\emph{Communications in Mathematical Physics} \textbf{43}, 199--220 (1975),
+\href{https://doi.org/10.1007/BF02345020}{doi:\nolinkurl{10.1007/BF02345020}}.
+
+\bibitem{Prsa}
+A. Pr\v{s}a et al.,
+``Nominal values for selected solar and planetary quantities: IAU 2015 Resolution B3,''
+\emph{The Astronomical Journal} \textbf{152}, 41 (2016),
+\href{https://doi.org/10.3847/0004-6256/152/2/41}{doi:\nolinkurl{10.3847/0004-6256/152/2/41}}.
+
+\end{thebibliography}
+
+\end{document}
