@@ -33,6 +33,8 @@ The manuscripts distinguish exact results from approximations and established ph
 | 19 | When the Horizon Spins | [PDF](papers/19-when-the-horizon-spins/19.%20when%20the%20horizon%20spins.pdf) | [Source](papers/19-when-the-horizon-spins/19.%20when%20the%20horizon%20spins.tex) |
 | 20 | The Final Parsec Equilibrium | [PDF](papers/20-the-final-parsec-equilibrium/20.%20the%20final%20parsec%20equilibrium.pdf) | [Source](papers/20-the-final-parsec-equilibrium/20.%20the%20final%20parsec%20equilibrium.tex) |
 
+| 21 | The Absorber and the Window: Temporal Propagator | Not yet available | [Source](papers/21-the-absorber-and-the-window/21.%20the%20absorber%20and%20the%20window.tex) |
+
 ## License
 
 The manuscripts and supporting materials that is added to this repository, now and in the future, are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), but only to the extent that this account's user owns or is authorized to license the relevant rights. This includes the manuscripts’ LaTeX source files and PDFs.
