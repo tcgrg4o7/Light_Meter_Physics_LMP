@@ -8,6 +8,12 @@ LMP uses time-based quantities to examine familiar relationships from another pe
 
 The manuscripts distinguish exact results from approximations and established physics from exploratory interpretations. Readers should consult each manuscript for its definitions, assumptions, references, and applicable limits.
 
+## Where to start
+
+For relativity and frequency, start with papers 1–4; for gravitational clock rates, explore papers 5–10; for thermal physics and black holes, see papers 14–19. The papers can also be read individually.
+
+The [LMP shorthand gouge sheet](resources/LMP%20shorthand%20gouge%20sheet.pdf) provides a guide to the notation used across the collection.
+
 ## Manuscript index
 
 | No. | Paper | PDF | LaTeX source |
@@ -36,7 +42,7 @@ The manuscripts distinguish exact results from approximations and established ph
 
 ## License
 
-The manuscripts and supporting materials that is added to this repository, now and in the future, are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), but only to the extent that this account's user owns or is authorized to license the relevant rights. This includes the manuscripts’ LaTeX source files and PDFs.
+The manuscripts and supporting materials that are added to this repository, now and in the future, are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), but only to the extent that this account's user owns or is authorized to license the relevant rights. This includes the manuscripts’ LaTeX source files and PDFs.
 
 Third-party material identified as subject to different terms is excluded and remains subject to those terms. Other repository material is not covered by this license notice.
 
