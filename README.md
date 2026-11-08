@@ -40,6 +40,11 @@ The [LMP shorthand gouge sheet](resources/LMP%20shorthand%20gouge%20sheet.pdf) p
 | 20 | The Final Parsec Equilibrium | [PDF](papers/20-the-final-parsec-equilibrium/20.%20the%20final%20parsec%20equilibrium.pdf) | [Source](papers/20-the-final-parsec-equilibrium/20.%20the%20final%20parsec%20equilibrium.tex) |
 | 21 | The Absorber and the Window: Temporal Propagator | [PDF](papers/21-the-absorber-and-the-window/21.%20the%20absorber%20and%20the%20window.pdf) | [Source](papers/21-the-absorber-and-the-window/21.%20the%20absorber%20and%20the%20window.tex) |
 | 22 | The Temporal Propagator | [PDF](papers/22-the-temporal-propagator/22.%20the%20temporal%20propagator.pdf) | [Source](papers/22-the-temporal-propagator/22.%20the%20temporal%20propagator.tex) |
+| 23 | The Electron’s Triangle | [PDF](papers/23-the-electron-s-triangle/23-the-electron-s-triangle.pdf) | [Source](papers/23-the-electron-s-triangle/23-the-electron-s-triangle.tex) |
+| 24 | The Rapidity Ladder | [PDF](papers/24-the-rapidity-ladder/24-the-rapidity-ladder.pdf) | [Source](papers/24-the-rapidity-ladder/24-the-rapidity-ladder.tex) |
+| 25 | The Magnetic Slope | [PDF](papers/25-the-magnetic-slope/25-the-magnetic-slope.pdf) | [Source](papers/25-the-magnetic-slope/25-the-magnetic-slope.tex) |
+| 26 | Proper Velocity | [PDF](papers/26-proper-velocity/26-proper-velocity.pdf) | [Source](papers/26-proper-velocity/26-proper-velocity.tex) |
+| 27 | The Cosmic Acceleration Scale | [PDF](papers/27-the-cosmic-acceleration-scale/27-the-cosmic-acceleration-scale.pdf) | [Source](papers/27-the-cosmic-acceleration-scale/27-the-cosmic-acceleration-scale.tex) |
 
 ## License
 
