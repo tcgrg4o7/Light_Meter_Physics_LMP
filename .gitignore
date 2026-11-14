@@ -1,0 +1,4 @@
+# Shared Lean dependency cache used by repository-wide checks
+.lean-cache/
+# Python audit-test bytecode
+__pycache__/

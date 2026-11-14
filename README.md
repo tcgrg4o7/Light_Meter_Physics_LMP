@@ -46,6 +46,10 @@ The [LMP shorthand gouge sheet](resources/LMP%20shorthand%20gouge%20sheet.pdf) p
 | 26 | Proper Velocity | [PDF](papers/26-proper-velocity/26-proper-velocity.pdf) | [Source](papers/26-proper-velocity/26-proper-velocity.tex) |
 | 27 | The Cosmic Acceleration Scale | [PDF](papers/27-the-cosmic-acceleration-scale/27-the-cosmic-acceleration-scale.pdf) | [Source](papers/27-the-cosmic-acceleration-scale/27-the-cosmic-acceleration-scale.tex) |
 
+## Lean mathematical companions
+
+Six manuscripts currently include checked Lean companions. See the [repository-wide Lean index and build instructions](LEAN.md) for coverage, assumptions, and automated checks. These validate specified mathematical claims, not whole papers or empirical physics.
+
 ## License
 
 The manuscripts and supporting materials that are added to this repository, now and in the future, are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), but only to the extent that this account's user owns or is authorized to license the relevant rights. This includes the manuscripts’ LaTeX source files and PDFs.
