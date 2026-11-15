@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   check:
-    name: All six Lean companions
+    name: All registered Lean companions
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:

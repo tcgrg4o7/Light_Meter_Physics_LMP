@@ -48,7 +48,7 @@ The [LMP shorthand gouge sheet](resources/LMP%20shorthand%20gouge%20sheet.pdf) p
 
 ## Lean mathematical companions
 
-Six manuscripts currently include checked Lean companions. See the [repository-wide Lean index and build instructions](LEAN.md) for coverage, assumptions, and automated checks. These validate specified mathematical claims, not whole papers or empirical physics.
+Seven manuscripts currently include checked Lean companions. See the [repository-wide Lean index and build instructions](LEAN.md) for coverage, assumptions, and automated checks. These validate specified mathematical claims, not whole papers or empirical physics.
 
 ## License
 

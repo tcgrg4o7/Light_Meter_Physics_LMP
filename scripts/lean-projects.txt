@@ -2,5 +2,6 @@ papers/04-compton-frequency/lean
 papers/09-mass-as-a-time/lean
 papers/16-the-smarr-relation/lean
 papers/17-counting-the-horizon/lean
+papers/19-when-the-horizon-spins/lean
 papers/23-the-electron-s-triangle/lean
 papers/26-proper-velocity/lean
