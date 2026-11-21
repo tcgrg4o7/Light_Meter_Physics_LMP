@@ -2,7 +2,7 @@
 
 Light Meter Physics explores relativity, gravitational clock rates, and physical relationships expressed using light-travel time. The project emphasizes first-principles derivations, dimensional clarity, and worked examples connecting equations with physical interpretation.
 
-Topics include relativistic energy and frequency, gravitational time dilation, thermal equilibrium in gravity, black-hole thermodynamics, and rotating black holes.
+Topics include relativistic motion and frequency, gravitational clock rates, thermal physics and black holes, orbital dynamics, magnetic energy gradients, and tidal curvature.
 
 LMP uses time-based quantities to examine familiar relationships from another perspective. For example, G_τ = G/c³ is a rescaling of Newton’s gravitational constant, not a new independently measured constant. A change of units or notation alone does not establish new physics.
 
@@ -10,7 +10,14 @@ The manuscripts distinguish exact results from approximations and established ph
 
 ## Where to start
 
-For relativity and frequency, start with papers 1–4; for gravitational clock rates, explore papers 5–10; for thermal physics and black holes, see papers 14–19. The papers can also be read individually.
+The manuscripts can be read individually, or explored by topic using the [index below](#manuscript-index):
+
+- **Relativity and frequency:** Papers 1–4 introduce energy, momentum, proper time, and Compton frequency. Papers 23–24 and 26 return to relativistic energy and momentum, rapidity, and proper velocity.
+- **Gravity and clocks:** Papers 5–10 explore static clocks, gravitational gradients, and time scales. Papers 11–13 cover the Unruh scale, the chrono-mass constant, and weak-field clock-rate bookkeeping.
+- **Thermal physics and black holes:** Papers 14–19 cover heat in gravity, horizon temperature, the Smarr relation, horizon counting, and rotating black holes. Paper 20 examines black-hole binary hardening and the gravitational-wave rate crossover.
+- **The temporal propagator:** Papers 21–22 explore Wheeler–Feynman absorber theory and finite-window averages, with their comparison treated as a structural analogy.
+- **Magnetic and cosmic scales:** Paper 25 examines magnetic interaction-energy gradients; paper 27 considers the galactic acceleration scale and conditional cosmological connections.
+- **Orbits and tides:** Papers 28–30 follow the radius-scaling ladder, circular and elliptical Kepler orbits, and Schwarzschild tides and curvature.
 
 The [LMP shorthand gouge sheet](resources/LMP%20shorthand%20gouge%20sheet.pdf) provides a guide to the notation used across the collection.
 
