@@ -1,6 +1,6 @@
 # Lean companion index and checks
 
-Seven of the 30 manuscripts currently have Lean companions. These check specified mathematical statements under explicit definitions and assumptions. They do not prove entire papers or establish physical interpretations experimentally. Each linked README records source mapping, domains, limitations, and reproduction instructions.
+Ten of the 30 manuscripts currently have Lean companions. These check specified mathematical statements under explicit definitions and assumptions. They do not prove entire papers or establish physical interpretations experimentally. Each linked README records source mapping, domains, limitations, and reproduction instructions.
 
 | Manuscript | Companion | Named theorems/lemmas* | Checked scope |
 | --- | --- | ---: | --- |
@@ -11,13 +11,16 @@ Seven of the 30 manuscripts currently have Lean companions. These check specifie
 | 19 · When the Horizon Spins | [Instructions and proofs](papers/19-when-the-horizon-spins/lean/) | 71 | Kerr root classification, conditional Smarr fractions, signed-spin endpoints and strict extraction-versus-Smarr inequality |
 | 23 · The Electron's Triangle | [Instructions and proofs](papers/23-the-electron-s-triangle/lean/) | 47 | Exact 3–4–5 example, Lagrangian/dispersion and phase derivatives, complex plane-wave operators and Klein–Gordon residual |
 | 26 · Proper Velocity | [Instructions and proofs](papers/26-proper-velocity/lean/) | 28 | Signed inverse velocity maps, strict subluminal coordinate bound, chain rule, longitudinal derivatives and example arithmetic |
-| **Total** | **7 companions** | **229** | **Supporting lemmas included; not 229 independent physical claims** |
+| 28 · Three Powers of Radius | [Instructions and proofs](papers/28-three-powers-of-radius/lean/) | 8 | Derivative ladder, independent circular balance, and radius doubling |
+| 29 · Kepler’s Law in Logarithms | [Instructions and proofs](papers/29-kepler-in-logarithms/lean/) | 7 | Conditional ellipse period, semimajor-axis log slope and full-period intercept |
+| 30 · Schwarzschild Tides | [Instructions and proofs](papers/30-tidal-deformation/lean/) | 11 | Tidal trace, initial volume derivatives, conditional curvature contraction and horizon scalings |
+| **Total** | **10 companions** | **255** | **Supporting lemmas included; not 255 independent physical claims** |
 
-*Counts are source declarations, not a measure of scientific coverage. The other 23 manuscripts have no companion indexed here. Existing historical module names are retained for compatibility; new infrastructure has no “pilot” naming.
+*Counts are source declarations, not a measure of scientific coverage. The other 20 manuscripts have no companion indexed here. Existing historical module names are retained for compatibility; new infrastructure has no “pilot” naming.
 
 ## Run everything locally
 
-Install Lean via the official [Lean installation instructions](https://lean-lang.org/install/). All seven projects currently pin Lean 4.19.0 and the same mathlib v4.19.0 commit. Python 3.10 or newer and Bash are also needed.
+Install Lean via the official [Lean installation instructions](https://lean-lang.org/install/). All ten projects currently pin Lean 4.19.0 and the same mathlib v4.19.0 commit. Python 3.10 or newer and Bash are also needed.
 
 For each directory in [`scripts/lean-projects.txt`](scripts/lean-projects.txt), run `lake exe cache get` inside that directory once to provision its pinned dependencies. Then, from the repository root:
 
@@ -41,7 +44,7 @@ The preparation script first verifies the project registry and identical package
 
 [GitHub Actions workflow](.github/workflows/lean.yml) · [Run history](https://github.com/tcgrg4o7/Light_Meter_Physics_LMP/actions/workflows/lean.yml)
 
-The workflow runs on relevant pushes to `main`, pull requests, and manual dispatch. A single Linux job checks all seven projects sequentially, provisions dependencies once, and caches the pinned toolchain/shared packages. New pushes cancel superseded runs on the same ref. Documentation-only changes outside this index and proof-related paths do not trigger an expensive build.
+The workflow runs on relevant pushes to `main`, pull requests, and manual dispatch. A single Linux job checks all ten projects sequentially, provisions dependencies once, and caches the pinned toolchain/shared packages. New pushes cancel superseded runs on the same ref. Documentation-only changes outside this index and proof-related paths do not trigger an expensive build.
 
 Permissions are read-only (`contents: read`), checkout credentials are not persisted, and the workflow neither publishes nor commits anything. External actions are pinned to full commit hashes; Elan installation uses an official fixed release with a recorded SHA-256 checksum. There is no `pull_request_target` trigger or secret-dependent step. This workflow does not configure branch protection or make the check mandatory for merging.
 

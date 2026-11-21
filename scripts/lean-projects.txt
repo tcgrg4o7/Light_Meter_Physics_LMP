@@ -5,3 +5,6 @@ papers/17-counting-the-horizon/lean
 papers/19-when-the-horizon-spins/lean
 papers/23-the-electron-s-triangle/lean
 papers/26-proper-velocity/lean
+papers/28-three-powers-of-radius/lean
+papers/29-kepler-in-logarithms/lean
+papers/30-tidal-deformation/lean
