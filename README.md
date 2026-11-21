@@ -45,6 +45,9 @@ The [LMP shorthand gouge sheet](resources/LMP%20shorthand%20gouge%20sheet.pdf) p
 | 25 | The Magnetic Slope | [PDF](papers/25-the-magnetic-slope/25-the-magnetic-slope.pdf) | [Source](papers/25-the-magnetic-slope/25-the-magnetic-slope.tex) |
 | 26 | Proper Velocity | [PDF](papers/26-proper-velocity/26-proper-velocity.pdf) | [Source](papers/26-proper-velocity/26-proper-velocity.tex) |
 | 27 | The Cosmic Acceleration Scale | [PDF](papers/27-the-cosmic-acceleration-scale/27-the-cosmic-acceleration-scale.pdf) | [Source](papers/27-the-cosmic-acceleration-scale/27-the-cosmic-acceleration-scale.tex) |
+| 28 | Three Powers of Radius | [PDF](papers/28-three-powers-of-radius/28-three-powers-of-radius.pdf) | [Source](papers/28-three-powers-of-radius/28-three-powers-of-radius.tex) |
+| 29 | Kepler’s Law in Logarithms | [PDF](papers/29-kepler-in-logarithms/29-kepler-in-logarithms.pdf) | [Source](papers/29-kepler-in-logarithms/29-kepler-in-logarithms.tex) |
+| 30 | Schwarzschild Tides | [PDF](papers/30-tidal-deformation/30-tidal-deformation.pdf) | [Source](papers/30-tidal-deformation/30-tidal-deformation.tex) |
 
 ## Lean mathematical companions
 

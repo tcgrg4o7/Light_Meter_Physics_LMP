@@ -1,6 +1,6 @@
 # Lean companion index and checks
 
-Seven of the 27 manuscripts currently have Lean companions. These check specified mathematical statements under explicit definitions and assumptions. They do not prove entire papers or establish physical interpretations experimentally. Each linked README records source mapping, domains, limitations, and reproduction instructions.
+Seven of the 30 manuscripts currently have Lean companions. These check specified mathematical statements under explicit definitions and assumptions. They do not prove entire papers or establish physical interpretations experimentally. Each linked README records source mapping, domains, limitations, and reproduction instructions.
 
 | Manuscript | Companion | Named theorems/lemmas* | Checked scope |
 | --- | --- | ---: | --- |
@@ -13,7 +13,7 @@ Seven of the 27 manuscripts currently have Lean companions. These check specifie
 | 26 · Proper Velocity | [Instructions and proofs](papers/26-proper-velocity/lean/) | 28 | Signed inverse velocity maps, strict subluminal coordinate bound, chain rule, longitudinal derivatives and example arithmetic |
 | **Total** | **7 companions** | **229** | **Supporting lemmas included; not 229 independent physical claims** |
 
-*Counts are source declarations, not a measure of scientific coverage. The other 20 manuscripts have no companion indexed here. Existing historical module names are retained for compatibility; new infrastructure has no “pilot” naming.
+*Counts are source declarations, not a measure of scientific coverage. The other 23 manuscripts have no companion indexed here. Existing historical module names are retained for compatibility; new infrastructure has no “pilot” naming.
 
 ## Run everything locally
 

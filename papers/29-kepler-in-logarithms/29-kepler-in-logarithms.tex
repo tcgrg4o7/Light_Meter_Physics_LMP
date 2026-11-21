@@ -1,0 +1,445 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue,
+  pdftitle={Kepler's Law in Logarithms: Orbital Scale from Two Characteristic Times},
+  pdfauthor={Light-Meter Physics},
+  pdfsubject={Newtonian two-body motion, Kepler's third law, and dimensionless logarithmic coordinates},
+  pdfkeywords={Kepler's third law, orbital period, semimajor axis, logarithms, two-body motion}
+}
+
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
+\definecolor{ink}{HTML}{172E3D}
+\definecolor{teal}{HTML}{126D77}
+\definecolor{rust}{HTML}{B1533E}
+\definecolor{violet}{HTML}{796493}
+
+\title{Kepler's Law in Logarithms:\\
+Orbital Scale from Two Characteristic Times}
+\author{Light-Meter Physics}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Kepler's third law connects an orbit's period to its size. This manuscript derives that relation from Newtonian two-body motion, first for a circular orbit and then for an ellipse. For a circular orbit, the characteristic times $\tau_g=GM/c^3$ and $t_r=r/c$, together with the period-derived time $\tau_S=T_S/(2\pi)$, give $t_r^3=\tau_g\tau_S^2$ and $\ln(t_r/\tau_g)=\frac{2}{3}\ln(\tau_S/\tau_g)$. For an ellipse, defining $t_a=a/c$ gives the corresponding relations $t_a^3=\tau_g\tau_S^2$ and $\ln(t_a/\tau_g)=\frac{2}{3}\ln(\tau_S/\tau_g)$, with $\tau_S$ based on mean motion. The logarithmic relations are algebraic consequences of the inverse-square two-body model, not new physical laws. Worked examples compare ideal solar circular orbits at 1 and 4 AU and separately use the Earth--Moon relative orbit to illustrate how the relevant mass parameter belongs to the pair. The manuscript distinguishes a circular orbit's actual one-radian time from an ellipse's mean-anomaly time, treats perturbations as limits of the ideal model, and separates an optional Schwarzschild coordinate-time comparison from the Newtonian derivation.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Kepler's third law, Newtonian two-body motion, orbital period, semimajor axis, logarithmic coordinates
+
+\section{Introduction}
+\label{sec:introduction}
+
+For an isolated Newtonian pair, let $a$ be the semimajor axis of the relative orbit and $T_S$ its period. Then
+\begin{equation}
+  \frac{T_S^2}{a^3}=\frac{4\pi^2}{G(M_1+M_2)}.
+  \label{eq:third-law-pair}
+\end{equation}
+Orbits with the same total gravitational parameter $G(M_1+M_2)$ therefore share the same proportionality constant. For a light companion orbiting the Sun, $G(M_1+M_2)\simeq GM_\odot$. Kepler established the empirical regularity; Newtonian gravity explains it through the inverse-square force and the equations of motion \cite{KeplerHarmonices,NewtonPrincipia,OpenStaxKepler}.
+
+The goal here is to derive the relation from those mechanics, express the circular result using characteristic times, and show what the logarithmic plot does and does not say. For a circular orbit, the central result is
+\begin{equation}
+  \ln\!\left(\frac{t_r}{\tau_g}\right)
+  =\frac{2}{3}\ln\!\left(\frac{\tau_S}{\tau_g}\right),
+  \qquad
+  \tau_g\equiv\frac{GM}{c^3},
+  \qquad
+  t_r\equiv\frac{r}{c}.
+  \label{eq:central-result}
+\end{equation}
+Both logarithms act on dimensionless ratios. Here $r$ is the circular-orbit radius and $\tau_S$ is the time to sweep one radian. The elliptical period law uses the semimajor axis $a$ and is treated separately below.
+
+The manuscript begins with Newtonian relative motion. Circular and elliptical cases are identified separately because an ellipse has a constant period but a varying instantaneous angular rate. The examples use published astronomical parameters and explicitly label model inputs. A short final appendix records a distinct Schwarzschild result for readers interested in the strong-field continuation; it is not used to derive the Newtonian law.
+
+\section{Newtonian model and notation}
+\label{sec:model}
+
+Consider two point masses $M_1$ and $M_2$, with relative position $\boldsymbol r=\boldsymbol r_2-\boldsymbol r_1$ and separation $r=|\boldsymbol r|$. Newton's law of gravitation and the equations of motion give
+\begin{equation}
+  \ddot{\boldsymbol r}
+  =-\frac{G(M_1+M_2)}{r^3}\,\boldsymbol r.
+  \label{eq:relative-motion}
+\end{equation}
+In the exact Newtonian relative-orbit problem, define $M\equiv M_1+M_2$. When $M_2\ll M_1$, the test-particle approximation is $M\simeq M_1$. In either case, $M$ below means the mass governing the relative orbit, while $GM$ is its gravitational parameter \cite{OpenStaxKepler}.
+
+Use the gravitational time, circular radius-time, and semimajor-axis time
+\begin{equation}
+  \tau_g\equiv\frac{GM}{c^3},
+  \qquad
+  t_r\equiv\frac{r}{c},
+  \qquad
+  t_a\equiv\frac{a}{c}.
+  \label{eq:time-scales}
+\end{equation}
+These are convenient scales formed from a mass and a length; they are not, by definition, elapsed proper times or measured light-travel times. The notation keeps the circular radius $r$ and the elliptical semimajor axis $a$ distinct; for a circle, $a=r$ and hence $t_a=t_r$.
+
+For a circular orbit, let $\omega_S$ be its constant angular rate, $\tau_S=1/\omega_S$ the time to sweep one radian, and $T_S=2\pi\tau_S$ the full period. For an ellipse, $\omega_S\equiv2\pi/T_S$ is the mean motion and $\tau_S\equiv1/\omega_S=T_S/(2\pi)$ is the time for the mean anomaly to advance one radian. It is not the time for the physical radius vector to turn through one radian, which depends on where that interval begins. Throughout, $\omega_S$ denotes an orbital rate or mean motion, while $\omega_{\rm Sch}$ denotes the ideal Schuler-oscillator frequency.
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+  \toprule
+  Symbol & Meaning & SI unit \\
+  \midrule
+  $M$ & mass governing relative motion & $\mathrm{kg}$ \\
+  $\tau_g$ & gravitational time $GM/c^3$ & $\mathrm{s}$ \\
+  $t_r$ & radius-time $r/c$ & $\mathrm{s}$ \\
+  $t_a$ & semimajor-axis time $a/c$ & $\mathrm{s}$ \\
+  $a$ & semimajor axis for an ellipse & $\mathrm{m}$ \\
+  $\omega_S$ & circular rate or elliptical mean motion & $\mathrm{s^{-1}}$ \\
+  $\tau_S$ & $1/\omega_S=T_S/(2\pi)$ & $\mathrm{s}$ \\
+  $T_S$ & full orbital period & $\mathrm{s}$ \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\section{Circular orbit from force balance}
+\label{sec:circular}
+
+For a circular relative orbit, the acceleration magnitude is $r\omega_S^2$. Equating it to the inward acceleration from Eq.~\eqref{eq:relative-motion} gives
+\begin{equation}
+  r\omega_S^2=\frac{GM}{r^2}
+  \quad\Longrightarrow\quad
+  \omega_S^2=\frac{GM}{r^3}.
+  \label{eq:circular-rate}
+\end{equation}
+It follows that
+\begin{equation}
+  \tau_S=\frac{1}{\omega_S}
+  =\sqrt{\frac{r^3}{GM}},
+  \qquad
+  T_S=2\pi\tau_S
+  =2\pi\sqrt{\frac{r^3}{GM}}.
+  \label{eq:circular-period}
+\end{equation}
+The full period therefore obeys $T_S^2=4\pi^2r^3/(GM)$. For a test particle about a dominant source, $GM/r^2$ is the Newtonian field magnitude $g_N$, so the circular rate can also be written $\omega_S^2=g_N/r$.
+
+For the same inverse-square field magnitude,
+\begin{equation}
+  g_N\equiv\frac{GM}{r^2},
+  \qquad
+  \frac{dg_N}{dr}=-\frac{2GM}{r^3},
+  \qquad
+  -\frac{1}{2}\frac{dg_N}{dr}=\frac{GM}{r^3}=\omega_S^2.
+  \label{eq:field-gradient}
+\end{equation}
+The circular-orbit equation and the field derivative are independent routes to the same scale. The factor $1/2$ compensates for the factor $2$ produced by differentiating an inverse-square magnitude. This equality is a property of the point-source Newtonian model; it does not make the field gradient and orbital motion identical physical phenomena.
+
+\section{Elliptical orbit and semimajor axis}
+\label{sec:ellipse}
+
+Equation~\eqref{eq:relative-motion} is a central-force equation, so the specific angular momentum magnitude
+\begin{equation}
+  h\equiv|\boldsymbol r\times\dot{\boldsymbol r}|=r^2\left|\frac{d\phi}{dt}\right|
+  \label{eq:angular-momentum}
+\end{equation}
+is constant. Choose increasing $\phi$ in the direction of motion, so the areal velocity is $dA/dt=h/2$. For an ellipse with semimajor axis $a$, semiminor axis $b$, and eccentricity $e$, its area is $\pi ab$. The Keplerian dynamics gives the semilatus rectum $p=h^2/(GM)$, while ellipse geometry gives $p=a(1-e^2)=b^2/a$. Thus one revolution takes
+\begin{align}
+  T_S
+  &=\frac{\pi ab}{h/2}
+   =\frac{2\pi ab}{h},\\
+  T_S^2
+  &=\frac{4\pi^2a^2b^2}{h^2}
+   =\frac{4\pi^2a^3}{GM}.
+  \label{eq:ellipse-period}
+\end{align}
+The eccentricity cancels because $b^2/a=p=h^2/(GM)$. This is Kepler's third law for a Newtonian two-body orbit; the orbital size in the period law is the semimajor axis of the relative orbit, not the instantaneous separation \cite{OpenStaxKepler}.
+
+For an ellipse, define the mean motion and its corresponding time by
+\begin{equation}
+  \omega_S\equiv\frac{2\pi}{T_S},
+  \qquad
+  \tau_S\equiv\frac{1}{\omega_S}=\frac{T_S}{2\pi}.
+  \label{eq:mean-motion}
+\end{equation}
+Then $\omega_S^2=GM/a^3$ and $\tau_S^2=a^3/(GM)$. For a circle $a=r$ and $\omega_S$ equals the actual constant angular rate. For an ellipse, only the mean motion is constant; the body does not sweep equal angles in equal times. In terms of the semimajor-axis time, the period law becomes
+\begin{equation}
+  t_a^3=\tau_g\tau_S^2.
+  \label{eq:elliptical-time-law}
+\end{equation}
+Taking logarithms gives
+\begin{equation}
+  \ln\!\left(\frac{t_a}{\tau_g}\right)
+  =\frac{2}{3}\ln\!\left(\frac{\tau_S}{\tau_g}\right),
+  \label{eq:elliptical-log-law}
+\end{equation}
+which is distinct in its orbital length scale from the circular relation in $t_r$, though the two coincide when $a=r$.
+
+\section{Circular-orbit time-scale relation}
+\label{sec:times}
+
+For a circular orbit, $\tau_S^2=r^3/(GM)$. Substituting $t_r=r/c$ and $\tau_g=GM/c^3$ gives
+\begin{equation}
+  t_r^3=\tau_g\tau_S^2.
+  \label{eq:time-law}
+\end{equation}
+Both sides have units of $\mathrm{s^3}$. Dividing by $\tau_g^3$ produces a dimensionless equation:
+\begin{equation}
+  \left(\frac{t_r}{\tau_g}\right)^3
+  =\left(\frac{\tau_S}{\tau_g}\right)^2.
+  \label{eq:dimensionless-law}
+\end{equation}
+The mass parameter is absorbed into $\tau_g$, leaving a dimensionless relation common to ideal circular Newtonian orbits. The physical radius and period remain related through $M$.
+
+Neither $t_r$, $t_a$, nor $\tau_g$ is an independently running clock. They express a radius, a semimajor axis, and the gravitational parameter in time units; they are dimensional scales, not claims that an observer directly reads these values from a clock.
+
+\section{Logarithmic coordinates}
+\label{sec:logs}
+
+Take logarithms of the positive dimensionless ratios in Eq.~\eqref{eq:dimensionless-law}. Define
+\begin{equation}
+  X\equiv\ln\!\left(\frac{\tau_S}{\tau_g}\right),
+  \qquad
+  Y\equiv\ln\!\left(\frac{t_r}{\tau_g}\right).
+  \label{eq:log-coordinates}
+\end{equation}
+Then
+\begin{equation}
+  3Y=2X,
+  \qquad
+  Y=\frac{2}{3}X.
+  \label{eq:log-line}
+\end{equation}
+The slope is $2/3$ for natural or base-10 logarithms, provided the same base is used for both axes. No logarithm of a dimensional quantity is taken.
+
+If the horizontal coordinate is written using the full period, the exactly equivalent choice is
+\begin{equation}
+  X_T\equiv\ln\!\left(\frac{T_S}{2\pi\tau_g}\right)=X.
+  \label{eq:full-period-log}
+\end{equation}
+Using $X'\equiv\ln(T_S/\tau_g)$ instead gives
+\begin{equation}
+  Y=\frac{2}{3}X'-\frac{2}{3}\ln(2\pi).
+  \label{eq:full-period-intercept}
+\end{equation}
+The slope is unchanged, but the horizontal shift changes the intercept. Figure~\ref{fig:log-line} uses $X$ and $Y$; its displayed window does not include the origin.
+
+\section{Comparing orbits and estimating the mass scale}
+\label{sec:comparison}
+
+For two Keplerian relative orbits governed by the same $GM$, division of their period laws gives
+\begin{equation}
+  \frac{a_2}{a_1}
+  =\left(\frac{T_{S,2}}{T_{S,1}}\right)^{2/3}.
+  \label{eq:orbit-ratio}
+\end{equation}
+An eightfold period ratio corresponds to a fourfold semimajor-axis ratio. For the ideal circular solar examples below, the model period at $4\,\mathrm{AU}$ is eight times the period at $1\,\mathrm{AU}$. The labels are scaled examples based on the same solar $GM$, not independent measurements.
+
+For an elliptical orbit, the semimajor-axis period law can be rearranged as
+\begin{equation}
+  \tau_g=\frac{t_a^3}{\tau_S^2},
+  \qquad
+  GM=\frac{a^3}{\tau_S^2}
+    =\frac{4\pi^2a^3}{T_S^2}.
+  \label{eq:mass-inference}
+\end{equation}
+Thus an orbit's size and period determine the mass parameter within the Keplerian model. In a binary, the semimajor axis of the relative orbit is $a=a_1+a_2$ when $a_1$ and $a_2$ are the components' barycentric semimajor axes. The relative orbit constrains $G(M_1+M_2)$; it does not by itself identify either mass separately. Actual inference also depends on orbit determination, perturbations, and measurement precision.
+
+\section{Numerical examples and normalized plot}
+\label{sec:examples}
+
+For the solar examples use the following constants \cite{JPLParameters}:
+\begin{align*}
+  GM_\odot &= 1.32712440041279419\times10^{20}\,\mathrm{m^3\,s^{-2}},\\
+  1\,\mathrm{AU} &= 149{,}597{,}870{,}700\,\mathrm{m},\\
+  c &= 299{,}792{,}458\,\mathrm{m\,s^{-1}},\\
+  1\,\mathrm{day} &= 86{,}400\,\mathrm{s}.
+\end{align*}
+Convert all times to seconds before forming the logarithmic ratios, even though periods are displayed in days. Both solar entries are ideal circular-orbit model calculations. The Earth--Moon example is discussed separately using the mean semimajor axis and sidereal orbital period of that perturbed relative orbit.
+
+\begin{table}[ht]
+  \centering
+  \small
+  \begin{tabular}{@{}lrrrrrr@{}}
+    \toprule
+    Orbit & $t_r$ (s) & $\tau_g$ (s) & $\tau_S$ (d) & $T_S$ (d) & $X$ & $Y$ \\
+    \midrule
+    Sun, $1\,\mathrm{AU}$ & 499.00478 & $4.92549\times10^{-6}$ & 58.13244 & 365.25690 & 27.65055 & 18.43370 \\
+    Sun, $4\,\mathrm{AU}$ & 1996.01914 & $4.92549\times10^{-6}$ & 465.05953 & 2922.05519 & 29.72999 & 19.82000 \\
+
+    \bottomrule
+  \end{tabular}
+  \caption{Illustrative normalized coordinates computed from $X=\ln(\tau_S/\tau_g)$ and $Y=\ln(t_r/\tau_g)$ for ideal circular solar orbits at $1$ and $4$ AU. Inputs are from JPL sources cited in the text. Displayed values are rounded.}
+  \label{tab:examples}
+\end{table}
+
+For the two solar model points, $\Delta X=\ln 8$ and $\Delta Y=\ln 4$, so the slope between them is exactly $2/3$.
+
+For the Earth--Moon relative orbit, NASA tabulates a mean semimajor axis $a=384{,}400\,\mathrm{km}$ and a sidereal orbital period $T_S=27.3217\,\mathrm{d}$, distinct from the $29.53$-day synodic month \cite{NSSDCMoon,NSSDCSidereal}. These values give
+\begin{equation}
+  (GM)_{\rm inferred}=\frac{4\pi^2a^3}{T_S^2}
+  \simeq4.0241\times10^{14}\,\mathrm{m^3\,s^{-2}},
+  \qquad
+  (GM)_{\rm pair}=4.03503235625\times10^{14}\,\mathrm{m^3\,s^{-2}},
+  \label{eq:lunar-gm-comparison}
+\end{equation}
+where the pair value is the sum of the JPL Earth and Moon parameters \cite{JPLParameters}. The signed fractional difference, relative to the pair value, is $-0.27135\%$ before rounding, so the inferred value is about $0.27\%$ lower. A representative semimajor axis and sidereal period for a perturbed orbit need not form a mutually consistent isolated two-body solution; these two values alone cannot apportion the difference among perturbations, element conventions, and rounding.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[x=0.31cm,y=0.43cm,>=stealth]
+    \draw[->,ink] (18,12)--(39.2,12)
+      node[right] {$X=\ln(\tau_S/\tau_g)$};
+    \draw[->,ink] (18,12)--(18,26.6)
+      node[above] {$Y=\ln(t_r/\tau_g)$};
+    \foreach \x in {20,25,30,35}
+      \draw[ink] (\x,12)--(\x,11.7) node[below] {\x};
+    \foreach \y in {15,20,25}
+      \draw[ink] (18,\y)--(17.7,\y) node[left] {\y};
+    \draw[thick,teal] (18,12)--(39,26);
+    \fill[rust] (27.65055,18.43370) circle (2.5pt)
+      node[above left] {$1\,\mathrm{AU}$};
+    \fill[rust] (29.72999,19.82000) circle (2.5pt)
+      node[below right] {$4\,\mathrm{AU}$};
+  \end{tikzpicture}
+  \caption{The two calculated solar orbits are separated horizontally by $\ln 8$ and vertically by $\ln 4$, giving $\Delta Y/\Delta X=2/3$. The displayed window begins at $(18,12)$; the ideal algebraic line extrapolates through $(0,0)$ outside the panel. These markers illustrate model calculations, not an independent empirical test, because the periods are generated from the same Kepler relation.}
+  \label{fig:log-line}
+\end{figure}
+
+\section{A Schuler-scale comparison}
+\label{sec:schuler}
+
+For an ideal spherical Earth with the rounded radius $R=6371\,\mathrm{km}$ and Earth-only gravitational parameter $GM_{\oplus}=398600.435507\,\mathrm{km^3\,s^{-2}}$, the Newtonian surface field is $g_N=GM_{\oplus}/R^2$ \cite{NSSDCEarth,JPLParameters}. The ideal Schuler angular frequency satisfies
+\begin{equation}
+  \omega_{\rm Sch}^2=\frac{g_N}{R}=\frac{GM_{\oplus}}{R^3}.
+  \label{eq:schuler-scale}
+\end{equation}
+This equals the circular orbital scale $\omega_S^2=GM_{\oplus}/r^3$ evaluated in the limiting model $r\to R^+$. The equal angular scales do not make the motions physically identical: one is an inertial-navigation oscillation and the other is a circular orbit. The resulting model period is $T_{\rm Sch}=2\pi/\omega_{\rm Sch}=84.34729$ minutes, close to the independently reported conventional Schuler period of $84.4$ minutes \cite{OliverGower}. A circular orbit at Earth's physical surface is an ideal limiting comparison, not a realizable satellite orbit.
+
+\section{The radial-tide connection}
+\label{sec:tide}
+
+In the Newtonian point-source model, take outward radial direction as positive. The signed acceleration of a freely falling test probe is $a_r=-GM/r^2$ \cite{Fitzpatrick}. Two initially comoving probes with a radial separation $\xi_r$ satisfying $|\xi_r|\ll r$ therefore have, to first order,
+\begin{equation}
+  \Delta a_r\simeq\frac{da_r}{dr}\,\xi_r
+  =\frac{2GM}{r^3}\,\xi_r
+  =2\omega_S^2\xi_r
+  \quad\text{for the circular reference scale at }r.
+  \label{eq:tidal-separation}
+\end{equation}
+The outer probe accelerates inward less strongly, so the radial separation begins to grow. The full Newtonian tidal field also has two transverse components, each $\Delta a_\perp\simeq-GM\xi_\perp/r^3$. In general relativity, the corresponding relative acceleration is described by geodesic deviation \cite{OregonTides}.
+
+\section{Interpretive limits and conclusion}
+\label{sec:limits}
+
+The derivation depends on a Newtonian inverse-square force and an isolated two-body model. The period law for an ellipse uses the semimajor axis and the mean motion; it does not imply constant instantaneous angular speed. The gravitational time $\tau_g$, circular radius-time $t_r$, and semimajor-axis time $t_a$ are constructed quantities, while $\tau_S$ is derived from the orbit's period. Taking logarithms makes the dimensionless scaling visible but adds no new dynamics.
+
+Real planetary and satellite motion includes additional bodies and other perturbations. The Moon example illustrates why fitted or mean orbital elements may not reproduce the exact isolated two-body parameter. If the measured orbit is used to estimate a mass, the result is the gravitational parameter of the relative system under the adopted model. These distinctions are standard in orbital mechanics \cite{OpenStaxKepler}.
+
+Kepler's third law follows from Newtonian two-body motion. For circular motion, $t_r^3=\tau_g\tau_S^2$; after normalization and logarithms, it becomes a line of slope $2/3$. For elliptical motion, the corresponding period law and logarithmic relation use the semimajor axis $a$. The logarithmic representation organizes ideal systems with different masses on a common dimensionless relation while keeping the assumptions and the meaning of each quantity explicit.
+
+\appendix
+
+\section{Schwarzschild circular-orbit coordinate rate}
+\label{app:schwarzschild}
+
+Consider a test body on a circular geodesic in the vacuum exterior of a nonrotating spherical central mass $M$. Here $M$ denotes that central mass, and $r$ is the Schwarzschild areal radius. The equatorial line element is
+\begin{equation}
+  ds^2=-F(r)c^2dt^2+F(r)^{-1}dr^2+r^2d\phi^2,
+  \qquad
+  F(r)=1-\frac{2GM}{rc^2}.
+  \label{eq:schwarzschild-line-element}
+\end{equation}
+For a circular geodesic, the radial geodesic equation gives the coordinate angular rate, measured with Schwarzschild time $t$ normalized at infinity,
+\begin{equation}
+  \omega_S\equiv\frac{d\phi}{dt},
+  \qquad
+  \omega_S^2=\frac{GM}{r^3}.
+  \label{eq:schwarzschild-rate}
+\end{equation}
+This has the same algebraic form as the Newtonian circular result, but its interpretation is a coordinate-time relation in Schwarzschild spacetime. From the line element,
+\begin{equation}
+  \left(\frac{d\tau}{dt}\right)^2
+  =F-\frac{r^2\omega_S^2}{c^2}
+  =1-\frac{3GM}{rc^2}>0,
+  \qquad
+  r>\frac{3GM}{c^2}.
+  \label{eq:timelike-orbit-domain}
+\end{equation}
+Thus massive circular geodesics require $r>3GM/c^2$. The circular orbit at $r=3GM/c^2$ is null; timelike circular orbits are unstable for $3GM/c^2<r<6GM/c^2$, marginally stable at $r=6GM/c^2$, and stable for $r>6GM/c^2$. With $t_r=r/c$ and $\tau_g=GM/c^3$, these ranges are $3\tau_g<t_r<6\tau_g$, $t_r=6\tau_g$, and $t_r>6\tau_g$, respectively. This relativistic extension does not establish Newtonian dynamics in the strong field \cite{TongGR}.
+
+\begin{thebibliography}{11}
+\small
+\setstretch{1.0}
+\raggedright
+\urlstyle{same}
+
+\bibitem{KeplerHarmonices}
+J. Kepler,
+\emph{Harmonices Mundi}, Book V (1619).
+
+\bibitem{NewtonPrincipia}
+I. Newton,
+\emph{Philosophi\ae{} Naturalis Principia Mathematica} (1687).
+
+\bibitem{OpenStaxKepler}
+OpenStax,
+\emph{University Physics, Volume 1}, Sec.~13.5, ``Kepler's Laws of Planetary Motion,''
+available at \href{https://openstax.org/books/university-physics-volume-1/pages/13-5-keplers-laws-of-planetary-motion}{OpenStax}.
+
+\bibitem{JPLParameters}
+NASA Jet Propulsion Laboratory,
+Solar System Dynamics, ``Astrodynamic Parameters,''
+available at \href{https://ssd.jpl.nasa.gov/astro_par.html}{JPL Astrodynamic Parameters}.
+
+\bibitem{NSSDCMoon}
+NASA Goddard Space Flight Center,
+National Space Science Data Center, ``Moon Fact Sheet,''
+available at \href{https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html}{NASA NSSDC Moon Fact Sheet}.
+
+\bibitem{NSSDCSidereal}
+NASA Goddard Space Flight Center,
+National Space Science Data Center, ``Planetary Fact Sheet Notes,''
+available at \href{https://nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact_notes.html}{NASA NSSDC Fact Sheet Notes}.
+
+\bibitem{NSSDCEarth}
+NASA Goddard Space Flight Center,
+National Space Science Data Center, ``Earth Fact Sheet,''
+available at \href{https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html}{NASA NSSDC Earth Fact Sheet}.
+
+\bibitem{OliverGower}
+B. M. Oliver and J. F. R. Gower,
+``Use of an inertial navigation system for accurate track recovery and coastal oceanographic measurements,''
+Sec.~3, Eq.~(1) (1977), NASA Technical Reports Server, record 19780006643,
+available at \href{https://ntrs.nasa.gov/citations/19780006643}{NASA Technical Reports Server}.
+
+\bibitem{Fitzpatrick}
+R. Fitzpatrick,
+``Newtonian Gravity,''
+University of Texas at Austin lecture notes,
+available at \href{https://farside.ph.utexas.edu/teaching/celestial/Celestialhtml/node14.html}{Newtonian Gravity}.
+
+\bibitem{OregonTides}
+Oregon State University,
+``Tidal Forces,'' lecture notes,
+available at \href{https://sites.science.oregonstate.edu/physics/coursewikis/GGR/book/ggr/tidal.html}{Oregon State University}.
+
+\bibitem{TongGR}
+D. Tong,
+\emph{General Relativity},
+lecture notes, University of Cambridge,
+available at \href{https://www.damtp.cam.ac.uk/user/tong/gr/grhtml/}{Cambridge General Relativity Notes}.
+
+\end{thebibliography}
+
+\end{document}
